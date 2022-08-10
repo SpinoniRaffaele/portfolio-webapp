@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+.no-margin {
+    margin: 0%;
+}
+
+.font-title {
+    font-family: Space Mono;
+    font-size: 100px;
+    color: whitesmoke;
+}
+
+.font-subtitle {
+    font-family: Muli;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
