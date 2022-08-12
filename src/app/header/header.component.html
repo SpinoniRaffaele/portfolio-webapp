@@ -1,2 +1,11 @@
-<div class="blurry" style="color: whitesmoke; height: 12%;">
+<div *ngIf="isDesktop" class="blurry header-dim">
+    <div>
+        <ul class="no-margin header-list">
+            <li *ngFor="let headerElement of headerList" class="header-list-elem">
+                <a href="{{ headerElement.label }}" style="text-decoration: none;">
+                    <b class="font-general underline">{{ headerElement.label }}</b>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageContentComponent } from './home-page-content/home-page-content.component';
+import { MediaService } from './shared/media.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { HomePageContentComponent } from './home-page-content/home-page-content.
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MediaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

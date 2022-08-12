@@ -2,3 +2,22 @@
     background-color: rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(5px);
 }
+
+.header-dim {
+    height: 6em;
+}
+
+.header-list-elem {
+    display: inline-block;
+    padding-top: 1.8em;
+    padding-left: 5%;
+}
+
+.header-list {
+    padding-left: 50%;
+    text-align: center;
+}
+
+.underline:hover {
+    text-decoration: underline;
+}
