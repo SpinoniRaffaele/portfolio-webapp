@@ -6,16 +6,21 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageContentComponent } from './home-page-content/home-page-content.component';
 import { MediaService } from './shared/media.service';
+import { RouterModule, Routes } from '@angular/router';
+import { ProjectsComponent } from './projects/projects.component';
+import { appRoutes } from './router.config';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomePageContentComponent
+    HomePageContentComponent,
+    ProjectsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [MediaService],
   bootstrap: [AppComponent]

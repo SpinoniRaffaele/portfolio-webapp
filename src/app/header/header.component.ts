@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from '../shared/media.service';
-import { HeaderElement } from './header.datamodel';
+import { HeaderElement, headerList } from './header.datamodel';
 
 @Component({
   selector: 'app-header',
@@ -11,12 +11,7 @@ export class HeaderComponent implements OnInit {
 
   isDesktop: boolean = false;
 
-  headerList: HeaderElement[] = [
-    { label: 'Home' },
-    { label: 'About me' },
-    { label: 'Quick Links' },
-    { label: 'Projects' }
-];
+  headerList = headerList;
 
   constructor(private readonly mediaService: MediaService) { }
 

@@ -1,5 +1,5 @@
 <div *ngIf="isDesktop" class="blurry header-dim">
-    <div>
+    <nav>
         <ul class="no-margin header-list">
             <li *ngFor="let headerElement of headerList" class="header-list-elem">
                 <a href="{{ headerElement.label }}" style="text-decoration: none;">
@@ -7,5 +7,5 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </nav>
 </div>
