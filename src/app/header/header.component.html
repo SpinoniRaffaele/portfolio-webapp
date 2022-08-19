@@ -1,0 +1,11 @@
+<div *ngIf="isDesktop" class="blurry header-dim">
+    <nav>
+        <ul class="no-margin header-list">
+            <li *ngFor="let headerElement of headerList" class="header-list-elem">
+                <a routerLink="{{ headerElement.label }}" routerLinkActive="active" style="text-decoration: none;">
+                    <b class="font-general underline">{{ headerElement.label }}</b>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
