@@ -1,4 +1,6 @@
-<div *ngIf="isDesktop" class="blurry header-dim">
+<div *ngIf="isDesktop; else phoneLayout" class="blurry header-dim inline">
+    <div class="image shadow">
+    </div>
     <nav>
         <ul class="no-margin header-list">
             <li *ngFor="let headerElement of headerList" class="header-list-elem">
@@ -9,3 +11,9 @@
         </ul>
     </nav>
 </div>
+
+<ng-template #phoneLayout>
+ <div class="font-general">
+    TODO: implement phone header
+ </div>
+</ng-template>

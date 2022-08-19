@@ -9,6 +9,7 @@ import { MediaService } from './shared/media.service';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { appRoutes } from './router.config';
     HeaderComponent,
     FooterComponent,
     HomePageContentComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
