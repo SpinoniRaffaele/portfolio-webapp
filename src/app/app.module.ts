@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageContentComponent } from './home-page-content/home-page-content.component';
 import { MediaService } from './shared/media.service';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
 
@@ -20,7 +20,7 @@ import { appRoutes } from './router.config';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
   ],
   providers: [MediaService],
   bootstrap: [AppComponent]

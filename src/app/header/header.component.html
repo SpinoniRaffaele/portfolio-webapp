@@ -2,7 +2,7 @@
     <nav>
         <ul class="no-margin header-list">
             <li *ngFor="let headerElement of headerList" class="header-list-elem">
-                <a href="{{ headerElement.label }}" style="text-decoration: none;">
+                <a routerLink="{{ headerElement.label }}" routerLinkActive="active" style="text-decoration: none;">
                     <b class="font-general underline">{{ headerElement.label }}</b>
                 </a>
             </li>
