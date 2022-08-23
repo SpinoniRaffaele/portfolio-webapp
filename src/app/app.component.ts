@@ -9,6 +9,7 @@ import { LoaderService } from './shared/loader.service';
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-webapp';
+  backGroundImagePath: string = '../assets/images/3d_stripe_blue.png';
 
   constructor(public loaderService: LoaderService, private http: HttpClient) {}
 
