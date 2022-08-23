@@ -10,6 +10,8 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
 import { LoaderComponent } from './loader/loader.component';
+import { LoadingInterceptor } from './shared/loading.interceptor';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,16 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+    HttpClientModule
   ],
-  providers: [MediaService],
+  providers: [
+    MediaService,
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    },
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

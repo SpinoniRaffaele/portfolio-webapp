@@ -1,12 +1,7 @@
   .loader{
-    margin: 0 0 2em;
-    height: 100px;
-    width: 20%;
     text-align: center;
     padding: 1em;
-    margin: 0 auto 1em;
-    display: inline-block;
-    vertical-align: top;
+    padding-top: 50vh;
   }
   
   /*
@@ -15,4 +10,10 @@
   svg path,
   svg rect{
     fill: #d2d2d2;
+  }
+
+  .center {
+    margin: auto;
+    width: 50%;
+    height: 100vh;
   }
