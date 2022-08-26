@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageContentComponent } from './home-page-content/home-page-content.component';
 import { MediaService } from './shared/media.service';
-import { PreloadAllModules, RouterModule } from '@angular/router';
+import { ActivatedRoute, PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
 import { LoaderComponent } from './loader/loader.component';
@@ -25,14 +25,14 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     MediaService,
     {
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
     },
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })
