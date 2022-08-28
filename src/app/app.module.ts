@@ -6,12 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageContentComponent } from './home-page-content/home-page-content.component';
 import { MediaService } from './shared/media.service';
-import { ActivatedRoute, PreloadAllModules, RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
 import { LoaderComponent } from './loader/loader.component';
 import { LoadingInterceptor } from './shared/loading.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ContactMeComponent } from './home-page-content/contact-me/contact-me.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +23,14 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomePageContentComponent,
     ProjectsComponent,
-    LoaderComponent
+    LoaderComponent,
+    ContactMeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
     HttpClientModule,
+    NgbModule
   ],
   providers: [
     MediaService,
