@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from '../shared/media.service';
-import { HeaderElement, headerList } from './header.datamodel';
+import { headerList } from './header.datamodel';
 
 @Component({
   selector: 'app-header',

@@ -3,10 +3,14 @@
     </div>
     <nav>
         <ul class="no-margin header-list">
-            <li *ngFor="let headerElement of headerList" class="header-list-elem">
-                <a routerLink="{{ headerElement.label }}" routerLinkActive="active" style="text-decoration: none;">
-                    <b class="font-header underline">{{ headerElement.label }}</b>
-                </a>
+            <li 
+            *ngFor="let headerElement of headerList" 
+            class="header-list-elem underline font-header"
+            routerLink="{{ headerElement.label }}" 
+            routerLinkActive="active">
+            <div class="mt">
+                {{ headerElement.label }}
+            </div>
             </li>
         </ul>
     </nav>
