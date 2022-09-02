@@ -6,13 +6,14 @@
 .text-area {
     margin-left: 10vh;
     margin-top: 10vh;
-    height: 350px;
+    height: 400px;
     margin-bottom: 6vh;
     width: 50%;
+    min-width: 300px;
 }
 
 .blurry {
-    background-color: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(5px);
     border-radius: 15px;
 }
