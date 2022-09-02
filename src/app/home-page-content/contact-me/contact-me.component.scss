@@ -57,13 +57,15 @@ $color: #b20d52;
 
 .form {
   margin: auto;
-  width: 350px;
+  width: 80vw;
+  max-width: 350px;
   margin-top: 25px;
 }
 
 .form-address {
   border-radius: 5px;
-  width: 350px;
+  width: 80vw;
+  max-width: 350px;
   height: 50px;
   background-color: transparent;
   color: whitesmoke;
@@ -78,7 +80,8 @@ $color: #b20d52;
 
 .form-content {
   border-radius: 5px;
-  width: 350px;
+  width: 80vw;
+  max-width: 350px;
   height: 100px;
   background-color: transparent;
   color: whitesmoke;
