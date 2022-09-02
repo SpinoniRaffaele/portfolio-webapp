@@ -14,6 +14,7 @@ import { LoadingInterceptor } from './shared/loading.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ContactMeComponent } from './home-page-content/contact-me/contact-me.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomePageContentComponent,
     ProjectsComponent,
     LoaderComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+$color: #b20d52;
 
 .center {
     margin-left: auto;
@@ -27,7 +28,7 @@
 
 .modal_{
   border-radius: 5px;
-  box-shadow:0 0 10px #b20d52,0 0 7px #b20d52,0 0 7px #b20d52,0 0 7px #b20d52;
+  box-shadow:0 0 10px $color,0 0 7px $color,0 0 7px $color,0 0 7px $color;
 }
 
 .blurry {
@@ -36,7 +37,7 @@
 }
 
 .little-blurry {
-  box-shadow:0 0 3px #b20d52,0 0 3px #b20d52,0 0 3px #b20d52,0 0 3px #b20d52;
+  box-shadow:0 0 3px $color,0 0 3px $color,0 0 3px $color,0 0 3px $color;
 }
 
 .inline {
@@ -71,8 +72,8 @@
 .form-address:focus {
   outline: none;
   border: none;
-  outline-color: #b20d52;
-  box-shadow:0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52;
+  outline-color: $color;
+  box-shadow:0 0 5px $color,0 0 5px $color,0 0 5px $color,0 0 5px $color;
 }
 
 .form-content {
@@ -86,8 +87,8 @@
 .form-content:focus {
   outline: none;
   border: none;
-  outline-color: #b20d52;
-  box-shadow:0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52;
+  outline-color: $color;
+  box-shadow:0 0 5px $color,0 0 5px $color,0 0 5px $color,0 0 5px $color;
 }
 
 //copied from here on  -- button stuff
@@ -108,10 +109,10 @@
 
 
 .submit a:hover {
-  background: #b20d52;
+  background: $color;
   color: #fff;
   border-radius: 5px; 
-  box-shadow:0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52,0 0 5px #b20d52;
+  box-shadow:0 0 5px $color,0 0 5px $color,0 0 5px $color,0 0 5px $color;
 }
 
 .submit a span {  
@@ -124,7 +125,7 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #b20d52);
+  background: linear-gradient(90deg, transparent, $color);
   animation: btn-anim1 1s linear 3;
   animation-delay: 0s; 
 }
@@ -143,7 +144,7 @@
   right: 0;
   width: 2px;  
   height: 100%;
-  background: linear-gradient(180deg, transparent, #b20d52); 
+  background: linear-gradient(180deg, transparent, $color); 
   animation: btn-anim2 1s linear 3;
   animation-delay: .25s;
 }
@@ -162,7 +163,7 @@
   right: -100%;
   width: 100%;  
   height: 2px;
-  background: linear-gradient(270deg, transparent, #b20d52); 
+  background: linear-gradient(270deg, transparent, $color); 
   animation: btn-anim3 1s linear 3;
   animation-delay: .5s;
 }
@@ -181,7 +182,7 @@
   left: 0;
   width: 2px;  
   height: 100%;
-  background: linear-gradient(360deg, transparent, #b20d52); 
+  background: linear-gradient(360deg, transparent, $color); 
   animation: btn-anim4 1s linear 3;
   animation-delay: .75s;
 }
