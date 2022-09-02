@@ -1,0 +1,14 @@
+<div class="font-header">
+    <ul class="no-margin header-list blurry">
+        <li
+        *ngFor="let headerElement of headerList" 
+        class="header-list-elem underline font-header"
+        routerLink="{{ headerElement.label }}" 
+        routerLinkActive="active"
+        (click)="menuItemSelected.emit(headerElement.label)">
+        <div style="padding-top: 12px">
+            {{ headerElement.label }}
+        </div>
+        </li>
+    </ul>
+</div>

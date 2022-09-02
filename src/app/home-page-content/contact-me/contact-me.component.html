@@ -1,0 +1,40 @@
+<div class="center">
+    <button class="submit get-in-touch">
+      <a (click)="openDialog(content)" class="little-blurry">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Get in touch
+      </a>
+      </button>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal_ blurry">
+    <div class="inline mt">
+      <div class="font-subtitle ml">
+        Get in touch
+      </div>
+      <div class="font-subtitle">
+        <div class="close-button" (click)="modal.dismiss()">X</div>
+      </div>
+    </div>
+    <form class="form">
+      <input type="email" class="form-address" placeholder="your mail address">
+      <br>
+      <br>
+      <textarea name="Text1" cols="40" rows="5" class="form-content" placeholder="your message"></textarea>
+    </form>
+    <div class="submit save-button">
+      <a (click)="onSubmit()" class="little-blurry">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Send
+      </a>
+    </div>
+  </div>
+
+</ng-template>

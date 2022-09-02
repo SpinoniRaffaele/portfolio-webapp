@@ -1,7 +1,14 @@
-<div class="background-global">
-    <app-header class="blurry"></app-header>
-
-    <router-outlet></router-outlet>
-
-    <app-footer></app-footer>
+<div class="background-gradient">
+    <div *ngIf="this.loaderService.getLoading(); else loadedBlock">
+        <app-loader></app-loader>
+    </div>
+    <ng-template #loadedBlock>
+        <div class="shape3d" [style.background-image]="'url('+backGroundImagePath+')'">
+            <app-header class="blurry"></app-header>
+    
+            <router-outlet></router-outlet>
+        
+            <app-footer></app-footer>
+        </div>
+    </ng-template>
 </div>
