@@ -20,19 +20,26 @@
         <div class="close-button" (click)="modal.dismiss()">X</div>
       </div>
     </div>
-    <form class="form">
-      <input type="email" class="form-address" placeholder="your mail address">
+    <form class="form" [formGroup]="formGroup">
+      <input type="email" class="form-address" placeholder="your mail address" [formControl]="formGroup.controls['email']">
+      <div class="invalid-label" *ngIf="formGroup.get('email').errors && (formGroup.get('email').dirty || this.sendEmpty)">
+        ❌Invalid Email
+      </div>
       <br>
       <br>
-      <textarea name="Text1" cols="40" rows="5" class="form-content" placeholder="your message"></textarea>
+      <textarea name="Text1" cols="40" rows="5" class="form-content" 
+      placeholder="Your message" [formControl]="formGroup.controls['body']"></textarea>
+      <div class="invalid-label" *ngIf="formGroup.get('body').errors && (formGroup.get('body').dirty || this.sendEmpty)">
+        ❌Empty Message
+      </div>
     </form>
     <div class="submit save-button">
-      <a (click)="onSubmit()" class="little-blurry">
+      <a (click)="onSubmit()" type="submit" class="little-blurry">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Send
+        {{ this.sendButtonMessage }} 
       </a>
     </div>
   </div>

@@ -7,6 +7,12 @@ $color: #b20d52;
     height: 100px;
 }
 
+.invalid-label {
+  margin-top: 3px;
+  color: $color;
+  font-family: Muli;
+}
+
 .get-in-touch {
   background-color: transparent;
   border: none;
@@ -51,7 +57,7 @@ $color: #b20d52;
 
 .save-button {
   margin: auto;
-  width: 95px;
+  width: 160px;
   margin-top: 25px;
 }
 
@@ -97,6 +103,7 @@ $color: #b20d52;
 //copied from here on  -- button stuff
 
 .submit a { 
+  width: 160px;
   font-family: Muli;
   font-size: 20px;
   color: whitesmoke;
@@ -104,6 +111,7 @@ $color: #b20d52;
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
+  text-align: center;
   overflow: hidden;
   transition: .5s;
   margin-top: 10px;

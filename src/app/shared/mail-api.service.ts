@@ -1,31 +1,46 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Email } from '../../assets/mail-api.datamodel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MailAPIService {
 
-  basePath: string = 'https://api.mailjet.com/v3.1/send';
+  private readonly host: string = 'smtp.elasticemail.com';
 
-  headers: HttpHeaders = new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Authorization': 'Basic ' + btoa('3bcd35860e7b109e78aee3081e2cc625:e8e9d3bd0a79e4ad9d5944bf25c2180e')
-  });
+  private readonly username: string = 'raffaelespinoni@gmail.com';
 
-  body: string = '{"Messages":[{"From": {"Email": "raffaele.spinoni@gmail.com","Name": "Raffaele - Website"},"To": ' + 
-  '[{"Email": "raffaele.spinoni@gmail.com","Name": "Raffaele"}],"Subject": ' +
-  '"My first Mailjet email","TextPart": "Greetings from Mailjet.","HTMLPart": "<h3>Dear passenger 1, ' +
-  'welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />","CustomID": "AppGettingStartedTest"}]}';
+  private readonly mailAddressFrom: string = 'raffaele.spinoni@gmail.com';
 
-  constructor(private http: HttpClient) { }
+  private readonly mailAddressTo: string = 'raffaele.spinoni@gmail.com';
 
-  sendMail() {
-    this.http.post(
-      this.basePath, 
-      this.body, 
-      { headers: this.headers }
-      ).subscribe(res => {console.log(res)});
+  private readonly subject: string = 'Mail From Your Portfolio Website';
+
+  private readonly timeout: number = 10000;
+
+
+  constructor() { }
+
+  sendMail(sender: string, content: string): Promise<any> {
+
+    const body: string = this.buildBody(sender, content);
+
+    const emailPromise: Promise<any> = Email.send({
+      Host : this.host,
+      Username : this.username,
+      Password : 'CB7E5436E35FEDF4055157784B71CDEE68AC',
+      To : this.mailAddressTo,
+      From : this.mailAddressFrom,
+      Subject : this.subject,
+      Body : body
+    }).then(res => {return res});
+
+    const timeoutPromise: Promise<any> = new Promise((_) => setTimeout(() => {return "KO"}, this.timeout));
+
+    return Promise.race([emailPromise, timeoutPromise]);
+  }
+
+  private buildBody(sender: string, content: string): string {
+    return 'Message from <b>' + sender + '</b><br><br>' + content;
   }
 }

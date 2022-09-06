@@ -1,5 +1,5 @@
 <div class="background-gradient">
-    <div *ngIf="this.loaderService.getLoading(); else loadedBlock">
+    <div *ngIf="this.loaderService.getLoading() && this.loaderService.isFirstLoading(); else loadedBlock">
         <app-loader></app-loader>
     </div>
     <ng-template #loadedBlock>
