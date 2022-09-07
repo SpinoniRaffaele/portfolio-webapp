@@ -1,3 +1,4 @@
+var XMLHttpRequest = require('xhr2');
 const Email = { 
     send: function (a) { 
         return new Promise(function (n, e) { 
