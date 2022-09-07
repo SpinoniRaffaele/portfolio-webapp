@@ -21,7 +21,7 @@ export class MailAPIService {
   }
 
   public isResponseGood(res: any): boolean {
-    return res.Messages[0].Status === "success";
+    return JSON.parse(res).Messages[0].Status === "success";
   }
 
   public whitelistContent(content: string): string {
