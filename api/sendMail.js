@@ -72,14 +72,11 @@
 //     // response.status(200).send(`Hello ${body}!`);
 //   }
 
-
+const mailjet = require('node-mailjet')
 
 export default function handler(request, response) {
-    const mailjet = require ('node-mailjet')
-.connect('3bcd35860e7b109e78aee3081e2cc625', '3bcd35860e7b109e78aee3081e2cc625')
-const mailRequest = mailjet
-.post("send", {'version': 'v3.1'})
-.request({
+mailjet = mailjet.connect('3bcd35860e7b109e78aee3081e2cc625', '3bcd35860e7b109e78aee3081e2cc625')
+const mailRequest = mailjet.post("send", {'version': 'v3.1'}).request({
   "Messages":[
     {
       "From": {
@@ -99,14 +96,11 @@ const mailRequest = mailjet
     }
   ]
 })
-mailRequest
-  .then((result) => {
+mailRequest.then((result) => {
     console.log(result.body);
     response.status(200).send(`ok`);
-  })
-  .catch((err) => {
+  }).catch((err) => {
     console.log(err.statusCode);
     response.status(500).send(`Mail Provider error`);
   })
-
 }
