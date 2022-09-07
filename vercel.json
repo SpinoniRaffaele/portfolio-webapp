@@ -1,7 +1,7 @@
 {
     "functions": {
-        "api/sendMail.js": {
-        "runtime": "node@5.0.0"
+        "api/sendMail.sh": {
+        "runtime": "vercel-bash@4.1.0"
         }
     }
 }
