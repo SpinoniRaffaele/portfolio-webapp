@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/sendMail.js": {
+        "runtime": "node@5.0.0"
+        }
+    }
+}
