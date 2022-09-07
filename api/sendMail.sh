@@ -1,6 +1,8 @@
 import "querystring@1.3.0"
 
 handler() {
+
+    echo $2
 	local path
 	local QUERY
     local ADDRESS
@@ -12,7 +14,9 @@ handler() {
     set -- $QUERY
     IFS="="
     set -- $1
-    ADDRESS=$2
+    ADDR=$2
+    AT="@"
+    ADDRESS=${ADDR//%40/$AT}
     echo $ADDRESS
 
     IFS="&"
