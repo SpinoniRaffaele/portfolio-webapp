@@ -72,10 +72,9 @@
 //     // response.status(200).send(`Hello ${body}!`);
 //   }
 
-const mailjet = require('node-mailjet')
+const mailjet = require('node-mailjet').connect('3bcd35860e7b109e78aee3081e2cc625', '3bcd35860e7b109e78aee3081e2cc625');
 
 export default function handler(request, response) {
-mailjet = mailjet.connect('3bcd35860e7b109e78aee3081e2cc625', '3bcd35860e7b109e78aee3081e2cc625')
 const mailRequest = mailjet.post("send", {'version': 'v3.1'}).request({
   "Messages":[
     {
