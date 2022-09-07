@@ -2,7 +2,6 @@ import "querystring@1.3.0"
 
 handler() {
 
-    echo $2
 	local path
 	local QUERY
     local ADDRESS
