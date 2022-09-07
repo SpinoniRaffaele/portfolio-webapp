@@ -43,8 +43,9 @@ export class ContactMeComponent {
       this.sendButtonMessage = 'Sending...';
       this.mailAPIService.sendMail(this.formGroup.controls['email'].value, this.formGroup.controls['body'].value)
       .subscribe(res => {
+        console.log(res);
         this.loaderService.setLoading(false);
-        if(this.mailAPIService.isResponseGood(res)) {
+        if(res.Messages[0].Status === "success") {
           this.handleSuccess();
         } else {
           this.handleError();
