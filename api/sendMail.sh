@@ -28,5 +28,5 @@ handler() {
     BODY=${BOD//%20/$SPACE}
     echo $BODY
 
-    curl -s -X POST --user "${API_KEY}:${API_SECRET}" https://api.mailjet.com/v3.1/send -H "Content-Type:application/json" -d '{"Messages":[{"From": {"Email": "10575516@polimi.it","Name": "Raffaele"},"To": [{"Email": "raffaelespinoni@gmail.com","Name": "Raffaele"}],"Subject": "Mail from the portfolio website","TextPart": "'${BODY}'","HTMLPart": "<br>From: '${ADDRESS}'","CustomID": "AppGettingStartedTest"}]}'
+    curl -s -X POST --user "${API_KEY}:${API_SECRET}" https://api.mailjet.com/v3.1/send -H "Content-Type:application/json" -d '{"Messages":[{"From": {"Email": "10575516@polimi.it","Name": "Polimi Raffaele"},"To": [{"Email": "raffaelespinoni@gmail.com","Name": "Raffaele"}],"Subject": "Mail from the portfolio website","TextPart": "","HTMLPart": "<i>'${BODY}'</i><br><br>From: '${ADDRESS}'","CustomID": "AppGettingStartedTest"}]}'
 }
