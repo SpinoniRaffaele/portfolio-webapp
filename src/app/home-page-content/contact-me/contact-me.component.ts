@@ -42,9 +42,9 @@ export class ContactMeComponent {
       this.loaderService.setLoading(true);
       this.sendButtonMessage = 'Sending...';
       this.mailAPIService.sendMail(this.formGroup.controls['email'].value, this.formGroup.controls['body'].value)
-      .then(res => {
+      .subscribe(res => {
         this.loaderService.setLoading(false);
-        if(res === 'OK') {
+        if(this.mailAPIService.isResponseGood(res)) {
           this.handleSuccess();
         } else {
           this.handleError();

@@ -1,17 +1,34 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MailAPIService {
 
-  constructor() { }
+  private readonly baseUrl = 'https://portfolio-webapp-spinoniraffaele.vercel.app/api/sendMail';
 
-  sendMail(sender: string, content: string): Promise<any> {
+  constructor(private http: HttpClient) { }
 
-    const timeoutPromise: Promise<any> = new Promise((_) => setTimeout(() => {return "KO"}, 1000));
+  sendMail(sender: string, content: string): Observable<any> {
 
-    return timeoutPromise;
+    let params = new HttpParams();
+    params = params.append('address', sender);
+    params = params.append('body', this.whitelistContent(content));
+
+    return this.http.get(this.baseUrl, {responseType: 'text', params: params });
   }
 
+  public isResponseGood(res: any): boolean {
+    return res.Messages[0].Status === "success";
+  }
+
+  public whitelistContent(content: string): string {
+   return content.replace('#', "_")
+   .replace('?', "_")
+   .replace('=', "_")
+   .replace('&', "_")
+   .replace('/', "_");
+  }
 }

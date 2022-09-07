@@ -10,7 +10,6 @@ import { LoaderService } from './shared/loader.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'portfolio-webapp';
   backGroundImagePath: string = '../assets/images/background_Home.png';
   
   constructor(
