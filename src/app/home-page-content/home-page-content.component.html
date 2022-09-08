@@ -1,11 +1,18 @@
 
-<div class="inline">
+<div>
     <div>
-        <div class="font-title title">
+        <div 
+        class="font-title" 
+        [class.title]="this.isDesktop"
+        [class.title-phone]="!this.isDesktop"
+        >
             Raffaele Spinoni
         </div>
-        
-        <div class="font-general text-area blurry">
+        <div 
+        class="font-general text-area blurry" 
+        [class.text-area-position]="this.isDesktop" 
+        [class.text-area-position-phone]="!this.isDesktop"
+        >
             <div class="padding font-subtitle">
                 👋
             </div>

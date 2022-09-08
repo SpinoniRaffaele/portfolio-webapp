@@ -1,10 +1,25 @@
+.title-phone {
+    margin-top: 5vh;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
 .title {
     margin-top: 5vh;
-    margin-left: 8vw;
+    width: 80%;
+    margin-left: 10vw; 
+}
+
+.text-area-position-phone {
+    margin: auto;
+}
+
+.text-area-position {
+    margin-left: 10vw;
 }
 
 .text-area {
-    margin-left: 6vw;
     margin-top: 10vh;
     height: 400px;
     margin-bottom: 6vh;
@@ -16,11 +31,6 @@
     background-color: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(5px);
     border-radius: 15px;
-}
-
-.inline {
-    display: grid;
-    grid-template-columns: 80% 20%;
 }
 
 .padding {

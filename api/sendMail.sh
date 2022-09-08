@@ -13,7 +13,7 @@ handler() {
     IFS="&"
     set -- $QUERY
     IFS="="
-    set -- $1
+    set -- $2
     ADDR=$2
     AT="@"
     ADDRESS=${ADDR//%40/$AT}
@@ -21,7 +21,7 @@ handler() {
     IFS="&"
     set -- $QUERY
     IFS="="
-    set -- $2
+    set -- $1
     BOD=$2
     SPACE=" "
     BODY=${BOD//%20/$SPACE}

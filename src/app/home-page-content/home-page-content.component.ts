@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaService } from '../shared/media.service';
 
 @Component({
   selector: 'app-home-page-content',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageContentComponent implements OnInit {
 
-  constructor() { }
+  public isDesktop: boolean = true;
+
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit(): void {
+    this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
 }
