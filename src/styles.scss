@@ -14,6 +14,12 @@ $color: #b20d52;
     color: $light;
 }
 
+.blurry {
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
 .font-subtitle {
     font-family: Muli;
     font-size: 30px;

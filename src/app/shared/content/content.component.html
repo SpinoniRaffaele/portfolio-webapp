@@ -1,0 +1,12 @@
+<div 
+class="font-general height"
+[class.horizontal]="this.isDesktop" 
+[class.vertical]="!this.isDesktop"
+>
+    <div class="image" [style.background-image]="wrapImagePath(this.imagePath)">
+    </div>
+    <div class="spacing"></div>
+    <div class="text">
+        {{ this.textContent }}
+    </div>
+</div>

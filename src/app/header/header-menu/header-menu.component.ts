@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { HeaderElement, headerList } from '../header/header.datamodel';
+import { HeaderElement, headerList } from '../header.datamodel';
 
 @Component({
   selector: 'app-header-menu',

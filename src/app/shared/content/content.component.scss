@@ -1,0 +1,31 @@
+.horizontal {
+    display: grid;
+    grid-template-columns: 48% 4% 48%;
+}
+
+.vertical {
+    display: grid;
+    grid-template-rows: 48% 4% 48%;
+}
+
+.image {
+    justify-self: center;
+    align-self: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+    cursor: pointer;
+}
+
+.text {
+    justify-self: center;
+    align-self: center;
+}
+
+.height {
+    height: 400px;
+}

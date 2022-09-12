@@ -1,0 +1,38 @@
+<div class="blurry group"  [class.group-width]="isDesktop" [class.group-width-phone]="!isDesktop">
+    <div [class.grid]="isDesktop" [class.grid-phone]="!isDesktop">
+        <div class="image">
+            <img 
+            src ="../../../assets/svgs/left-arrow-svgrepo-com.svg" 
+            [class.shadow]="!isFirstContent()"
+            [class.disabled]="isFirstContent()"
+            (click)=changeComponent(false)
+            >
+        </div>
+        <app-content 
+        [textContent]="this.contentGroupInfo[selectedContent].text"
+        [imagePath]="this.contentGroupInfo[selectedContent].imagePath"
+        >
+        </app-content>
+        <div class="image">
+            <img 
+            src ="../../../assets/svgs/right-arrow-svgrepo-com.svg" 
+            [class.shadow]="!isLastContent()" 
+            [class.disabled]="isLastContent()"
+            (click)=changeComponent(true)
+            >
+        </div>
+    </div>
+    <div class="center">
+        <div *ngFor="let item of [].constructor(this.contentGroupInfo.length); let i = index">
+            <img 
+            *ngIf="i !== this.selectedContent" 
+            src="../../../assets/svgs/white empty circle.svg" 
+            class="circle-dim">
+            <img 
+            *ngIf="i === this.selectedContent" 
+            src="../../../assets/svgs/filled circle.svg" 
+            class="circle-dim selected">
+        </div>
+    </div>
+</div>
+<div class="height-filler"></div>

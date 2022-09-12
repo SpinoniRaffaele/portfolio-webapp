@@ -9,13 +9,16 @@ import { MediaService } from './shared/media.service';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
-import { LoaderComponent } from './loader/loader.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 import { LoadingInterceptor } from './shared/loading.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ContactMeComponent } from './home-page-content/contact-me/contact-me.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { HeaderMenuComponent } from './header/header-menu/header-menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutMeContentComponent } from './about-me-content/about-me-content.component';
+import { ContentGroupComponent } from './shared/content-group/content-group.component';
+import { ContentComponent } from './shared/content/content.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     LoaderComponent,
     ContactMeComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    AboutMeContentComponent,
+    ContentGroupComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
