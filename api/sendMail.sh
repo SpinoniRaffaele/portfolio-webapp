@@ -1,6 +1,5 @@
 import "querystring@1.3.0"
 
-# to whitelist in the UI: #, =, &, ?, /
 handler() {
 
 	local path
