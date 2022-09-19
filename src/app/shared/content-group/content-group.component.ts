@@ -37,5 +37,4 @@ export class ContentGroupComponent implements OnInit {
       this.selectedContent--;
     }
   }
-
 }

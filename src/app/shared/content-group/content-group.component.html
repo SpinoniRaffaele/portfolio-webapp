@@ -11,6 +11,8 @@
         <app-content 
         [textContent]="this.contentGroupInfo[selectedContent].text"
         [imagePath]="this.contentGroupInfo[selectedContent].imagePath"
+        (swipeleft)="changeComponent(true)"
+        (swiperight)="changeComponent(false)"
         >
         </app-content>
         <div class="image">
