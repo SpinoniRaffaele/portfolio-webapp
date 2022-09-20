@@ -29,3 +29,28 @@
 .height {
     height: 400px;
 }
+
+.modal_{
+    border-radius: 5px;
+    height: 100vh;
+}
+
+.blurry {
+  background-color: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(10px);
+}
+
+.close-button {
+    cursor:pointer;
+    float: right;
+    margin-right: 15px;
+}
+
+.image-open {
+    justify-self: center;
+    align-self: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+}

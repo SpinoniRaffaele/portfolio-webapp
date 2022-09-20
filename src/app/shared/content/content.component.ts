@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MediaService } from '../media.service';
 
 @Component({
@@ -10,11 +11,13 @@ export class ContentComponent implements OnInit {
 
   @Input() textContent: string = '';
 
+  private modal: any;
+
   @Input() imagePath: string = "../../../assets/images/AngularLogo.png";
 
   isDesktop = true;
 
-  constructor(private readonly mediaService: MediaService) { }
+  constructor(private readonly mediaService: MediaService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
@@ -24,4 +27,7 @@ export class ContentComponent implements OnInit {
     return "url('" + imagePath + "')";
   }
 
+  openDialog(content: TemplateRef<any>) {
+    this.modal = this.modalService.open(content, { fullscreen: true });
+  }
 }

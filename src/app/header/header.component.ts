@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(event: any) {
     this.isMenuToggled = event.target.checked;
-    console.log(this.isMenuToggled);
   }
 
   closeMenu(event: any) {

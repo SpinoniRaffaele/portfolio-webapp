@@ -3,10 +3,24 @@ class="font-general height"
 [class.horizontal]="this.isDesktop" 
 [class.vertical]="!this.isDesktop"
 >
-    <div class="image" [style.background-image]="wrapImagePath(this.imagePath)">
+    <div 
+    class="image" 
+    [style.background-image]="wrapImagePath(this.imagePath)"
+    (click)="this.openDialog(content)">
     </div>
     <div class="spacing"></div>
     <div class="text">
         {{ this.textContent }}
     </div>
 </div>
+
+
+<ng-template #content let-modal>
+    <div class="blurry modal_">
+        <div class="mt font-subtitle">
+            <div class="close-button" (click)="modal.dismiss()">X</div>
+        </div>
+        <div class="image-open" [style.background-image]="wrapImagePath(this.imagePath)">
+        </div>
+    </div>
+</ng-template>
