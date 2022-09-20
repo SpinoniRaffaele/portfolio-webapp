@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { contactMeContent } from '../home-page-content/contact-me/contact-me-content.datamodel';
+import { aboutMeContent } from './about-me-content.datamodel';
 
 @Component({
   selector: 'app-about-me-content',
@@ -8,7 +8,7 @@ import { contactMeContent } from '../home-page-content/contact-me/contact-me-con
 })
 export class AboutMeContentComponent {
 
-  contentInfo = contactMeContent;
+  aboutMeContent = aboutMeContent;
 
   constructor() { }
 }

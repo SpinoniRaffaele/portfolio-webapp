@@ -21,10 +21,10 @@
             [class.shadow]="!isLastContent()" 
             [class.disabled]="isLastContent()"
             (click)=changeComponent(true)
-            >
+            alt="Expand">
         </div>
     </div>
-    <div class="center">
+    <div class="center" [style.width]="">
         <div *ngFor="let item of [].constructor(this.contentGroupInfo.length); let i = index">
             <img 
             *ngIf="i !== this.selectedContent" 
@@ -37,4 +37,3 @@
         </div>
     </div>
 </div>
-<div class="height-filler"></div>

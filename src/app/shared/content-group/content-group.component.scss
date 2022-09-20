@@ -1,5 +1,5 @@
 .group {
-    min-height: 400px;
+    min-height: 500px;
     width: 90%;
     margin: auto;
     margin-top: 40px;
@@ -12,10 +12,6 @@
 
 .group-width-phone {
     width: 90%;
-}
-
-.height-filler {
-    height: 60vh;
 }
 
 .grid {
@@ -41,16 +37,18 @@
 }
 
 .center {
-    width: 80px;
+    width: 200px;
     height: 30px;
     margin: auto;
     align-self: center;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
 }
 
 .circle-dim {
     height: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .disabled {
