@@ -3,7 +3,7 @@
         <div class="image">
             <img 
             src ="../../../assets/svgs/left-arrow-svgrepo-com.svg" 
-            [class.shadow]="!isFirstContent()"
+            [class.scale]="!isFirstContent()"
             [class.disabled]="isFirstContent()"
             (click)=changeComponent(false)
             >
@@ -18,10 +18,10 @@
         <div class="image">
             <img 
             src ="../../../assets/svgs/right-arrow-svgrepo-com.svg" 
-            [class.shadow]="!isLastContent()" 
+            [class.scale]="!isLastContent()" 
             [class.disabled]="isLastContent()"
             (click)=changeComponent(true)
-            alt="Expand">
+            >
         </div>
     </div>
     <div class="center" [style.width]="">
