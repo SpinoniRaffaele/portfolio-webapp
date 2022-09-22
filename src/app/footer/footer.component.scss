@@ -16,4 +16,10 @@
 .right {
     text-align: right;
     margin-right: 8vw;
+    text-decoration: none;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    color: whitesmoke;
 }
