@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  readonly sourceCodeLink = "https://github.com/SpinoniRaffaele/portfolio-webapp";
+
   constructor() { }
 
   ngOnInit(): void {

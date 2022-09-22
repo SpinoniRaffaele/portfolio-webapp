@@ -7,3 +7,13 @@
     margin-left: 8vw;
     padding-top: 3em;
 }
+
+.inline {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.right {
+    text-align: right;
+    margin-right: 8vw;
+}
