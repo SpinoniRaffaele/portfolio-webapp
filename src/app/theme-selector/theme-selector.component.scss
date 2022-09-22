@@ -1,0 +1,44 @@
+.sticky {
+    position: sticky;   
+    border-radius: 15px;
+    z-index: 99;
+    opacity: 0.3;
+}
+
+.activate:hover {
+    opacity: 1;
+}
+
+.position-desktop {
+    top: 40vh;
+    left: 10px;
+    width: 40px;
+    height: 80px;
+}
+
+.position-phone {
+    top: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.small {
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.deactive-highlight:hover {
+    opacity: 0.45;
+}
+
+.highlight {
+    opacity: 0.9;
+}

@@ -4,6 +4,7 @@ import { NavigationStart, Router } from '@angular/router';
 import { appRoutes } from './router.config';
 import { LoaderService } from './shared/loader.service';
 import { MediaService } from './shared/media.service';
+import { ThemeService } from './shared/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -15,17 +16,23 @@ export class AppComponent implements OnInit {
   backGroundImagePath: string = '../assets/images/background_Home.png';
 
   isDesktop = true;
+
+  isMenuToggled = false;
+
+  isDark = true;
   
   constructor(
     public loaderService: LoaderService, 
     private http: HttpClient,
     private mediaService: MediaService, 
-    private router: Router) {}
+    private router: Router,
+    private themeService: ThemeService) {}
 
   ngOnInit(): void {
-    //fake request to show the loading process, to be update when a backend is used
+    //fake request to show the loading process
     this.http.get('', {responseType: 'text'}).subscribe();
     this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
+    this.themeService.isDark.subscribe(val => this.isDark = val)
     this.router.events.subscribe(ev => {
       if (ev instanceof NavigationStart && this.isValidUrl(ev.url)) {
         this.backGroundImagePath = '../assets/images/background_' + ev.url.substring(1) + '.png';

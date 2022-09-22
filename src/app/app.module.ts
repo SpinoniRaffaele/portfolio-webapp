@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AboutMeContentComponent } from './about-me-content/about-me-content.component';
 import { ContentGroupComponent } from './shared/content-group/content-group.component';
 import { ContentComponent } from './shared/content/content.component';
+import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ContentComponent } from './shared/content/content.component';
     HeaderMenuComponent,
     AboutMeContentComponent,
     ContentGroupComponent,
-    ContentComponent
+    ContentComponent,
+    ThemeSelectorComponent
   ],
   imports: [
     BrowserModule,

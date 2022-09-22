@@ -10,9 +10,12 @@ $textcolor: $light;
     margin: 0%;
 }
 
-.background-gradient {
+.background-gradient-dark {
     background: linear-gradient(30deg, rgb(82, 82, 82), rgb(66, 66, 66));
-    //background: linear-gradient(30deg, rgb(240, 240, 240), rgb(255, 255, 255));
+}
+
+.background-gradient-white {
+    background: linear-gradient(30deg, rgb(240, 240, 240), rgb(220, 220, 220));
 }
 
 .blurry {
@@ -21,10 +24,16 @@ $textcolor: $light;
     border-radius: 15px;
 }
 
-.font-title {
+.font-title-dark-theme {
     font-family: Space Mono;
     font-size: 50px;
     color: $textcolor;
+}
+
+.font-title-light-theme {
+    font-family: Space Mono;
+    font-size: 50px;
+    color: $dark;
 }
 
 .font-subtitle {

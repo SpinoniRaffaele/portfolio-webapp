@@ -1,4 +1,7 @@
-<div class="background-gradient">
+<div 
+[class.background-gradient-dark]="this.isDark" 
+[class.background-gradient-white]="!this.isDark"
+>
     <div *ngIf="this.loaderService.getLoading() && this.loaderService.isFirstLoading(); else loadedBlock">
         <app-loader></app-loader>
     </div>
@@ -8,7 +11,9 @@
         [class.shape-position-phone]="!isDesktop" 
         [style.background-image]="'url('+backGroundImagePath+')'"
         >
-            <app-header class="blurry"></app-header>
+            <app-header class="blurry" (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
+
+            <app-theme-selector *ngIf="!this.isMenuToggled"></app-theme-selector>
     
             <router-outlet></router-outlet>
         

@@ -1,0 +1,20 @@
+<div 
+class="sticky blurry activate" 
+[class.position-desktop]="this.isDesktop" 
+[class.position-phone]="!this.isDesktop"
+>
+    <img 
+    class="small"
+    [class.highlight]="this.isDark"
+    [class.deactive-highlight]="!this.isDark"
+    src ="../../../assets/svgs/moon.svg" 
+    (click)=toggleDarkMode(true)
+    >
+    <img 
+    class="small"
+    [class.highlight]="!this.isDark"
+    [class.deactive-highlight]="this.isDark"
+    src ="../../../assets/svgs/sun.svg" 
+    (click)=toggleDarkMode(false)
+    >
+</div>

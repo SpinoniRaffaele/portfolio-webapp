@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostBinding, OnInit, Output } from '@angular/core';
 import { MediaService } from '../shared/media.service';
 import { headerList } from './header.datamodel';
 
@@ -10,6 +10,8 @@ import { headerList } from './header.datamodel';
 export class HeaderComponent implements OnInit {
 
   @HostBinding('style.border-radious') borderRadious!: string;
+
+  @Output() isMenuToggledEmitter = new EventEmitter();
 
   isDesktop: boolean = false;
 
@@ -25,10 +27,11 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(event: any) {
     this.isMenuToggled = event.target.checked;
+    this.isMenuToggledEmitter.emit(this.isMenuToggled);
   }
 
   closeMenu(event: any) {
     this.isMenuToggled = false;
-    console.log(this.isMenuToggled);
+    this.isMenuToggledEmitter.emit(this.isMenuToggled);
   }
 }
