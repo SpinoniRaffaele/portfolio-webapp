@@ -1,8 +1,6 @@
 .sticky {
     position: sticky;   
-    border-radius: 15px;
     z-index: 99;
-    opacity: 0.3;
 }
 
 .activate:hover {
@@ -14,16 +12,18 @@
     left: 10px;
     width: 40px;
     height: 80px;
+    border-radius: 15px;
 }
 
 .position-phone {
-    top: 76%;
+    top: 0%;
     margin-left: auto;
     margin-right: auto;
     width: 80px;
     height: 40px;
     display: grid;
     grid-template-columns: 50% 50%;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .small {

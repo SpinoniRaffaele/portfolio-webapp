@@ -3,7 +3,9 @@
     <div>
         <div 
         [class.font-title-dark-theme]="this.isDark"
+        [class.title-shadow-dark-theme]="this.isDark"
         [class.font-title-light-theme]="!this.isDark"
+        [class.title-shadow-light-theme]="!this.isDark"
         [class.title]="this.isDesktop"
         [class.title-phone]="!this.isDesktop"
         >

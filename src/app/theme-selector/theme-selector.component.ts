@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { last, lastValueFrom } from 'rxjs';
 import { MediaService } from '../shared/media.service';
 import { ThemeService } from '../shared/theme.service';
 
@@ -16,6 +17,7 @@ export class ThemeSelectorComponent implements OnInit {
   constructor(private mediaService: MediaService, private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.isDark = this.themeService.isDark.getValue();
     this.mediaService.isDesktop$.subscribe(isDesktop => this.isDesktop = isDesktop);
   }
 
