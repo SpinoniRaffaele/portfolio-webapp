@@ -6,14 +6,15 @@
         <app-loader></app-loader>
     </div>
     <ng-template #loadedBlock>
-        <div 
-        class="shape3d" 
-        [class.shape-position-phone]="!isDesktop" 
-        [style.background-image]="'url('+backGroundImagePath+')'"
-        >
-            <app-header class="blurry" (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
 
-            <app-theme-selector *ngIf="!this.isMenuToggled"></app-theme-selector>
+        <div 
+        class="shape3d dim" 
+        [class.shape-position-phone]="!isDesktop" 
+        [style.background-image]="backGroundImagePath"
+        >
+            <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
+
+            <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky"></app-theme-selector>
     
             <router-outlet></router-outlet>
         

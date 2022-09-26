@@ -37,6 +37,12 @@ $color: #b20d52;
   box-shadow:0 0 10px $color,0 0 7px $color,0 0 7px $color,0 0 7px $color;
 }
 
+.super-blurry {
+  background-color: rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
 .little-blurry {
   box-shadow:0 0 3px $color,0 0 3px $color,0 0 3px $color,0 0 3px $color;
 }

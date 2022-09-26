@@ -24,10 +24,12 @@
 .text {
     justify-self: center;
     align-self: center;
+    user-select: text;
+    text-align: justify;
 }
 
 .height {
-    height: 400px;
+    height: 540px;
 }
 
 .modal_{

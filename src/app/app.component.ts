@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { appRoutes } from './router.config';
 import { LoaderService } from './shared/loader.service';
@@ -14,6 +14,10 @@ import { ThemeService } from './shared/theme.service';
 export class AppComponent implements OnInit {
 
   backGroundImagePath: string = '../assets/images/background_Home.png';
+
+  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects'];
+
+  sticky = false;
 
   isDesktop = true;
 
@@ -34,19 +38,33 @@ export class AppComponent implements OnInit {
     this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
     this.themeService.isDark.subscribe(val => this.isDark = val)
     this.router.events.subscribe(ev => {
-      if (ev instanceof NavigationStart && this.isValidUrl(ev.url)) {
-        this.backGroundImagePath = '../assets/images/background_' + ev.url.substring(1) + '.png';
+      if (ev instanceof NavigationStart) {
+        if (this.isValidUrl(ev.url)) {
+          this.backGroundImagePath = "url('../assets/images/background_" + ev.url.substring(1) + ".png')";
+        } else {
+          this.backGroundImagePath = "none";
+        }
       }
     });
   }
 
   private isValidUrl(url: string): boolean {
-    var isFound: boolean = false;
-    appRoutes.forEach(route => {
-      if (route.path === url.substring(1).replace('%20', ' ')) {
-        isFound = true;
+    let found: boolean = false;
+    this.requiresBackGroundSubPath.forEach(subPath => {
+      if (url.substring(1) === subPath) {
+        found = true;
       }
     });
-    return isFound;
+    return found;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  handleScroll(){
+    const windowScroll = window.pageYOffset;
+    if(windowScroll >= 100){
+      this.sticky = true;
+    } else {
+      this.sticky = false;
+    }
   }
 }
