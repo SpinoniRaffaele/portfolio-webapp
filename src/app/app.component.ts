@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-import { appRoutes } from './router.config';
 import { LoaderService } from './shared/loader.service';
 import { MediaService } from './shared/media.service';
 import { ThemeService } from './shared/theme.service';

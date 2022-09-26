@@ -1,4 +1,4 @@
-import { ContentInfo } from "src/app/shared/content-group/content-group.datamodel";
+import { ContentGroup, ContentInfo } from "src/app/shared/content-group/content-group.datamodel";
 
 const mediumText: string = 'I\'ve recently begun a side hustle as a technical writer. In particular, ' +
     'i\'ve joined the vibrant community of Medium writers, you can find my medium profile link in the "Quick Links" section. '
@@ -23,10 +23,21 @@ const frontEndText: string = "I have recently joined the front-end side of devel
     "I'm actually learning flutter and the Dart language for multi-platform mobile development. " +
     "Regarding native technologies, i've got some experience with Android development in Java in the past";
 
-export const aboutMeContent: ContentInfo[][] =
+const mountainText: string = "Outside of the office, i really like any kind of outdoor activity. " + 
+    "I like to stay active and I enjoy phisical activity, in particular when it involves also the mountain and its " + 
+    "beautiful landscapes. My favourites activities are hiking in the summer and skying in the winter";
+
+const climbingText: string = "Recently i've discovered an amazing sport: Climbing; Either indoor or outdoor " +
+    "this sport mix adrenaline and fatigue in a unique way!";
+
+const exploreText: string = "Traveling and exploring are also essential parts of my life. " + 
+    "I like to visit new places and meet new cultures all over the world. ";
+
+export const aboutMeContent: ContentGroup[] =
 [
 //first group - Developer
-    [
+{
+    info: [
 
         {
             imagePath: '../../../assets/images/polimi.jpg',
@@ -43,35 +54,35 @@ export const aboutMeContent: ContentInfo[][] =
             text: frontEndText
         }
     ],
+    title: 'Developer Career'
+},
 //second group - Technical Writer
-    [
+{
+    info: [
         {
             imagePath: '../../../assets/images/medium_logo.png',
             text: mediumText
         }
     ],
+    title: 'Technical writing'
+},
 // third group - Sports
-    [
+{
+    info: [
         {
-            imagePath: '../../../assets/images/vercelLogo.png',
-            text: 'Test Vercel'
+            imagePath: '../../../assets/images/ski.jpg',
+            text: mountainText
         },
 
         {
-            imagePath: '',
-            text: 'Test No Image'
-        }
+            imagePath: '../../../assets/images/mountain.jpg',
+            text: climbingText
+        },
+        {
+            imagePath: '../../../assets/images/eze-sunset.jpg',
+            text: exploreText
+        },
     ],
-// fourth group - languages - not sure
-    [
-        {
-            imagePath: '../../../assets/images/vercelLogo.png',
-            text: 'Test Vercel'
-        },
-
-        {
-            imagePath: '',
-            text: 'Test No Image'
-        }
-    ]
+    title: 'Outdoor'
+}
 ]

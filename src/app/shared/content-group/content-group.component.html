@@ -1,8 +1,9 @@
 <div class="blurry group"  [class.group-width]="isDesktop" [class.group-width-phone]="!isDesktop">
+    <p class="font-subtitle" style="text-align: center;">{{this.contentGroupInfo.title}}</p>
     <div [class.grid]="isDesktop" [class.grid-phone]="!isDesktop">
         <div class="image">
             <img 
-            *ngIf="this.contentGroupInfo.length > 1"
+            *ngIf="this.contentGroupInfo.info.length > 1"
             src ="../../../assets/svgs/left-arrow-svgrepo-com.svg" 
             [class.scale]="!isFirstContent()"
             [class.disabled]="isFirstContent()"
@@ -10,15 +11,15 @@
             >
         </div>
         <app-content 
-        [textContent]="this.contentGroupInfo[selectedContent].text"
-        [imagePath]="this.contentGroupInfo[selectedContent].imagePath"
+        [textContent]="this.contentGroupInfo.info[selectedContent].text"
+        [imagePath]="this.contentGroupInfo.info[selectedContent].imagePath"
         (swipeleft)="changeComponent(true)"
         (swiperight)="changeComponent(false)"
         >
         </app-content>
         <div class="image">
             <img 
-            *ngIf="this.contentGroupInfo.length > 1"
+            *ngIf="this.contentGroupInfo.info.length > 1"
             src ="../../../assets/svgs/right-arrow-svgrepo-com.svg" 
             [class.scale]="!isLastContent()" 
             [class.disabled]="isLastContent()"
@@ -26,8 +27,8 @@
             >
         </div>
     </div>
-    <div *ngIf="this.contentGroupInfo.length > 1" class="center" [style.width]="">
-        <div *ngFor="let item of [].constructor(this.contentGroupInfo.length); let i = index">
+    <div *ngIf="this.contentGroupInfo.info.length > 1" class="center" [style.width]="">
+        <div *ngFor="let item of [].constructor(this.contentGroupInfo.info.length); let i = index">
             <img 
             *ngIf="i !== this.selectedContent" 
             src="../../../assets/svgs/white empty circle.svg" 

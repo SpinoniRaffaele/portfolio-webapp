@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MediaService } from '../media.service';
-import { ContentInfo } from './content-group.datamodel';
+import { ContentGroup, ContentInfo } from './content-group.datamodel';
 
 @Component({
   selector: 'app-content-group',
@@ -9,7 +9,7 @@ import { ContentInfo } from './content-group.datamodel';
 })
 export class ContentGroupComponent implements OnInit {
 
-  @Input() contentGroupInfo: ContentInfo[] = [{imagePath: '', text: ''}];
+  @Input() contentGroupInfo: ContentGroup = {info: [{imagePath: '', text: ''}], title: ''};
 
   selectedContent: number = 0;
 
@@ -22,7 +22,7 @@ export class ContentGroupComponent implements OnInit {
   }
 
   isLastContent(): boolean {
-    return this.selectedContent === this.contentGroupInfo.length - 1;
+    return this.selectedContent === this.contentGroupInfo.info.length - 1;
   }
 
   isFirstContent(): boolean {
