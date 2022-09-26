@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { LoaderService } from './shared/loader.service';
+import { MediaService } from './shared/media.service';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -14,7 +15,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      providers: [ LoaderService, HttpClient, HttpHandler ]
+      providers: [ LoaderService, HttpClient, HttpHandler, MediaService ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

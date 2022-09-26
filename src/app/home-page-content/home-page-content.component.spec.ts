@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MediaService } from '../shared/media.service';
 
 import { HomePageContentComponent } from './home-page-content.component';
 
@@ -8,7 +9,8 @@ describe('HomePageContentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageContentComponent ]
+      declarations: [ HomePageContentComponent ],
+      providers: [MediaService]
     })
     .compileComponents();
 

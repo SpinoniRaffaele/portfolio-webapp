@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MediaService } from '../shared/media.service';
 
 import { ThemeSelectorComponent } from './theme-selector.component';
 
@@ -8,7 +9,8 @@ describe('ThemeSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeSelectorComponent ]
+      declarations: [ ThemeSelectorComponent ],
+      providers: [MediaService]
     })
     .compileComponents();
 

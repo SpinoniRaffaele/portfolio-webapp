@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MediaService } from '../media.service';
 
 import { ContentGroupComponent } from './content-group.component';
 
@@ -8,7 +9,8 @@ describe('ContentGroupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentGroupComponent ]
+      declarations: [ ContentGroupComponent ],
+      providers: [MediaService]
     })
     .compileComponents();
 
