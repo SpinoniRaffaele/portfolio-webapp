@@ -21,11 +21,15 @@ import { ContentGroupComponent } from './shared/content-group/content-group.comp
 import { ContentComponent } from './shared/content-group/content/content.component';
 import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
 
+declare var Hammer: any;
+
 @Injectable()
-export class HammerConfig extends HammerGestureConfig {
-  override = <any> {
-      'pinch': { enable: false },
-      'rotate': { enable: false }
+export class MyHammerConfig extends HammerGestureConfig  {
+  override buildHammer(element: HTMLElement) {
+    let mc = new Hammer(element, {
+      touchAction: "pan-y"
+    });
+    return mc;
   }
 }
 
@@ -60,7 +64,7 @@ export class HammerConfig extends HammerGestureConfig {
     HttpClientModule,
     {
       provide: HAMMER_GESTURE_CONFIG,
-      useClass: HammerConfig
+      useClass: MyHammerConfig
     }
   ],
   bootstrap: [AppComponent]
