@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { Injectable, NgModule } from '@angular/core';
+import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,6 +21,13 @@ import { ContentGroupComponent } from './shared/content-group/content-group.comp
 import { ContentComponent } from './shared/content-group/content/content.component';
 import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
 
+@Injectable()
+export class HammerConfig extends HammerGestureConfig {
+  override = <any> {
+      'pinch': { enable: false },
+      'rotate': { enable: false }
+  }
+}
 
 @NgModule({
   declarations: [
@@ -51,6 +58,10 @@ import { ThemeSelectorComponent } from './theme-selector/theme-selector.componen
       provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
     },
     HttpClientModule,
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: HammerConfig
+    }
   ],
   bootstrap: [AppComponent]
 })
