@@ -25,5 +25,9 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
+    expect(component.sticky).toBeFalse();
+    expect(component.isMenuToggled).toBeFalse();
+    expect(component.isDark).toBeTrue();
+    expect(component.isDesktop).toBeTrue();
   });
 });

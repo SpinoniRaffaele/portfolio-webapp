@@ -21,5 +21,17 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component.isMenuToggled).toBeFalse();
+    expect(component.headerList).toBeDefined();
+  });
+
+  it('should toggle the menu correctly', () => {
+    component.toggleMenu({target: {checked: true}});
+    expect(component.isMenuToggled).toBeTrue();
+  });
+
+  it('should close the menu correctly', () => {
+    component.closeMenu();
+    expect(component.isMenuToggled).toBeFalse();
   });
 });

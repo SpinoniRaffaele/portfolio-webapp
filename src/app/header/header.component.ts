@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     this.isMenuToggledEmitter.emit(this.isMenuToggled);
   }
 
-  closeMenu(event: any) {
+  closeMenu() {
     this.isMenuToggled = false;
     this.isMenuToggledEmitter.emit(this.isMenuToggled);
   }

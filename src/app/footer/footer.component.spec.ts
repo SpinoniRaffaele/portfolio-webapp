@@ -20,4 +20,9 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a valid link', () => {
+    expect(component.sourceCodeLink).toBeDefined();
+    expect(component.sourceCodeLink).toMatch(/^https?:/);
+  });
 });

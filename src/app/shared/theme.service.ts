@@ -13,5 +13,9 @@ export class ThemeService {
   setTheme(isDark: boolean) {
     this.isDark.next(isDark);
   }
+
+  getTheme() {
+    return this.isDark.getValue();
+  }
   
 }

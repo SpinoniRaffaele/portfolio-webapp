@@ -20,4 +20,8 @@ describe('AboutMeContentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have content', () => {
+    expect(component.aboutMeContent).toBeDefined();
+  });
 });

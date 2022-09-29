@@ -17,7 +17,7 @@ export class ThemeSelectorComponent implements OnInit {
   constructor(private mediaService: MediaService, private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    this.isDark = this.themeService.isDark.getValue();
+    this.isDark = this.themeService.getTheme();
     this.mediaService.isDesktop$.subscribe(isDesktop => this.isDesktop = isDesktop);
   }
 
