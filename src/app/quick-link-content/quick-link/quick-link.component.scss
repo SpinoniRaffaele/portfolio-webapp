@@ -1,0 +1,31 @@
+.aggregator {
+    height: 25vw;
+    max-height: 200px;
+    width: 25vw;
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 2.5vh;
+    margin-top: 2.5vh;
+    background-color: rgba(250, 250, 250, 0.8);
+    filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+}
+
+.rotate {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 25vw;
+    max-width: 200px;
+    height: 25vw;
+    max-height: 200px;
+    padding: 10px;
+}
+
+.rotate:hover {
+    -webkit-animation:spin 0.5s linear 1;
+    -moz-animation:spin 0.5s linear 1;
+    animation:spin 0.5s linear 1;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

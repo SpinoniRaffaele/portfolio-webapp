@@ -20,6 +20,8 @@ import { AboutMeContentComponent } from './about-me-content/about-me-content.com
 import { ContentGroupComponent } from './shared/content-group/content-group.component';
 import { ContentComponent } from './shared/content-group/content/content.component';
 import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
+import { QuickLinkContentComponent } from './quick-link-content/quick-link-content.component';
+import { QuickLinkComponent } from './quick-link-content/quick-link/quick-link.component';
 
 declare var Hammer: any;
 
@@ -46,7 +48,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AboutMeContentComponent,
     ContentGroupComponent,
     ContentComponent,
-    ThemeSelectorComponent
+    ThemeSelectorComponent,
+    QuickLinkContentComponent,
+    QuickLinkComponent
   ],
   imports: [
     BrowserModule,
