@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   backGroundImagePath: string = '../assets/images/background_Home.png';
 
-  requiresBackGroundSubPath = ['Home', 'Quick%20Links'];
+  requiresBackGroundSubPath = ['Home', 'Quick%20Links', ''];
 
   sticky = false;
 
@@ -39,7 +39,8 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(ev => {
       if (ev instanceof NavigationStart) {
         if (this.isValidUrl(ev.url)) {
-          this.backGroundImagePath = "url('../assets/images/background_" + ev.url.substring(1) + ".png')";
+          const url: string = ev.url === '/' ? 'Home' : ev.url.substring(1); 
+          this.backGroundImagePath = "url('../assets/images/background_" + url + ".png')";
         } else {
           this.backGroundImagePath = "none";
         }
