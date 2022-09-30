@@ -27,7 +27,7 @@
             >
         </div>
     </div>
-    <div *ngIf="this.contentGroupInfo.info.length > 1" class="center" [style.width]="">
+    <div *ngIf="this.contentGroupInfo.info.length > 1" class="center-content-group" [style.width]="">
         <div *ngFor="let item of [].constructor(this.contentGroupInfo.info.length); let i = index">
             <img 
             *ngIf="i !== this.selectedContent" 
