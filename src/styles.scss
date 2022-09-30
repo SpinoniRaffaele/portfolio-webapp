@@ -6,6 +6,26 @@ $color: #b20d52;
 
 $textcolor: $light;
 
+.center {
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-self: center;
+    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.horizontal-center {
+    position: absolute;
+    left: 50%;
+    align-self: center;
+    text-align: center;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
 .no-margin {
     margin: 0%;
 }

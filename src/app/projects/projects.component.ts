@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-projects',
@@ -14,6 +15,21 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  const uluru = { lat: -25.344, lng: 131.031 };
+  //@ts-ignore
+  const map = new google.maps.Map(
+    document.getElementById("map") as HTMLElement,
+    {
+      zoom: 4,
+      center: uluru,
+    }
+  );
+
+  //@ts-ignore
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
   }
 
   checkPsw(pwd: string) {

@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   backGroundImagePath: string = '../assets/images/background_Home.png';
 
-  requiresBackGroundSubPath = ['Home', 'Quick%20Links', ''];
+  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects'];
 
   sticky = false;
 

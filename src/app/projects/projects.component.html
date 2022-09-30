@@ -1,36 +1,47 @@
-<div class="center-block blurry" *ngIf="!this.viewContent">
-    <input type="password" placeholder="Insert Password" class="input" #pwd>
-    <p *ngIf="this.tryAgain" class="font-general" style="margin-left: 10vw;">Wrong password, try again</p>
-    <button type="submit" class="button" (click)="checkPsw(pwd.value)">OK</button>
+  <div class="center-block blurry" style="background-color: rgba(0, 0, 0, 0);">
+    <p class="font-subtitle center"> 
+      <b>This section is a testing sandbox for different experimental features</b>
+    </p>
+  </div>
+
+  <div class="center-block blurry">
+    <p class="font-subtitle" style="text-align: center;">Google Maps API</p>
+    <div id="map"></div>
+  </div>
+  
+  <div class="center-block blurry" *ngIf="!this.viewContent">
+      <p class="font-subtitle" style="text-align: center;"> Password Checker </p>
+      <input type="password" placeholder="Insert Password" class="input" #pwd>
+      <p *ngIf="this.tryAgain" class="font-general" style="margin-left: 10vw;">Wrong password, try again</p>
+      <button type="submit" class="button" (click)="checkPsw(pwd.value)">OK</button>
+  </div>
+  
+  <div *ngIf="this.viewContent" class="center-block blurry height">
+      <textarea class="margin">
+          Termini e Condizioni:
+          - il weekend puo durare 
+            massimo 5 giorni;
+          - il presente buono 
+            perde validita nel 
+            qual caso in cui 
+            la nostra relazione 
+            venisse a termine;
+          - le decisioni concernanti
+            l'alloggio e 
+            le attivita sono 
+            scelte dal possessore 
+            del buono;
+          - il budget totale 
+            disponibile per il 
+            weekend 
+            non puo superare in 
+            totale i 600€ 💶;
+          - la perdita del buono 
+            comporta la perdita 
+            dell'offerta.
+      </textarea>
 </div>
 
-<div *ngIf="this.viewContent" class="center-block blurry height">
-    <textarea class="margin">
-        CONGRATULAZIONI!
-        Hai vinto un week-end 
-        a Venezia
-        con Raffaele🎉
-        
-        Termini e Condizioni:
-        - il weekend puo durare 
-          massimo 5 giorni;
-        - il presente buono 
-          perde validita nel 
-          qual caso in cui 
-          la nostra relazione 
-          venisse a termine;
-        - le decisioni concernanti
-          l'alloggio e 
-          le attivita sono 
-          scelte dal possessore 
-          del buono;
-        - il budget totale 
-          disponibile per il 
-          weekend 
-          non puo superare in 
-          totale i 600€ 💶;
-        - la perdita del buono 
-          comporta la perdita 
-          dell'offerta.
-    </textarea>
+<div style="height: 200vh;">
+
 </div>
