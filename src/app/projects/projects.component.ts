@@ -17,12 +17,14 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  askForCoords() {
     const location = window.navigator.geolocation;
     location.getCurrentPosition((pos) => {
       this.coords = pos.coords;
-      console.log(this.coords);
     }
-      , (error) => {console.log(error)});
+      , (error) => {this.coords = 'error';});
   }
 
   checkPsw(pwd: string) {
@@ -32,5 +34,9 @@ export class ProjectsComponent implements OnInit {
     else {
       this.tryAgain = true;
     }
+  }
+
+  openPlayStore() {
+    window.open('https://play.google.com/store/apps/details?id=it.kinito&hl=it&gl=US','_newtab');
   }
 }

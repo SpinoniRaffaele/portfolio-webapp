@@ -6,33 +6,55 @@
 
   <div class="center-block blurry">
     <p class="font-subtitle" style="text-align: center;">Kinito Application🍺</p>
-    <div class="font-general center"> 
+    <div class="font-general" style="text-align: center; padding-bottom: 10px;"> 
       A simple android native application developed in java
       <br>
-      <button>
-        BUTTON TEXT
+      <br>
+      <button class="play-store-button shadow" (click)="openPlayStore()">
       </button>
       <br>
-      Look at the source <a href="www.google.com">here</a>
+      <br>
+      Look at the source 
+      <a 
+      href="https://github.com/SpinoniRaffaele/Kinito" 
+      class="no-decoration underline"
+      target=”_blank”
+      >
+      🔗here
+      </a>
     </div>
   </div>
 
   <div class="center-block blurry">
     <p class="font-subtitle" style="text-align: center;">Show my Coordinates</p>
-    <div *ngIf="this.coords !== undefined" class="font-general center"> 
+    <div *ngIf="this.coords === undefined" class="font-general center">
+      <button (click)="askForCoords()" class="button-proj">
+        Ask for coords
+      </button>
+    </div>
+    <div *ngIf="this.coords === 'error'" class="font-general center">
+      Error retrieving coordinates
+      <button (click)="askForCoords()" class="button-proj">
+        Retry
+      </button>
+    </div>
+    <div *ngIf="this.coords !== undefined && this.coords !== 'error'" class="font-general center"> 
       Latitude: {{this.coords.latitude}}
       <br>
       Longitude: {{this.coords.longitude}}
       <br>
       Precision: {{this.coords.accuracy}} </div>
       <br>
-  </div>
+    </div>
   
   <div class="center-block blurry" *ngIf="!this.viewContent">
+    <div class="center">
       <p class="font-subtitle" style="text-align: center;"> Password Checker </p>
       <input type="password" placeholder="Insert Password" class="input" #pwd>
-      <p *ngIf="this.tryAgain" class="font-general" style="margin-left: 10vw;">Wrong password, try again</p>
-      <button type="submit" class="button" (click)="checkPsw(pwd.value)">OK</button>
+      <p *ngIf="this.tryAgain" class="font-general">Wrong password, try again</p>
+      <br *ngIf="!this.tryAgain">
+      <button type="submit" class="button-proj" (click)="checkPsw(pwd.value)">OK</button>
+    </div>
   </div>
   
   <div *ngIf="this.viewContent" class="center-block blurry height">
@@ -59,4 +81,4 @@
             comporta la perdita 
             dell'offerta.
       </textarea>
-</div>
+  </div>

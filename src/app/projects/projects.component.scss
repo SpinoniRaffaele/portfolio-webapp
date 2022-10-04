@@ -1,5 +1,5 @@
 .center-block {
-    min-height: 150px;
+    min-height: 220px;
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 10vh;
@@ -8,21 +8,8 @@
 
 .input {
     margin-top: 5vh;
-    width: 60vw;
-    margin-left: 10vw;
-    border-radius: 15px;
-    background-color: lightgray;
-}
-
-.button {
-    margin-left: 35vw;
-    margin-right: 35vw;
-    margin-top: 3vh;
-    width: 10vw;
-    height: 50px;
-    border-radius: 15px;
-    background-color: lightgray;
-    margin-bottom: 3vh;
+    border-radius: 5px;
+    border-style: none;
 }
 
 .height {
@@ -37,4 +24,37 @@
     border-radius: 15px;
     height: 420px;
     background-color: lightgray;
+}
+
+.play-store-button {
+    background-image: url('../../assets/images/googlePlayBadge.png');
+    background-repeat: none;
+    background-position: -20px -20px;
+    background-size: 120% 180%;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(230, 230, 230, 0.4));
+}
+
+.shadow:hover {
+    filter: drop-shadow(0px 0px 5px rgba(230, 230, 230, 0.8));
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+.button-proj {
+    margin-top: 10px;
+    min-width: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
