@@ -1,12 +1,31 @@
-  <div class="center-block blurry" style="background-color: rgba(0, 0, 0, 0);">
+  <div class="center-block blurry">
     <p class="font-subtitle center"> 
-      <b>This section is a testing sandbox for different experimental features</b>
+      <b>This section is presenting different experimental projects</b>
     </p>
   </div>
 
   <div class="center-block blurry">
-    <p class="font-subtitle" style="text-align: center;">Google Maps API</p>
-    <div id="map"></div>
+    <p class="font-subtitle" style="text-align: center;">Kinito Application🍺</p>
+    <div class="font-general center"> 
+      A simple android native application developed in java
+      <br>
+      <button>
+        BUTTON TEXT
+      </button>
+      <br>
+      Look at the source <a href="www.google.com">here</a>
+    </div>
+  </div>
+
+  <div class="center-block blurry">
+    <p class="font-subtitle" style="text-align: center;">Show my Coordinates</p>
+    <div *ngIf="this.coords !== undefined" class="font-general center"> 
+      Latitude: {{this.coords.latitude}}
+      <br>
+      Longitude: {{this.coords.longitude}}
+      <br>
+      Precision: {{this.coords.accuracy}} </div>
+      <br>
   </div>
   
   <div class="center-block blurry" *ngIf="!this.viewContent">

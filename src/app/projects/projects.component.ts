@@ -12,24 +12,17 @@ export class ProjectsComponent implements OnInit {
 
   tryAgain = false;
 
+  coords: any = undefined;
+
   constructor() { }
 
   ngOnInit(): void {
-  const uluru = { lat: -25.344, lng: 131.031 };
-  //@ts-ignore
-  const map = new google.maps.Map(
-    document.getElementById("map") as HTMLElement,
-    {
-      zoom: 4,
-      center: uluru,
+    const location = window.navigator.geolocation;
+    location.getCurrentPosition((pos) => {
+      this.coords = pos.coords;
+      console.log(this.coords);
     }
-  );
-
-  //@ts-ignore
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-  });
+      , (error) => {console.log(error)});
   }
 
   checkPsw(pwd: string) {
@@ -40,5 +33,4 @@ export class ProjectsComponent implements OnInit {
       this.tryAgain = true;
     }
   }
-
 }
