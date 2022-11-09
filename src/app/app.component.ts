@@ -12,9 +12,9 @@ import { ThemeService } from './shared/theme.service';
 })
 export class AppComponent implements OnInit {
 
-  backGroundImagePath: string = '../assets/images/background_Home.png';
+  backGroundImagePath: string = "url('../assets/images/background_Home.png')";
 
-  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects'];
+  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects', ''];
 
   sticky = false;
 
