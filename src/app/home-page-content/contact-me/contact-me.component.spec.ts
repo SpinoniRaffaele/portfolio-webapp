@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subject } from 'rxjs';
 import { LoaderService } from 'src/app/shared/loader.service';
 import { MailAPIService } from 'src/app/shared/mail-api.service';
+import { MediaService } from 'src/app/shared/media.service';
 
 import { ContactMeComponent } from './contact-me.component';
 
@@ -21,6 +22,7 @@ describe('ContactMeComponent', () => {
       providers: [ 
         {provide: MailAPIService, useValue: mailAPISpy},
         {provide: NgbModal, useValue: modalSpy}, 
+        MediaService,
         FormBuilder, 
         LoaderService, 
         HttpClient, 

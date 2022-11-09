@@ -26,7 +26,22 @@
                 <br><br>
                 <hr>
             </div>
-            <app-contact-me></app-contact-me>
+            <div [class.horizontal-grid]="this.isDesktop" [class.vertical-grid]="!this.isDesktop">
+                <div #empty></div>
+                <div class="center-contact-me">
+                    <button class="submit get-in-touch">
+                      <a href="../../assets/pdf/cv_eng_2.0.pdf" download class="little-blurry focused">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Download CV
+                      </a>
+                      </button>
+                </div>
+                <app-contact-me></app-contact-me>
+                <div #empty></div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,15 +1,18 @@
-import { Component, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderService } from 'src/app/shared/loader.service';
 import { MailAPIService } from 'src/app/shared/mail-api.service';
+import { MediaService } from 'src/app/shared/media.service';
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements OnInit {
+
+  isDesktop = true;
 
   readonly mailRegEx: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -25,6 +28,7 @@ export class ContactMeComponent {
     private modalService: NgbModal, 
     private mailAPIService: MailAPIService, 
     private formBuilder: FormBuilder,
+    private mediaService: MediaService,
     public loaderService: LoaderService) {
       this.formGroup = this.formBuilder.group({
         email: new FormControl('', [Validators.required, Validators.pattern(this.mailRegEx)]),
@@ -32,6 +36,10 @@ export class ContactMeComponent {
       });
       this.sendEmpty = false;
     }
+
+  ngOnInit() {
+    this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
+  }
 
   openDialog(content: TemplateRef<any>) {
     this.modal = this.modalService.open(content);

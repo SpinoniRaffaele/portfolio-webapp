@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .title-phone {
     margin-top: 10vh;
     width: 80%;
@@ -22,22 +24,37 @@
 .text-area-position-phone {
     margin: auto;
     width: 60%;
+    min-width: 280px;
 }
 
 .text-area-position {
     margin-left: 10vw;
     width: 40%;
+    min-width: 480px;
 }
 
 .text-area {
     margin-top: 10vh;
-    height: 400px;
     margin-bottom: 12vh;
-    min-width: 280px;
+    padding-bottom: 30px;
 }
 
 .padding {
     padding-top: 50px;
     padding-right: 50px;
     padding-left: 50px;
+}
+
+.horizontal-grid {
+    display: grid;
+    grid-template-columns: 8% 42% 42% 8%;   
+}
+
+.vertical-grid {
+    display: grid;
+    grid-template-rows: 0px 70px 70px 0px;
+}
+
+.focused {
+    background: $color;
 }
