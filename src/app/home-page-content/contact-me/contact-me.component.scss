@@ -1,4 +1,4 @@
-$color: #b20d52;
+@import '../../../colors.scss';
 
 .invalid-label {
   margin-top: 3px;
@@ -15,7 +15,6 @@ $color: #b20d52;
   outline:none;
   border-radius: 5px;
   cursor:pointer;
-
 }
 
 .modal_{
