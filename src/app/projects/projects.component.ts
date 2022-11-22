@@ -20,10 +20,9 @@ export class ProjectsComponent {
   askForCoords() {
     const location = window.navigator.geolocation;
     location.getCurrentPosition((pos) => {
-      console.log(pos);
       this.coords = pos.coords;
     }
-      , (error) => {this.coords = 'error'; console.log(error)});
+      , (error) => {this.coords = 'error';});
   }
 
   openPlayStore() {

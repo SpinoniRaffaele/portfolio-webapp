@@ -26,7 +26,7 @@
   <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
     <p class="font-subtitle v-padding" style="text-align: center;">Show Coordinates</p>
     <div *ngIf="this.coords === undefined" class="font-general h-center">
-      <div class="h-center v-padding" >
+      <div class="h-center v-padding">
         <button class="submit get-in-touch" (click)="askForCoords()">
             <a class="little-blurry">
                 <span></span>
@@ -40,6 +40,7 @@
     </div>
     <div *ngIf="this.coords === 'error'" class="font-general">
       Error retrieving coordinates
+      <br>
       <button (click)="askForCoords()" class="button-proj">
         Retry
       </button>

@@ -8,7 +8,7 @@ import { MeteoApiData, TimePointData } from './meteo-api.datamodel';
 })
 export class MeteoApiService {
 
-  private readonly BASE_PATH = 'http://www.7timer.info/bin/api.pl';
+  private readonly BASE_PATH = 'https://www.7timer.info/bin/api.pl';
 
   private readonly DEFAULT_LATITUDE = 23;
 
