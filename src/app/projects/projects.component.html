@@ -1,12 +1,10 @@
-  <div class="center-block blurry">
-    <p class="font-subtitle center"> 
-      <b>This section is presenting different experimental projects</b>
-    </p>
+  <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
+    <app-meteo-visualizer></app-meteo-visualizer>
   </div>
 
-  <div class="center-block blurry">
-    <p class="font-subtitle" style="text-align: center;">Kinito Application🍺</p>
-    <div class="font-general" style="text-align: center; padding-bottom: 10px;"> 
+  <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
+    <p class="font-subtitle v-padding" style="text-align: center;">Kinito Application🍺</p>
+    <div class="font-general v-padding" style="text-align: center;"> 
       A simple android native application developed in java
       <br>
       <br>
@@ -25,20 +23,28 @@
     </div>
   </div>
 
-  <div class="center-block blurry">
-    <p class="font-subtitle" style="text-align: center;">Show my Coordinates</p>
-    <div *ngIf="this.coords === undefined" class="font-general center">
-      <button (click)="askForCoords()" class="button-proj">
-        Ask for coords
-      </button>
+  <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
+    <p class="font-subtitle v-padding" style="text-align: center;">Show Coordinates</p>
+    <div *ngIf="this.coords === undefined" class="font-general h-center">
+      <div class="h-center v-padding" >
+        <button class="submit get-in-touch" (click)="askForCoords()">
+            <a class="little-blurry">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Ask for coords
+            </a>
+        </button>
     </div>
-    <div *ngIf="this.coords === 'error'" class="font-general center">
+    </div>
+    <div *ngIf="this.coords === 'error'" class="font-general">
       Error retrieving coordinates
       <button (click)="askForCoords()" class="button-proj">
         Retry
       </button>
     </div>
-    <div *ngIf="this.coords !== undefined && this.coords !== 'error'" class="font-general center"> 
+    <div *ngIf="this.coords !== undefined && this.coords !== 'error'" class="font-general" style="text-align: center;"> 
       Latitude: {{this.coords.latitude}}
       <br>
       Longitude: {{this.coords.longitude}}
@@ -46,39 +52,3 @@
       Precision: {{this.coords.accuracy}} </div>
       <br>
     </div>
-  
-  <div class="center-block blurry" *ngIf="!this.viewContent">
-    <div class="center">
-      <p class="font-subtitle" style="text-align: center;"> Password Checker </p>
-      <input type="password" placeholder="Insert Password" class="input" #pwd>
-      <p *ngIf="this.tryAgain" class="font-general">Wrong password, try again</p>
-      <br *ngIf="!this.tryAgain">
-      <button type="submit" class="button-proj" (click)="checkPsw(pwd.value)">OK</button>
-    </div>
-  </div>
-  
-  <div *ngIf="this.viewContent" class="center-block blurry height">
-      <textarea class="margin">
-          Termini e Condizioni:
-          - il weekend puo durare 
-            massimo 5 giorni;
-          - il presente buono 
-            perde validita nel 
-            qual caso in cui 
-            la nostra relazione 
-            venisse a termine;
-          - le decisioni concernanti
-            l'alloggio e 
-            le attivita sono 
-            scelte dal possessore 
-            del buono;
-          - il budget totale 
-            disponibile per il 
-            weekend 
-            non puo superare in 
-            totale i 600€ 💶;
-          - la perdita del buono 
-            comporta la perdita 
-            dell'offerta.
-      </textarea>
-  </div>

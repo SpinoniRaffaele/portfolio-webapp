@@ -1,28 +1,18 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'colors.scss';
 
-.center {
-    width: 80vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    align-self: center;
-    text-align: center;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.horizontal-center {
-    position: absolute;
-    left: 50%;
-    align-self: center;
-    text-align: center;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+.h-center {
+	margin: auto;
+	width: fit-content;
 }
 
 .no-margin {
     margin: 0%;
+}
+
+.v-padding {
+	padding-top: 20px; 
+	padding-bottom: 20px;
 }
 
 .background-gradient-dark {
@@ -35,7 +25,8 @@
 
 .blurry {
     background-color: rgba(0, 0, 0, 0.30);
-    backdrop-filter: blur(2px);
+    //backdrop-filter: blur(2px);  
+    //todo: check how to enable this without breaking firefox
     border-radius: 15px;
 }
 
@@ -228,4 +219,8 @@ margin-bottom: 10px;
     50%,100% {  
       bottom: 100%;
     }
+  }
+
+  .focused {
+    background: $color;
   }

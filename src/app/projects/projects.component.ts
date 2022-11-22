@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MediaService } from '../shared/media.service';
 
 
 @Component({
@@ -6,34 +7,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
-
-  viewContent = false;
-
-  tryAgain = false;
+export class ProjectsComponent {
 
   coords: any = undefined;
 
-  constructor() { }
+  isDesktop = false;
 
-  ngOnInit(): void {
+  constructor(private mediaService: MediaService) {
+    this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
   askForCoords() {
     const location = window.navigator.geolocation;
     location.getCurrentPosition((pos) => {
+      console.log(pos);
       this.coords = pos.coords;
     }
-      , (error) => {this.coords = 'error';});
-  }
-
-  checkPsw(pwd: string) {
-    if (pwd === 'CONNARD123') {
-      this.viewContent = true;
-    }
-    else {
-      this.tryAgain = true;
-    }
+      , (error) => {this.coords = 'error'; console.log(error)});
   }
 
   openPlayStore() {

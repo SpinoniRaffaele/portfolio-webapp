@@ -1,0 +1,21 @@
+.h-scrolling {
+	overflow: scroll;
+	overflow-y: hidden !important;
+	white-space: nowrap;
+    width:80vw;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.phone-width {
+	width: 96vw;
+}
+
+.h-scrolling-element {
+    display: inline-block;
+	margin-left: 10px;
+}
+
+.loading-opacity {
+	opacity: 0.5;
+}

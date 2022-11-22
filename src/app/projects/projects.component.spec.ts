@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MediaService } from '../shared/media.service';
 
 import { ProjectsComponent } from './projects.component';
 
@@ -8,7 +9,8 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectsComponent ]
+      declarations: [ ProjectsComponent ],
+      providers: [MediaService]
     })
     .compileComponents();
 

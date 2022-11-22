@@ -1,0 +1,22 @@
+<div class="contour blurry font-general">
+    <p style="text-align: center; padding-top: 20px">{{ this.dateTime | date: 'short' }}</p>
+
+    <div class="h-center">
+        <img src="{{getWeatherImage()}}"/>
+    </div>
+    <br>
+    <p class="center-text">{{ this.instantMeteoData.temp2m? this.instantMeteoData.temp2m + '°C' : '' }}</p>
+
+    <p class="center-text"> 
+        {{ this.instantMeteoData.prec_amount | precipitationAmount }} 
+    </p>
+
+    <div class="h-center">
+        <img src="{{getWindImage()}}"/>
+    </div>
+
+    <p class="center-text">
+        {{getWindSpeed()}}
+    </p>
+
+</div>

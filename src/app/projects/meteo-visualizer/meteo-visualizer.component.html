@@ -1,0 +1,26 @@
+<div class="font-subtitle v-padding" style="text-align: center;">
+    Meteo Application
+</div>
+<div class="h-scrolling" [class.phone-width]="!this.isDesktop">
+    <div *ngFor="let timePoint of this.meteoState" class="h-scrolling-element">
+        <app-meteo-time-point [instantMeteoData]="timePoint" [class.loading-opacity]="this.loading">
+        </app-meteo-time-point>
+    </div>
+</div>
+<div class="h-center v-padding" *ngIf="this.validPosition; else positionError">
+    <button class="submit get-in-touch" (click)="refresh()">
+        <a class="little-blurry" [class.focused]="!this.loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            {{ this.loading ? 'Loading...' : 'Refresh' }}
+        </a>
+    </button>
+</div>
+
+<ng-template #positionError>
+    <p style="text-align: center;" class="font-general">
+        Allow the browser to access your position in order to retrieve meteo data
+    </p>
+</ng-template>

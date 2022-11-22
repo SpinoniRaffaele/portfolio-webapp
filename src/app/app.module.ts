@@ -22,6 +22,9 @@ import { ContentComponent } from './shared/content-group/content/content.compone
 import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
 import { QuickLinkContentComponent } from './quick-link-content/quick-link-content.component';
 import { QuickLinkComponent } from './quick-link-content/quick-link/quick-link.component';
+import { MeteoVisualizerComponent } from './projects/meteo-visualizer/meteo-visualizer.component';
+import { MeteoTimePointComponent } from './projects/meteo-visualizer/meteo-time-point/meteo-time-point.component';
+import { PrecipitationAmountPipe } from './projects/meteo-visualizer/precipitation-amount.pipe';
 
 declare var Hammer: any;
 
@@ -50,7 +53,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     ContentComponent,
     ThemeSelectorComponent,
     QuickLinkContentComponent,
-    QuickLinkComponent
+    QuickLinkComponent,
+    MeteoVisualizerComponent,
+    MeteoTimePointComponent,
+    PrecipitationAmountPipe
   ],
   imports: [
     BrowserModule,
