@@ -24,4 +24,32 @@ describe('MeteoVisualizerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should ask for current position', () => {
+    spyOn(window.navigator.geolocation, 'getCurrentPosition');
+    component.ngOnInit();
+    expect(window.navigator.geolocation.getCurrentPosition).toHaveBeenCalled();
+  });
+
+  it('should initialize the meteo API', () => {
+    spyOn(component.meteoApiService, 'requestMeteoClientData');
+    component.initializeMeteo({coords: {longitude: 1, latitude: 2}});
+    expect(component.meteoApiService.requestMeteoClientData).toHaveBeenCalled();
+    expect(component.loading).toEqual(true);
+  });
+
+  it('should call the meteo API on refresh', () => {
+    spyOn(component.meteoApiService, 'requestMeteoClientData');
+    component.loading = false;
+    component.refresh();
+    expect(component.meteoApiService.requestMeteoClientData).toHaveBeenCalled();
+    expect(component.loading).toEqual(true);
+  });
+
+  it('should not call the meteo API on refresh if another call is ongoing', () => {
+    spyOn(component.meteoApiService, 'requestMeteoClientData');
+    component.loading = true;
+    component.refresh();
+    expect(component.meteoApiService.requestMeteoClientData).not.toHaveBeenCalled();
+  });
 });

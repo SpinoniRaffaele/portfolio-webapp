@@ -1,4 +1,4 @@
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpParams } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
 import { MailAPIService } from './mail-api.service';
@@ -22,5 +22,13 @@ describe('MailAPIService', () => {
     const content = "text with # invalid ? character / =  done.";
     const actual = service.whitelistContent(content);
     expect(actual).toEqual('text with _ invalid _ character _ _  done.');
+  });
+
+  it('should send the email with the correct headers', () => {
+    spyOn(service.http, 'get');
+    const sender = 'sender@mail.com';
+    const content = 'thecontentoftheemail';
+    service.sendMail(sender, content);
+    expect(service.http.get).toHaveBeenCalled();
   });
 });

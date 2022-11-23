@@ -9,7 +9,7 @@ export class MailAPIService {
 
   private readonly baseUrl = 'https://portfolio-webapp-spinoniraffaele.vercel.app/api/sendMail';
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
   sendMail(sender: string, content: string): Observable<any> {
 

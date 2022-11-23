@@ -19,9 +19,7 @@ export interface MeteoApiData {
     product?: string
 }
 
-export enum WindDirection {
-    N, NE, E, SE, S, SW, W, NW
-}
+export type WindDirection = "N" | "NE" | "E" | "SE" | "S" | "SW" | "W" | "NW";
 
 export type WindIntensity = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 

@@ -20,7 +20,7 @@ export class MeteoApiService {
 
   public meteoState: Subject<TimePointData[]> = new Subject();
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
   }
 
   requestMeteoClientData(latitude: number, longitude: number) {

@@ -1,3 +1,4 @@
+import { EmbeddedViewRef, TemplateRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MediaService } from '../../media.service';
 
@@ -21,5 +22,11 @@ describe('ContentComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should open the image with fullscreen size', () => {
+    spyOn(component.modalService, 'open');
+    component.openDialog({elementRef: {nativeElement: undefined}, createEmbeddedView: (): any => {}});
+    expect(component.modalService.open).toHaveBeenCalledOnceWith(jasmine.anything(),  { fullscreen: true });
   });
 });

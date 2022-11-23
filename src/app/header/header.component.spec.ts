@@ -26,12 +26,16 @@ describe('HeaderComponent', () => {
   });
 
   it('should toggle the menu correctly', () => {
+    spyOn(component.isMenuToggledEmitter, 'emit');
     component.toggleMenu({target: {checked: true}});
     expect(component.isMenuToggled).toBeTrue();
+    expect(component.isMenuToggledEmitter.emit).toHaveBeenCalledWith(true);
   });
 
   it('should close the menu correctly', () => {
+    spyOn(component.isMenuToggledEmitter, 'emit');
     component.closeMenu();
     expect(component.isMenuToggled).toBeFalse();
+    expect(component.isMenuToggledEmitter.emit).toHaveBeenCalledWith(false);
   });
 });

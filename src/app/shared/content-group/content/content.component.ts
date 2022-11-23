@@ -17,7 +17,7 @@ export class ContentComponent implements OnInit {
 
   isDesktop = true;
 
-  constructor(private readonly mediaService: MediaService, private modalService: NgbModal) { }
+  constructor(private readonly mediaService: MediaService, public modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);

@@ -22,22 +22,26 @@ export class MeteoVisualizerComponent implements OnInit {
 
   validPosition: boolean = false;
 
-  constructor(private meteoApiService: MeteoApiService, private mediaService: MediaService) {
+  constructor(public meteoApiService: MeteoApiService, private mediaService: MediaService) {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
   ngOnInit(): void {
     const location = window.navigator.geolocation;
-    location.getCurrentPosition((pos) => {
-      this.latitude = pos.coords.latitude;
-      this.longitude = pos.coords.longitude;
-      this.validPosition = true;
-      this.loading = true;
-      this.meteoApiService.requestMeteoClientData(this.latitude, this.longitude);
-      this.meteoApiService.meteoState.subscribe(state => {
-        this.meteoState = state;
-        this.loading = false;
-      });
+    location.getCurrentPosition((position) => {
+      this.initializeMeteo(position);
+    });
+  }
+
+  initializeMeteo(pos: any) {
+    this.latitude = pos.coords.latitude;
+    this.longitude = pos.coords.longitude;
+    this.validPosition = true;
+    this.loading = true;
+    this.meteoApiService.requestMeteoClientData(this.latitude, this.longitude);
+    this.meteoApiService.meteoState.subscribe(state => {
+      this.meteoState = state;
+      this.loading = false;
     });
   }
 

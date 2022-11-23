@@ -7,3 +7,13 @@ export interface ContentGroup {
     info: ContentInfo[],
     title: string
 }
+
+export const emptyGroup: ContentGroup = {
+    info: [
+        {
+            imagePath: '', 
+            text: ''
+        }
+    ], 
+    title: ''
+};

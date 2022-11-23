@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MediaService } from '../media.service';
-import { ContentGroup, ContentInfo } from './content-group.datamodel';
+import { ContentGroup, ContentInfo, emptyGroup } from './content-group.datamodel';
 
 @Component({
   selector: 'app-content-group',
@@ -9,7 +9,7 @@ import { ContentGroup, ContentInfo } from './content-group.datamodel';
 })
 export class ContentGroupComponent implements OnInit {
 
-  @Input() contentGroupInfo: ContentGroup = {info: [{imagePath: '', text: ''}], title: ''};
+  @Input() contentGroupInfo: ContentGroup = emptyGroup;
 
   selectedContent: number = 0;
 
