@@ -35,7 +35,7 @@ export class MeteoApiService {
       if (answerCasted.dataseries) {
         this.meteoState.next(answerCasted.dataseries);
       } else {
-        //todo: error handling
+        this.meteoState.next([]);
       }
     });
   }

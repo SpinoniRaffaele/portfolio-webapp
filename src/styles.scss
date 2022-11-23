@@ -11,7 +11,7 @@
 }
 
 .v-padding {
-	padding-top: 20px; 
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
@@ -24,9 +24,9 @@
 }
 
 .blurry {
-    background-color: rgba(0, 0, 0, 0.30);
-    //backdrop-filter: blur(2px);  
-    //todo: check how to enable this without breaking firefox
+    background-color: hsla(0, 0, 0, 0.30);
+    //backdrop-filter: blur(2px);
+    //todo: add blur when firefox is ok with it
     border-radius: 15px;
 }
 

@@ -1,7 +1,15 @@
-<div class="font-subtitle v-padding" style="text-align: center;">
+<div class="info-padding">
+    <img 
+    src ="../../../assets/svgs/info.svg" 
+    ngbTooltip="The information present here are retrieved directly from www.7timer.info/doc.php
+    As a developer I'm not responsible for the forecast reliability"
+    >
+</div>
+<div class="font-subtitle" style="text-align: center;">
     Meteo Application
 </div>
-<div class="h-scrolling" [class.phone-width]="!this.isDesktop">
+
+<div class="h-scrolling" [class.phone-width]="!this.isDesktop" *ngIf="this.meteoState !== []; else apiError">
     <div *ngFor="let timePoint of this.meteoState" class="h-scrolling-element">
         <app-meteo-time-point [instantMeteoData]="timePoint" [class.loading-opacity]="this.loading">
         </app-meteo-time-point>
@@ -19,8 +27,20 @@
     </button>
 </div>
 
+
+<ng-template #apiError>
+    <p style="text-align: center;" class="font-general">
+        Error response from the meteo API
+    </p>
+</ng-template>
+
 <ng-template #positionError>
     <p style="text-align: center;" class="font-general">
         Allow the browser to access your position in order to retrieve meteo data
     </p>
+</ng-template>
+
+<ng-template #tooltip>
+    The information present here are retrieved directly from www.7timer.info/doc.php
+    <br> As a developer I'm not responsible for the forecast content
 </ng-template>

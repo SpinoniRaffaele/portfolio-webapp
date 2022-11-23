@@ -19,3 +19,13 @@
 .loading-opacity {
 	opacity: 0.5;
 }
+
+.h-grid {
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+.info-padding {
+	padding-top: 3px;
+	padding-left: 3px;
+}
