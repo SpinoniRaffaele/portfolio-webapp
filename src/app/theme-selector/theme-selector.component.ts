@@ -1,14 +1,25 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { last, lastValueFrom } from 'rxjs';
 import { MediaService } from '../shared/media.service';
 import { ThemeService } from '../shared/theme.service';
 
 @Component({
   selector: 'app-theme-selector',
   templateUrl: './theme-selector.component.html',
-  styleUrls: ['./theme-selector.component.scss']
+  styleUrls: ['./theme-selector.component.scss'],
+  animations:  [
+    trigger('animationTrigger', [
+      state('in', style({})),
+      transition('void => *', [
+        style({'opacity':'0'}), 
+        animate(1000)
+      ])
+    ])
+  ]
 })
 export class ThemeSelectorComponent implements OnInit {
+
+  animationState = '';
 
   isDark = true;
 

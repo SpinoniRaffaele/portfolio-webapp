@@ -2,23 +2,19 @@
 [class.background-gradient-dark]="this.isDark" 
 [class.background-gradient-white]="!this.isDark"
 >
-    <div *ngIf="this.loaderService.getLoading() && this.loaderService.isFirstLoading(); else loadedBlock">
-        <app-loader></app-loader>
-    </div>
-    <ng-template #loadedBlock>
+    <div 
+    class="shape3d dim" 
+    [class.shape-position-phone]="!isDesktop" 
+    [style.background-image]="backGroundImagePath"
+    >
+        <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
 
-        <div 
-        class="shape3d dim" 
-        [class.shape-position-phone]="!isDesktop" 
-        [style.background-image]="backGroundImagePath"
-        >
-            <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
+        <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky"></app-theme-selector>
 
-            <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky"></app-theme-selector>
-    
+        <div [@animationTrigger]="this.animationState">
             <router-outlet></router-outlet>
-        
-            <app-footer></app-footer>
         </div>
-    </ng-template>
+    
+        <app-footer></app-footer>
+    </div>
 </div>

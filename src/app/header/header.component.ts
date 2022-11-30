@@ -1,11 +1,26 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, HostBinding, OnInit, Output } from '@angular/core';
 import { MediaService } from '../shared/media.service';
 import { headerList } from './header.datamodel';
 
+const disappearedMenuStyle: any = {'opacity':'0', 'transform': 'translateY(-400px)'};
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations:  [
+    trigger('animationTrigger', [
+      state('in', style({})),
+      transition('void => *', [
+        style(disappearedMenuStyle), 
+        animate('0.3s ease-out')
+      ]),
+      transition('* => void', 
+        animate('0.3s ease-in', style(disappearedMenuStyle))
+      )
+    ])
+  ]
 })
 export class HeaderComponent implements OnInit {
 
@@ -25,13 +40,8 @@ export class HeaderComponent implements OnInit {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
-  toggleMenu(event: any) {
-    this.isMenuToggled = event.target.checked;
-    this.isMenuToggledEmitter.emit(this.isMenuToggled);
-  }
-
-  closeMenu() {
-    this.isMenuToggled = false;
-    this.isMenuToggledEmitter.emit(this.isMenuToggled);
+  toggleMenu(isOpening: boolean) {
+      this.isMenuToggled = isOpening;
+      this.isMenuToggledEmitter.emit(this.isMenuToggled);
   }
 }

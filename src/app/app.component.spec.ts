@@ -1,8 +1,8 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { LoaderService } from './shared/loader.service';
 import { MediaService } from './shared/media.service';
 
 describe('AppComponent', () => {
@@ -11,11 +11,11 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
       declarations: [
         AppComponent
       ],
-      providers: [ LoaderService, HttpClient, HttpHandler, MediaService ]
+      providers: [ HttpClient, HttpHandler, MediaService ],
+      imports: [RouterTestingModule, BrowserAnimationsModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

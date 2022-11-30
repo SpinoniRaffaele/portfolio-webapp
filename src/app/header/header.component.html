@@ -21,7 +21,7 @@
         <div class="image shadow">
         </div>
         <div class="nav-container">
-            <input class="checkbox" type="checkbox" [checked]="isMenuToggled" (click)="toggleMenu($event)"/>
+            <input class="checkbox" type="checkbox" [checked]="isMenuToggled" (click)="toggleMenu($event.target.checked)"/>
             <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -29,7 +29,7 @@
             </div>  
         </div>
     </div>
-    <div *ngIf="isMenuToggled" class="no-margin">
-        <app-header-menu (menuItemSelected)="closeMenu()"></app-header-menu>
+    <div *ngIf="isMenuToggled" class="no-margin" [@animationTrigger]="animationState">
+        <app-header-menu (menuItemSelected)="toggleMenu(false)"></app-header-menu>
     </div>
 </ng-template>

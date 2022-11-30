@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MediaService } from '../shared/media.service';
 import { ThemeService } from '../shared/theme.service';
 
@@ -16,7 +17,8 @@ describe('ThemeSelectorComponent', () => {
       providers: [
         MediaService, 
         {provide: ThemeService, useValue: themeSpy}
-      ]
+      ],
+      imports: [BrowserAnimationsModule]
     })
     .compileComponents();
 

@@ -1,10 +1,9 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { EmbeddedViewRef, inject, Injector, TemplateRef } from '@angular/core';
+import { EmbeddedViewRef, Injector } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subject } from 'rxjs';
-import { LoaderService } from 'src/app/shared/loader.service';
 import { MailAPIService } from 'src/app/shared/mail-api.service';
 import { MediaService } from 'src/app/shared/media.service';
 
@@ -24,7 +23,6 @@ describe('ContactMeComponent', () => {
         {provide: NgbModal, useValue: modalSpy}, 
         MediaService,
         FormBuilder, 
-        LoaderService, 
         HttpClient, 
         HttpHandler ]
     })

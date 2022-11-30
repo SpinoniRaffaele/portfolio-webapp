@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { LoaderService } from 'src/app/shared/loader.service';
 import { MailAPIService } from 'src/app/shared/mail-api.service';
 import { MediaService } from 'src/app/shared/media.service';
 
@@ -24,12 +23,13 @@ export class ContactMeComponent implements OnInit {
 
   formGroup: FormGroup;
 
+  isLoading: boolean = false;;
+
   constructor(
     private modalService: NgbModal, 
     private mailAPIService: MailAPIService, 
     private formBuilder: FormBuilder,
-    private mediaService: MediaService,
-    public loaderService: LoaderService) {
+    private mediaService: MediaService) {
       this.formGroup = this.formBuilder.group({
         email: new FormControl('', [Validators.required, Validators.pattern(this.mailRegEx)]),
         body: new FormControl('', [Validators.required])
@@ -47,11 +47,11 @@ export class ContactMeComponent implements OnInit {
 
   onSubmit() {
     if (this.formGroup.valid) {
-      this.loaderService.setLoading(true);
+      this.isLoading = true;
       this.sendButtonMessage = 'Sending...';
       this.mailAPIService.sendMail(this.formGroup.controls['email'].value, this.formGroup.controls['body'].value)
       .subscribe(res => {
-        this.loaderService.setLoading(false);
+        this.isLoading = false;
         if(this.mailAPIService.isResponseGood(res)) {
           this.handleSuccess();
         } else {
