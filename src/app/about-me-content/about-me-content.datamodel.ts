@@ -40,17 +40,17 @@ export const aboutMeContent: ContentGroup[] =
     info: [
 
         {
-            imagePath: '../../../assets/images/polimi.jpg',
+            imagePath: 'assets/images/polimi.jpg',
             text: developerText
         },
 
         {
-            imagePath: '../../../assets/images/backend-dev.png',
+            imagePath: 'assets/images/backend-dev.png',
             text: backendText
         },
 
         {
-            imagePath: '../../../assets/images/big-dev-screen.jpeg',
+            imagePath: 'assets/images/big-dev-screen.jpeg',
             text: frontEndText
         }
     ],
@@ -60,7 +60,7 @@ export const aboutMeContent: ContentGroup[] =
 {
     info: [
         {
-            imagePath: '../../../assets/images/medium_logo.png',
+            imagePath: 'assets/images/medium_logo.png',
             text: mediumText
         }
     ],
@@ -70,19 +70,19 @@ export const aboutMeContent: ContentGroup[] =
 {
     info: [
         {
-            imagePath: '../../../assets/images/ski.jpg',
+            imagePath: 'assets/images/ski.jpg',
             text: mountainText
         },
 
         {
-            imagePath: '../../../assets/images/mountain.jpg',
+            imagePath: 'assets/images/mountain.jpg',
             text: climbingText
         },
         {
-            imagePath: '../../../assets/images/eze-sunset.jpg',
+            imagePath: 'assets/images/eze-sunset.jpg',
             text: exploreText
         },
     ],
     title: 'Outdoor'
 }
-]
+];

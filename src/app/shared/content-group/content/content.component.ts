@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ImageLoaderService } from '../../image-loader.service';
 import { MediaService } from '../../media.service';
 
 @Component({
@@ -13,18 +14,23 @@ export class ContentComponent implements OnInit {
 
   private modal: any;
 
-  @Input() imagePath: string = "../../../assets/images/AngularLogo.png";
+  @Input() imagePath: string = '';
 
   isDesktop = true;
 
-  constructor(private readonly mediaService: MediaService, public modalService: NgbModal) { }
+  constructor(
+    private readonly mediaService: MediaService, 
+    public modalService: NgbModal, 
+    private imageLoader: ImageLoaderService
+  ) { }
 
   ngOnInit(): void {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
   wrapImagePath(imagePath: string): string {
-    return "url('" + imagePath + "')";
+    const imageSrc = this.imageLoader.loadImage(imagePath);
+    return "url('" + imageSrc + "')";
   }
 
   openDialog(content: TemplateRef<any>) {

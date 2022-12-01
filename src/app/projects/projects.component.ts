@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImageLoaderService } from '../shared/image-loader.service';
 import { MediaService } from '../shared/media.service';
 
 
@@ -13,7 +14,9 @@ export class ProjectsComponent {
 
   isDesktop = false;
 
-  constructor(private mediaService: MediaService) {
+  googlePlayImage = 'url("' + this.imageLoader.loadImage('assets/images/googlePlayBadge.png') + '")';
+
+  constructor(private mediaService: MediaService, public imageLoader: ImageLoaderService) {
     this.mediaService.isDesktop$.subscribe(value => this.isDesktop = value);
   }
 
@@ -22,7 +25,7 @@ export class ProjectsComponent {
     location.getCurrentPosition((pos) => {
       this.coords = pos.coords;
     }
-      , (error) => {this.coords = 'error';});
+      , (_) => {this.coords = 'error';});
   }
 
   openPlayStore() {

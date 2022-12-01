@@ -4,7 +4,7 @@
         <div class="image">
             <img 
             *ngIf="this.contentGroupInfo.info.length > 1"
-            src ="../../../assets/svgs/left-arrow-svgrepo-com.svg" 
+            src ="assets/svgs/left-arrow-svgrepo-com.svg" 
             [class.scale]="!isFirstContent()"
             [class.disabled]="isFirstContent()"
             (click)=changeComponent(false)
@@ -20,7 +20,7 @@
         <div class="image">
             <img 
             *ngIf="this.contentGroupInfo.info.length > 1"
-            src ="../../../assets/svgs/right-arrow-svgrepo-com.svg" 
+            src ="assets/svgs/right-arrow-svgrepo-com.svg" 
             [class.scale]="!isLastContent()" 
             [class.disabled]="isLastContent()"
             (click)=changeComponent(true)
@@ -31,11 +31,11 @@
         <div *ngFor="let item of [].constructor(this.contentGroupInfo.info.length); let i = index">
             <img 
             *ngIf="i !== this.selectedContent" 
-            src="../../../assets/svgs/white empty circle.svg" 
+            src="assets/svgs/white empty circle.svg" 
             class="circle-dim">
             <img 
             *ngIf="i === this.selectedContent" 
-            src="../../../assets/svgs/filled circle.svg" 
+            src="assets/svgs/filled circle.svg" 
             class="circle-dim selected">
         </div>
     </div>

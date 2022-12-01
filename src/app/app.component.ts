@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { ImageLoaderService } from './shared/image-loader.service';
 import { MediaService } from './shared/media.service';
 import { ThemeService } from './shared/theme.service';
 import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/transition-timing.datamodel';
@@ -18,9 +19,10 @@ import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/
     ])
   ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
-  backGroundImagePath: string = "url('../assets/images/background_Home.png')";
+  backGroundImagePathWrapped: string = 
+  "url('" + this.imageLoader.loadImage('assets/images/background_Home.png') + "')";
 
   requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects', ''];
 
@@ -37,9 +39,11 @@ export class AppComponent implements OnInit {
   constructor(
     private mediaService: MediaService, 
     private router: Router,
-    private themeService: ThemeService) {}
+    private themeService: ThemeService,
+    public imageLoader: ImageLoaderService) {}
 
   ngOnInit(): void {
+    this.imageLoader.preloadImages();
     this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
     this.themeService.isDark.subscribe(val => this.isDark = val)
     this.router.events.subscribe(ev => {
@@ -47,9 +51,10 @@ export class AppComponent implements OnInit {
         this.animationState = 'not-loaded';
         if (this.isValidUrl(ev.url)) {
           const url: string = ev.url === '/' ? 'Home' : ev.url.substring(1); 
-          this.backGroundImagePath = "url('../assets/images/background_" + url + ".png')";
+          this.backGroundImagePathWrapped = 
+          "url('" + this.imageLoader.loadImage("assets/images/background_" + url + ".png") + "')";
         } else {
-          this.backGroundImagePath = "none";
+          this.backGroundImagePathWrapped = "none"
         }
       }
       if(ev instanceof NavigationEnd) {
@@ -76,5 +81,9 @@ export class AppComponent implements OnInit {
     } else {
       this.sticky = false;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.imageLoader.emptyLocalStorage();
   }
 }

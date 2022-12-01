@@ -1,5 +1,5 @@
 <div class="blurry aggregator">
     <a href="{{this.source.link}}" target=”_blank”>
-        <img class="rotate" src="{{this.source.imagePath}}">
+        <img class="rotate" [src]='this.imageLoader.loadImage(this.source.imagePath)'>
     </a>
 </div>

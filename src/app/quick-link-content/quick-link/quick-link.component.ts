@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ImageLoaderService } from 'src/app/shared/image-loader.service';
 import { QuickLink } from './quick-link-datamodel';
 
 @Component({
@@ -8,9 +9,9 @@ import { QuickLink } from './quick-link-datamodel';
 })
 export class QuickLinkComponent implements OnInit {
 
-  @Input() source: QuickLink = {link: '', imagePath: '../../assets/images/AngularLogo.png'};
+  @Input() source: QuickLink = {link: '', imagePath: ''};
 
-  constructor() { }
+  constructor(public imageLoader: ImageLoaderService) { }
 
   ngOnInit(): void {
   }

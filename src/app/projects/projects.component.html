@@ -8,7 +8,11 @@
       A simple android native application developed in java
       <br>
       <br>
-      <button class="play-store-button shadow" (click)="openPlayStore()">
+      <button 
+      class="play-store-button shadow" 
+      (click)="openPlayStore()"
+      [style.background-image] ="this.googlePlayImage"
+      >
       </button>
       <br>
       <br>
