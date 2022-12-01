@@ -1,6 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, HostBinding, OnInit, Output } from '@angular/core';
 import { MediaService } from '../shared/media.service';
+import { headerMenuTransitionTime } from '../shared/transition-timing.datamodel';
 import { headerList } from './header.datamodel';
 
 const disappearedMenuStyle: any = {'opacity':'0', 'transform': 'translateY(-400px)'};
@@ -14,10 +15,10 @@ const disappearedMenuStyle: any = {'opacity':'0', 'transform': 'translateY(-400p
       state('in', style({})),
       transition('void => *', [
         style(disappearedMenuStyle), 
-        animate('0.3s ease-out')
+        animate(headerMenuTransitionTime + ' ease-out')
       ]),
       transition('* => void', 
-        animate('0.3s ease-in', style(disappearedMenuStyle))
+        animate(headerMenuTransitionTime + ' ease-in', style(disappearedMenuStyle))
       )
     ])
   ]

@@ -3,6 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { MediaService } from './shared/media.service';
 import { ThemeService } from './shared/theme.service';
+import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/transition-timing.datamodel';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { ThemeService } from './shared/theme.service';
     trigger('animationTrigger', [
       state('loaded', style({'opacity':'1'})),
       state('not-loaded', style({'opacity':'0'})), 
-      transition('not-loaded => loaded', [animate('1s 0.2s')]),
+      transition('not-loaded => loaded', [animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)]),
       transition('loaded => not-loaded', [animate('0s')])
     ])
   ]

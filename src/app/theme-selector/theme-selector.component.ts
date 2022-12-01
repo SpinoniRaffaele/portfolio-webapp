@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from '../shared/media.service';
 import { ThemeService } from '../shared/theme.service';
+import { contentFadeInTransitionTime, headerMenuTransitionTime } from '../shared/transition-timing.datamodel';
 
 @Component({
   selector: 'app-theme-selector',
@@ -12,7 +13,7 @@ import { ThemeService } from '../shared/theme.service';
       state('in', style({})),
       transition('void => *', [
         style({'opacity':'0'}), 
-        animate(1000)
+        animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)
       ])
     ])
   ]
