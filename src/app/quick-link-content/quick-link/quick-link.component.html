@@ -1,5 +1,11 @@
-<div class="blurry aggregator">
+<div class="blurry aggregator" [@animationTrigger]="animationStatus">
     <a href="{{this.source.link}}" target=”_blank”>
-        <img class="rotate" [src]='this.imageLoader.loadImage(this.source.imagePath)'>
+        <img 
+        class="position" 
+        [src]='this.imageLoader.loadImage(this.source.imagePath)' 
+        (mouseenter)="pulseIn()" 
+        (mouseleave)="pulseOut()"
+        (tap)="pulseIn()"
+        >
     </a>
 </div>
