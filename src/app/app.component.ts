@@ -12,7 +12,7 @@ import { ThemeService } from './shared/theme.service';
     trigger('animationTrigger', [
       state('loaded', style({'opacity':'1'})),
       state('not-loaded', style({'opacity':'0'})), 
-      transition('not-loaded => loaded', [animate('1s')]),
+      transition('not-loaded => loaded', [animate('1s 0.2s')]),
       transition('loaded => not-loaded', [animate('0s')])
     ])
   ]

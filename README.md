@@ -10,6 +10,7 @@ following browsers:
 - Edge
 - DuckDuckGo
 - Brave 
+- Safari
 
 This was intended to be a frontend only application without the need of a backend server.
 However, the integration of a 'Contact Me' functionality required a backend able to call a mail API.
