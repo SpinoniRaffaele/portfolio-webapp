@@ -35,6 +35,8 @@ export class AppComponent implements OnInit, OnDestroy {
   isMenuToggled = false;
 
   isDark = true;
+
+  browserName: 'undefined' | 'chrome' | 'firefox' | 'safari' | 'opera' | 'edge' = 'undefined';
   
   constructor(
     private mediaService: MediaService, 
@@ -44,6 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.imageLoader.preloadImages();
+    this.checkBrowser();
     this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
     this.themeService.isDark.subscribe(val => this.isDark = val)
     this.router.events.subscribe(ev => {
@@ -81,6 +84,24 @@ export class AppComponent implements OnInit, OnDestroy {
     } else {
       this.sticky = false;
     }
+  }
+
+  checkBrowser() {
+    let userAgent = navigator.userAgent;
+    if(userAgent.indexOf('Chrom') !== -1){
+        this.browserName = "chrome";
+      }else if(userAgent.indexOf('Firefox') !== -1 || userAgent.indexOf('Fxios') !== -1){
+        this.browserName = "firefox";
+      }  else if(userAgent.indexOf('Safari') !== -1 ){
+        this.browserName = "safari";
+      }else if(userAgent.indexOf('opr') !== -1){
+        this.browserName = "opera";
+      } else if(userAgent.indexOf('Edg') !== -1){
+        this.browserName = "edge";
+      } 
+      if (this.browserName === 'undefined' || this.browserName === 'safari') {
+        alert("Your browser is currently not fully supported 😪, consider changing it for an otpimal experience");
+      }
   }
 
   ngOnDestroy(): void {
