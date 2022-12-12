@@ -8,6 +8,8 @@ following browsers:
 - Chrome
 - Firefox
 - Edge
+- Safari
+- Opera
 - Brave 
 
 This was intended to be a frontend only application without the need of a backend server.

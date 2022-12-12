@@ -99,7 +99,7 @@ export class AppComponent implements OnInit, OnDestroy {
       } else if(userAgent.indexOf('Edg') !== -1){
         this.browserName = "edge";
       } 
-      if (this.browserName === 'undefined' || this.browserName === 'safari') {
+      if (this.browserName === 'undefined') {
         alert("Your browser is currently not fully supported 😪, consider changing it for an otpimal experience");
       }
   }
