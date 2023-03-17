@@ -42,7 +42,9 @@ export type Weather =
     "lightsnowday" | "lightsnownight" | 
     "rainday" | "rainnight" |
     "snowday" | "snownight" |
-    "rainsnowday" | "rainsnownight";  //hailstorm
+    "rainsnowday" | "rainsnownight" |  //hailstorm
+    "tsday" | "tsnight" |
+    "tsrainday" | "tsrainnight";  
 
 
 export interface WeatherType {
@@ -60,7 +62,9 @@ weatherImageMapping.set('mcloudyday', "https://img.icons8.com/fluency/96/null/pa
 weatherImageMapping.set('mcloudynight', "https://img.icons8.com/fluency/96/null/partly-cloudy-night.png");
 
 weatherImageMapping.set('cloudyday', "https://img.icons8.com/fluency/96/null/clouds.png");
+weatherImageMapping.set('tsday', "https://img.icons8.com/fluency/96/null/clouds.png");
 weatherImageMapping.set('cloudynight', "https://img.icons8.com/fluency/96/null/clouds.png");
+weatherImageMapping.set('tsnight', "https://img.icons8.com/fluency/96/null/clouds.png");
 
 weatherImageMapping.set('lightrainday', "https://img.icons8.com/fluency/96/null/partly-cloudy-rain.png");
 weatherImageMapping.set('lightrainnight', "https://img.icons8.com/fluency/96/null/rainy-night.png");
@@ -71,6 +75,8 @@ weatherImageMapping.set('ishowernight', "https://img.icons8.com/fluency/96/null/
 
 weatherImageMapping.set('rainday', "https://img.icons8.com/fluency/96/null/intense-rain.png");
 weatherImageMapping.set('rainnight', "https://img.icons8.com/fluency/96/null/intense-rain.png");
+weatherImageMapping.set('tsrainday', "https://img.icons8.com/fluency/96/null/intense-rain.png");
+weatherImageMapping.set('tsrainnight', "https://img.icons8.com/fluency/96/null/intense-rain.png");
 
 weatherImageMapping.set('snowday', "https://img.icons8.com/fluency/96/null/snow.png");
 weatherImageMapping.set('snownight', "https://img.icons8.com/fluency/96/null/snow.png");
