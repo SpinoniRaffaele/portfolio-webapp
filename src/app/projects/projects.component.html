@@ -4,7 +4,12 @@
 
   <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
     <p class="font-subtitle v-padding" style="text-align: center;">Kinito Application🍺</p>
-    <div class="font-general v-padding" style="text-align: center;"> 
+    <div 
+    class="v-padding" 
+    [class.font-general]="!this.isDesktop"
+    [class.font-general-big]="this.isDesktop"
+    style="text-align: center;"
+    > 
       A simple android native application developed in java
       <br>
       <br>
@@ -26,34 +31,3 @@
       </a>
     </div>
   </div>
-
-  <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
-    <p class="font-subtitle v-padding" style="text-align: center;">Show Coordinates</p>
-    <div *ngIf="this.coords === undefined" class="font-general h-center">
-      <div class="h-center v-padding">
-        <button class="submit get-in-touch" (click)="askForCoords()">
-            <a class="little-blurry">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Ask for coords
-            </a>
-        </button>
-    </div>
-    </div>
-    <div *ngIf="this.coords === 'error'" class="font-general">
-      Error retrieving coordinates
-      <br>
-      <button (click)="askForCoords()" class="button-proj">
-        Retry
-      </button>
-    </div>
-    <div *ngIf="this.coords !== undefined && this.coords !== 'error'" class="font-general" style="text-align: center;"> 
-      Latitude: {{this.coords.latitude}}
-      <br>
-      Longitude: {{this.coords.longitude}}
-      <br>
-      Precision: {{this.coords.accuracy}} </div>
-      <br>
-    </div>

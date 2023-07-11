@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuickLinkComponent } from './quick-link.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('QuickLinkComponent', () => {
   let component: QuickLinkComponent;
@@ -8,6 +9,7 @@ describe('QuickLinkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ BrowserAnimationsModule ],
       declarations: [ QuickLinkComponent ]
     })
     .compileComponents();

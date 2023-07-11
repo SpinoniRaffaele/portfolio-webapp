@@ -1,4 +1,4 @@
-import { ContentGroup, ContentInfo } from "src/app/shared/content-group/content-group.datamodel";
+import { ContentGroup } from "src/app/shared/content-group/content-group.datamodel";
 
 const mediumText: string = 'I\'ve recently begun a side hustle as a technical writer. In particular, ' +
     'i\'ve joined the vibrant community of Medium writers, you can find my medium profile link in the "Quick Links" section. '
@@ -13,7 +13,7 @@ const backendText: string = "I've experienced different backend technologies, mo
 "having 1+ year of working experience on the Spring framework. " +
 "I've confidence with the C and C++ programming languages and a small knowledge of " +
 "Node.js for server side usage of JavaScript. I experienced with different design patterns and different architectures " +
-"such as exagonal, microservices, often using REST APIs. I've experience with Docker " +
+"such as exagonal, microservices, often using REST APIs. I've experience with Docker and Kubernetes " +
 "and a small knowledge of the AWS cloud environment. " +
 "On DB side, i've worked with both SQL and noSQL DBMS (Microsoft SQL, Mongo, Couchbase).";
 
@@ -24,7 +24,7 @@ const frontEndText: string = "I have recently joined the front-end side of devel
     "Regarding native technologies, i've got some experience with Android development in Java in the past";
 
 const mountainText: string = "Outside of the office, i really like any kind of outdoor activity. " + 
-    "I like to stay active and I enjoy phisical activity, in particular when it involves also the mountain and its " + 
+    "I like to stay active and I enjoy physical activity, in particular when it involves also the mountain and its " + 
     "beautiful landscapes. My favourites activities are hiking in the summer and skying in the winter";
 
 const climbingText: string = "Recently i've discovered an amazing sport: Climbing; Either indoor or outdoor " +

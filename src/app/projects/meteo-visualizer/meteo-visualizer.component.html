@@ -5,7 +5,7 @@
     As a developer I'm not responsible for the forecast reliability"
     >
 </div>
-<div class="font-subtitle" style="text-align: center;">
+<div class="font-subtitle v-padding" style="text-align: center;">
     Meteo Application
 </div>
 
@@ -29,13 +29,21 @@
 
 
 <ng-template #apiError>
-    <p style="text-align: center;" class="font-general">
+    <p 
+    style="text-align: center;" 
+    [class.font-general]="!this.isDesktop" 
+    [class.font-general-big]="this.isDesktop"
+    >
         Error response from the meteo API
     </p>
 </ng-template>
 
 <ng-template #positionError>
-    <p style="text-align: center;" class="font-general">
+    <p 
+    style="text-align: center;" 
+    [class.font-general]="!this.isDesktop" 
+    [class.font-general-big]="this.isDesktop"
+    >
         Allow the browser to access your position in order to retrieve meteo data
     </p>
 </ng-template>

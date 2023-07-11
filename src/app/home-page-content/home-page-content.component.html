@@ -12,7 +12,9 @@
             Raffaele Spinoni
         </div>
         <div 
-        class="font-general text-area blurry" 
+        class="text-area blurry" 
+        [class.font-general-big]="this.isDesktop"
+        [class.font-general]="!this.isDesktop"
         [class.text-area-position]="this.isDesktop" 
         [class.text-area-position-phone]="!this.isDesktop"
         >

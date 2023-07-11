@@ -1,5 +1,7 @@
 <div 
-class="font-general height"
+class="height"
+[class.font-general]="!this.isDesktop"
+[class.font-general-big]="this.isDesktop"
 [class.horizontal]="this.isDesktop" 
 [class.vertical]="!this.isDesktop"
 >
