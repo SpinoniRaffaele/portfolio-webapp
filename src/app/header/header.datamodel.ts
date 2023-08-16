@@ -6,5 +6,6 @@ export const headerList: HeaderElement[] = [
     { label: 'Home' },
     { label: 'About me' },
     { label: 'Quick Links' },
+    { label: 'Certifications' },
     { label: 'Projects' }
 ];

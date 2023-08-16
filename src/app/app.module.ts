@@ -24,6 +24,7 @@ import { QuickLinkComponent } from './quick-link-content/quick-link/quick-link.c
 import { MeteoVisualizerComponent } from './projects/meteo-visualizer/meteo-visualizer.component';
 import { MeteoTimePointComponent } from './projects/meteo-visualizer/meteo-time-point/meteo-time-point.component';
 import { PrecipitationAmountPipe } from './projects/meteo-visualizer/precipitation-amount.pipe';
+import { CertificationsComponent } from './certifications-content/certifications.component';
 
 declare var Hammer: any;
 
@@ -54,7 +55,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     QuickLinkComponent,
     MeteoVisualizerComponent,
     MeteoTimePointComponent,
-    PrecipitationAmountPipe
+    PrecipitationAmountPipe,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,
