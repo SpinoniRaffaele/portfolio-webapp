@@ -2,7 +2,7 @@
     <ul class="no-margin blurry header-list radius">
         <li
         *ngFor="let headerElement of headerList" 
-        class="header-list-elem underline font-header"
+        class="header-list-elem underline font-header h-center"
         routerLink="{{ headerElement.label }}" 
         routerLinkActive="active"
         (click)="menuItemSelected.emit(headerElement.label)">

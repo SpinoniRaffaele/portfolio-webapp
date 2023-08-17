@@ -1,0 +1,9 @@
+<app-certification-nav (activeListEmitter)="setCertificationContent($event)"></app-certification-nav>
+<div [@animationTrigger]="activeList">
+    <div *ngFor="let cert of certifications">
+        <app-content-group
+            [contentGroupInfo]="cert"
+        ></app-content-group>
+      </div>
+</div>
+<div class="footer-space"></div>

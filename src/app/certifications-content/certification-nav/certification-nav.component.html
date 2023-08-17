@@ -1,0 +1,22 @@
+<div class="fixed-selector">
+    <div 
+    class="font-header activate" 
+    [class.activate]="!isOfficial()" 
+    [class.focused]="isOfficial()" 
+    [class.solid-background]="hasScrolledTheHeader()"
+    (click)="setActiveList('official')"
+    >
+        <div class="h-center mt mb" [class.dark-text]="!this.isDark">Official</div>
+    </div>
+    <div 
+    class="font-header activate" 
+    [class.activate]="isOfficial()" 
+    [class.focused]="!isOfficial()" 
+    [class.solid-background]="hasScrolledTheHeader()"
+    (click)="setActiveList('unofficial')"
+    >
+        <div class="h-center mt mb" [class.dark-text]="!this.isDark">Unofficial</div>
+    </div>
+    <div class="underline" [class.underline-active]="isOfficial()"></div>
+    <div class="underline" [class.underline-active]="!isOfficial()"></div>
+</div>

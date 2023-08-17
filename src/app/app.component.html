@@ -9,7 +9,7 @@
     >
         <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
 
-        <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky"></app-theme-selector>
+        <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky" class="h-center"></app-theme-selector>
 
         <div [@animationTrigger]="this.animationState">
             <router-outlet></router-outlet>

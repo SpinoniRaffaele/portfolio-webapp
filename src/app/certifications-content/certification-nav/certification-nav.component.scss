@@ -1,0 +1,44 @@
+@import '../../../colors.scss';
+
+.fixed-selector {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.underline-active {
+    background: $color !important;
+    height: 5px;
+}
+
+.underline {
+    background: gray;
+    height: 5px;
+}
+
+.focused {
+    background: rgba(0, 0, 0, 0)
+}
+
+.activate:hover {
+    opacity: 1;
+}
+
+.activate {
+    opacity: 0.9;
+}
+
+.solid-background {
+    background: rgb(82, 82, 82)
+}
+
+.dark-text {
+    color: $dark;
+}

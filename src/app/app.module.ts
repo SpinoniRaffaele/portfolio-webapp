@@ -25,6 +25,7 @@ import { MeteoVisualizerComponent } from './projects/meteo-visualizer/meteo-visu
 import { MeteoTimePointComponent } from './projects/meteo-visualizer/meteo-time-point/meteo-time-point.component';
 import { PrecipitationAmountPipe } from './projects/meteo-visualizer/precipitation-amount.pipe';
 import { CertificationsComponent } from './certifications-content/certifications.component';
+import { CertificationNavComponent } from './certifications-content/certification-nav/certification-nav.component';
 
 declare var Hammer: any;
 
@@ -56,7 +57,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MeteoVisualizerComponent,
     MeteoTimePointComponent,
     PrecipitationAmountPipe,
-    CertificationsComponent
+    CertificationsComponent,
+    CertificationNavComponent
   ],
   imports: [
     BrowserModule,
