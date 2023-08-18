@@ -1,6 +1,12 @@
 export interface ContentInfo {
     imagePath: string,
     text: string
+    certificationInfo?: CertificationInfo
+}
+
+export interface CertificationInfo {
+    dateFrom: string,
+    dateTo: string
 }
 
 export interface ContentGroup {

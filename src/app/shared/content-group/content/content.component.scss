@@ -3,6 +3,11 @@
     grid-template-columns: 48% 4% 48%;
 }
 
+.horizontal-no-space {
+    display: grid;
+    grid-template-columns: 48% 48%;
+}
+
 .vertical {
     display: grid;
     grid-template-rows: 48% 4% 48%;
@@ -51,4 +56,13 @@
     background-position: center center;
     height: 90vh;
     margin-top: 60px;
+}
+
+.center {
+    justify-self: center;
+    align-self: center;
+}
+
+.small {
+    font-size: 10px;
 }

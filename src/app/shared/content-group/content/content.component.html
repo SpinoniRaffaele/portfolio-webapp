@@ -11,9 +11,19 @@ class="height"
     (click)="this.openDialog(content)">
     </div>
     <div class="spacing"></div>
-    <p class="text">
-        {{ this.textContent }}
-    </p>
+    <div class="center">
+        <div 
+        [class.vertical]="!this.isDesktop" 
+        [class.horizontal-no-space]="this.isDesktop" 
+        *ngIf="this.certificationInfo"
+        >
+            <p class="text"><i> obtained in: {{this.certificationInfo.dateFrom}}</i></p>
+            <p class="text"><i> expires in: {{this.certificationInfo.dateTo}}</i></p>
+        </div>
+        <p class="text">
+            {{ this.textContent }}
+        </p>
+    </div>
 </div>
 
 

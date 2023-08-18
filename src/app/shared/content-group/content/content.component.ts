@@ -2,6 +2,7 @@ import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImageLoaderService } from '../../image-loader.service';
 import { MediaService } from '../../media.service';
+import { CertificationInfo } from '../content-group.datamodel';
 
 @Component({
   selector: 'app-content',
@@ -9,6 +10,8 @@ import { MediaService } from '../../media.service';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
+
+  @Input() certificationInfo?: CertificationInfo;
 
   @Input() textContent: string = '';
 

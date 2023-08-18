@@ -13,6 +13,7 @@
         <app-content 
         [textContent]="this.contentGroupInfo.info[selectedContent].text"
         [imagePath]="this.contentGroupInfo.info[selectedContent].imagePath"
+        [certificationInfo]="this.contentGroupInfo.info[selectedContent].certificationInfo"
         (swipeleft)="changeComponent(true)"
         (swiperight)="changeComponent(false)"
         >
