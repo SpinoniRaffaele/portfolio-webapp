@@ -44,15 +44,17 @@ export class CertificationsComponent {
   constructor() { }
 
   setCertificationContent(activeList: "official" | "unofficial") {
-    this.activeList = this.activeList === "official" ? "officialToUnofficial": "unofficialToUfficial";
-    setTimeout(() => {
-      if (activeList === 'official') {
-        this.certifications = officialCertifications;
-      } else {
-        this.certifications = unofficialCertifications;
-      }
-      this.activeList = activeList;
-    }, 160);
+    if (activeList != this.activeList) {
+      this.activeList = this.activeList === "official" ? "officialToUnofficial": "unofficialToUfficial";
+      setTimeout(() => {
+        if (activeList === 'official') {
+          this.certifications = officialCertifications;
+        } else {
+          this.certifications = unofficialCertifications;
+        }
+        this.activeList = activeList;
+      }, 160);
+    }
     window.scrollTo(0, PIXEL_HEIGHT_OF_SCROLLING_BEFORE_TOP + this.OFFSET);
   }
 }

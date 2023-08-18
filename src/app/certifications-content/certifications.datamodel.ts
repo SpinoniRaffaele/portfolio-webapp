@@ -8,28 +8,28 @@ export const officialCertifications: ContentGroup[] = [
             imagePath: 'assets/images/polimi.jpg',
             text: 'sample'
         }],
-        title: ''
+        title: 'A'
     },
     {
         info: [{
             imagePath: 'assets/images/polimi.jpg',
             text: 'sample'
         }],
-        title: ''
+        title: 'A'
     },
     {
         info: [{
             imagePath: 'assets/images/polimi.jpg',
             text: 'sample'
         }],
-        title: ''
+        title: 'A'
     },
     {
         info: [{
             imagePath: 'assets/images/polimi.jpg',
             text: 'sample'
         }],
-        title: ''
+        title: 'A'
     }
 ];
 
@@ -39,27 +39,13 @@ export const unofficialCertifications: ContentGroup[] = [
             imagePath: 'assets/images/github.png',
             text: 'sample'
         }],
-        title: ''
+        title: 'A'
     },
     {
         info: [{
             imagePath: 'assets/images/polimi.jpg',
             text: 'sample'
         }],
-        title: ''
-    },
-    {
-        info: [{
-            imagePath: 'assets/images/polimi.jpg',
-            text: 'sample'
-        }],
-        title: ''
-    },
-    {
-        info: [{
-            imagePath: 'assets/images/polimi.jpg',
-            text: 'sample'
-        }],
-        title: ''
+        title: 'A'
     }
 ];
