@@ -6,7 +6,8 @@ export interface ContentInfo {
 
 export interface CertificationInfo {
     dateFrom: string,
-    dateTo: string
+    dateTo: string,
+    id?: string
 }
 
 export interface ContentGroup {

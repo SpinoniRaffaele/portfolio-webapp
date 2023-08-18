@@ -10,7 +10,12 @@
 
 .vertical {
     display: grid;
-    grid-template-rows: 48% 4% 48%;
+    grid-template-rows: 50% 0% 50%;
+}
+
+.vertical-no-space {
+    display: grid;
+    grid-template-rows: 48% 48%;
 }
 
 .image {
@@ -34,7 +39,7 @@
 }
 
 .height {
-    height: 540px;
+    min-height: 650px;
 }
 
 .modal_{

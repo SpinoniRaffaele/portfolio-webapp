@@ -13,7 +13,7 @@ class="height"
     <div class="spacing"></div>
     <div class="center">
         <div 
-        [class.vertical]="!this.isDesktop" 
+        [class.vertical-no-space]="!this.isDesktop" 
         [class.horizontal-no-space]="this.isDesktop" 
         *ngIf="this.certificationInfo"
         >
@@ -22,6 +22,9 @@ class="height"
         </div>
         <p class="text">
             {{ this.textContent }}
+        </p>
+        <p *ngIf="this.certificationInfo && this.certificationInfo.id">
+            <i>ID: {{this.certificationInfo.id}}</i>
         </p>
     </div>
 </div>
