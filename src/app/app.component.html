@@ -11,7 +11,7 @@
 
         <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky" class="h-center"></app-theme-selector>
 
-        <div [@animationTrigger]="this.animationState">
+        <div [@animationTrigger]="this.animationState" class="min-height">
             <router-outlet></router-outlet>
         </div>
     

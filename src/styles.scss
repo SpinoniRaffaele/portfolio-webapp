@@ -24,7 +24,7 @@
 }
 
 .blurry {
-    background-color: hsla(0, 0, 0, 0.30);
+    background-color: hsla(0, 0%, 0%, .30);
     //backdrop-filter: blur(2px);
     //todo: add blur when firefox is ok with it
     border-radius: 15px;
