@@ -29,6 +29,9 @@ const angularText: string = 'Udemy course covering deeply every aspect of the UI
     'are proposed where a complex web UI solution is build. It also includes content over the RxJs library, ' + 
     'the reducer pattern, and the TypeScript language.';
 
+const springOrsysText: string = 'Course delivered with 40 hours of live lessons. Focused on the spring framework\'s basics: ' +
+    'Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit o Spring Secuirity';
+
 export const officialCertifications: ContentGroup[] = [
     {
         info: [{
@@ -57,6 +60,17 @@ export const officialCertifications: ContentGroup[] = [
 ];
 
 export const unofficialCertifications: ContentGroup[] = [
+    {
+        info: [{
+            imagePath: 'assets/images/certification.PNG',
+            text: springOrsysText,
+            certificationInfo: {
+                dateFrom: 'december 2023',
+                dateTo: 'no expiration'
+            }
+        }],
+        title: 'Spring - Enterprise application\'s developer'
+    },
     {
         info: [{
             imagePath: 'assets/images/angular-maximilian.PNG',
