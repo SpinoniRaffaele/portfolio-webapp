@@ -10,18 +10,17 @@ const developerText: string = 'I have studied computer science in Politecnico di
     'I\'ve worked with quite some technologies as a dev and i\'m always looking forward learn some new ones.'
 
 const backendText: string = "I've experienced different backend technologies, more in details, i'm hard skilled in Java, " +
-"having 1+ year of working experience on the Spring framework. " +
-"I've confidence with the C and C++ programming languages and a small knowledge of " +
-"Node.js for server side usage of JavaScript. I experienced with different design patterns and different architectures " +
-"such as exagonal, microservices, often using REST APIs. I've experience with Docker and Kubernetes " +
+"having 2+ year of working experience on the Spring framework. " +
+"I've a bit of experience with the C and C++ programming languages and a small knowledge of " +
+"Node.js for server side usage of JavaScript. I know different design patterns and different architectures " +
+"such as microservices, often using REST APIs. I've experience with Docker and Kubernetes " +
 "and a small knowledge of the AWS cloud environment. " +
-"On DB side, i've worked with both SQL and noSQL DBMS (Microsoft SQL, Mongo, Couchbase).";
+"On DB side, i've worked a bit with both SQL and noSQL DBMS (Microsoft SQL Server, Mongo, Couchbase).";
 
 const frontEndText: string = "I have recently joined the front-end side of development. "+ 
-    "i've learnt the Angular framework, and i've work with it for more than a year using the TypeScript language. " + 
+    "i have 2+ years of experience with the Angular framework and the TypeScript language. " + 
     "I've a basic knowledge of HTML5 and some experience with CSS3 using the SASS framework."
-    "I'm actually learning flutter and the Dart language for multi-platform mobile development. " +
-    "Regarding native technologies, i've got some experience with Android development in Java in the past";
+    "I'm actually learning flutter and the Dart language for multi-platform mobile development. ";
 
 const mountainText: string = "Outside of the office, i really like any kind of outdoor activity. " + 
     "I like to stay active and I enjoy physical activity, in particular when it involves also the mountain and its " + 

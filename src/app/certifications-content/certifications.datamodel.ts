@@ -3,8 +3,8 @@ import { ContentGroup } from "../shared/content-group/content-group.datamodel";
 export const PIXEL_HEIGHT_OF_SCROLLING_BEFORE_TOP = 135;
 
 const delfText: string = 'The DELF B2 is the official French Language certif' + 
-    'ication of level B2, the exam is testing four areas: Writing, Speaking, Listening and Reading.' +
-    'The certification is given by official national authorities thet are present in different parts of France.';
+    'ication of level B2, the exam is testing four areas: Writing, Speaking, Listening and Reading. ' +
+    'The certification is given by official national authorities thet are present in different cities in France.';
 
 const toeicText: string = 'The TOEIC® Listening and Reading test has become a standard for decision' +
     ' makers worldwide. The test measures beginner to advanced English Listening and Reading comprehension' +
@@ -20,17 +20,17 @@ const awsText: string = 'Course offered by Cloud Academy inc. covering the bases
     ' requred in order to get the certification.';
 
 const cppText: string = 'Udemy course covering the features of the language C++, from the basics ' +
-    'to the Object Oriented Programming paradigm implemented in C++. The course doesn\'t go deeper in a specific' +
+    'to the Object Oriented Programming paradigm implemented in C++. The course doesn\'t go deeper in a specific ' +
     'framework and the programs generated use CLI.';
 
-const angularText: string = 'Udemy course covering deeply every aspect of the UI framework in 40 hours.' +
+const angularText: string = 'Udemy course covering deeply every aspect of the UI framework in 40 hours. ' +
     'The explanations go from the components and services to more advance concept like the angular CLI, ' +
-    'the http module, routing, animations... Practice session' + 
+    'the http module, routing, animations... Practice session ' + 
     'are proposed where a complex web UI solution is build. It also includes content over the RxJs library, ' + 
     'the reducer pattern, and the TypeScript language.';
 
 const springOrsysText: string = 'Course delivered with 40 hours of live lessons. Focused on the spring framework\'s basics: ' +
-    'Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit o Spring Secuirity';
+    'Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit of Spring Secuirity';
 
 export const officialCertifications: ContentGroup[] = [
     {
