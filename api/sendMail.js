@@ -18,8 +18,9 @@ export default function handler(request, response) {
                     },
                 ],
                 Subject: 'Portfolio Webapp message',
-                TextPart: 'New message from ' + request.body.address,
-                HTMLPart: '<i>' + request.body.textBody + '</i>'
+                TextPart: '',
+                HTMLPart: 'New message from ' + request.body.address + 
+                '<br><i>' + request.body.textBody + '</i>'
             },
         ],
     });
