@@ -1,6 +1,4 @@
 export default function handler(request, response) {
-    console.log(request);
-
     const Mailjet = require('node-mailjet');
     const mailjet = Mailjet.apiConnect(
         process.env["API_KEY"],
@@ -10,8 +8,8 @@ export default function handler(request, response) {
         Messages: [
             {
                 From: {
-                    Email: '10575516@polimi.it',
-                    Name: 'Polimi Raffaele',
+                    Email: request.body.address,
+                    Name: 'Sender',
                 },
                 To: [
                     {
@@ -25,5 +23,5 @@ export default function handler(request, response) {
             },
         ],
     });
-    mailjetRequest.then(result => { response.send(JSON.stringify({status: "success"})) }).catch(err => { console.log("ko: " + err) })
+    mailjetRequest.then(result => { response.send(JSON.stringify({status: "success"})) }).catch(err => { response.send(JSON.stringify({status: "ko", error: err})) })
 }
