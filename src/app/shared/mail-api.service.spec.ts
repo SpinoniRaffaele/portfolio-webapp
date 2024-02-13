@@ -25,10 +25,10 @@ describe('MailAPIService', () => {
   });
 
   it('should send the email with the correct headers', () => {
-    spyOn(service.http, 'get');
+    spyOn(service.http, 'post');
     const sender = 'sender@mail.com';
     const content = 'thecontentoftheemail';
     service.sendMail(sender, content);
-    expect(service.http.get).toHaveBeenCalled();
+    expect(service.http.post).toHaveBeenCalled();
   });
 });

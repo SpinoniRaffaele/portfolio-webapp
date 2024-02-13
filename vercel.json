@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "api/sendMail.sh": {
-        "runtime": "vercel-bash@4.1.0"
-        }
-    }
-}

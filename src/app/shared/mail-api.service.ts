@@ -17,11 +17,14 @@ export class MailAPIService {
     params = params.append('address', sender);
     params = params.append('body', this.whitelistContent(content));
 
-    return this.http.get(this.baseUrl, {responseType: 'text', params: params });
+    return this.http.post(
+      this.baseUrl, 
+      {textBody: this.whitelistContent(content), address: sender}, 
+      {responseType: 'text' });
   }
 
   public isResponseGood(res: any): boolean {
-    return JSON.parse(res)?.Messages[0]?.Status === "success";
+    return JSON.parse(res)?.status === "success";
   }
 
   public whitelistContent(content: string): string {
