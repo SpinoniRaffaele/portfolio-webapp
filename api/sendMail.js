@@ -8,8 +8,8 @@ export default function handler(request, response) {
         Messages: [
             {
                 From: {
-                    Email: request.body.address,
-                    Name: 'Sender',
+                    Email: 'raffaele.spinoni@gmail.com',
+                    Name: 'Raffaele',
                 },
                 To: [
                     {
