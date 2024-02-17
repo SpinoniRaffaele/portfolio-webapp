@@ -1,8 +1,9 @@
-export default function handler(request, response) {
-    const Mailjet = require('node-mailjet');
+import Mailjet from "node-mailjet";
+
+export default function handler(request: any, response: any) {
     const mailjet = Mailjet.apiConnect(
-        process.env["API_KEY"],
-        process.env["API_SECRET"],
+        process.env["API_KEY"]!,
+        process.env["API_SECRET"]!,
     );
     const mailjetRequest = mailjet.post('send', { version: 'v3.1' }).request({
         Messages: [
@@ -24,5 +25,9 @@ export default function handler(request, response) {
             },
         ],
     });
-    mailjetRequest.then(result => { response.send(JSON.stringify({status: "success"})) }).catch(err => { response.send(JSON.stringify({status: "ko", error: err})) })
+    mailjetRequest
+        .then((result: any) => {
+            response.send(JSON.stringify({status: "success"}))})
+        .catch((err: any) => {
+            response.send(JSON.stringify({status: "ko", error: err}))});
 }

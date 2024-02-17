@@ -1,6 +1,5 @@
 # Angular Portfolio WebApp
 This repo contains the side project of my portfolio WebApp which I developed using the Angular framework
-And, later, I plan on adding three.js to enhance UI/UX.
 
 The webapp is deployed here: https://portfolio-webapp-spinoniraffaele.vercel.app/ and it is e2e tested over the
 following browsers: 
@@ -22,3 +21,6 @@ Vercel is also allowing some 'backend' envinronment called Statelss Functions, t
 Here you can find a high-level design of the solution:
 
 ![High-Level Architecture](./webapp-arch.drawio.png)
+
+### TODO
+- Migrate UI test to jest
