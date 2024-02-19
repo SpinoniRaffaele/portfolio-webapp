@@ -21,6 +21,3 @@ Vercel is also allowing some 'backend' envinronment called Statelss Functions, t
 Here you can find a high-level design of the solution:
 
 ![High-Level Architecture](./webapp-arch.drawio.png)
-
-### TODO
-- Migrate UI test to jest
