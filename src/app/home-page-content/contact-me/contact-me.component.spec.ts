@@ -4,23 +4,24 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subject } from 'rxjs';
-import { MailAPIService } from 'src/app/shared/mail-api.service';
-import { MediaService } from 'src/app/shared/media.service';
+import { MailAPIService } from '../../shared/mail-api.service';
+import { MediaService } from '../../shared/media.service';
 
 import { ContactMeComponent } from './contact-me.component';
 
 describe('ContactMeComponent', () => {
   let component: ContactMeComponent;
   let fixture: ComponentFixture<ContactMeComponent>;
-  const modalSpy = jasmine.createSpyObj('NgbModal', ['open']);
-  const mailAPISpy = jasmine.createSpyObj('MailAPIService', ['sendMail', 'isResponseGood']);
+  let mockModal = {open: jest.fn()}
+  let mockMailApi = {sendMail: jest.fn(), isResponseGood: jest.fn()};
+  jest.spyOn(mockModal, 'open');
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ContactMeComponent ],
       providers: [ 
-        {provide: MailAPIService, useValue: mailAPISpy},
-        {provide: NgbModal, useValue: modalSpy}, 
+        {provide: MailAPIService, useValue: mockMailApi},
+        {provide: NgbModal, useValue: mockModal}, 
         MediaService,
         FormBuilder, 
         HttpClient, 
@@ -59,17 +60,17 @@ describe('ContactMeComponent', () => {
       }
     };
     component.openDialog(fakeTemplateRef);
-    expect(modalSpy.open).toHaveBeenCalled();
+    expect(mockModal.open).toHaveBeenCalled();
   });
 
   it('should call mailAPI onSubmit if form is valid', () => {
     const validMail: string = 'valid@gmail.com';
     const validBody: string = 'Valid';
+    jest.spyOn(mockMailApi, 'sendMail').mockReturnValue(new Observable());
     component.formGroup.get('email')?.patchValue(validMail);
     component.formGroup.get('body')?.patchValue(validBody);
-    mailAPISpy.sendMail.and.returnValue(new Observable());
     component.onSubmit();
-    expect(mailAPISpy.sendMail).toHaveBeenCalledWith(validMail, validBody);
+    expect(mockMailApi.sendMail).toHaveBeenCalledWith(validMail, validBody);
   });
 
   it('should correctly handle mail sending success', () => {
@@ -79,8 +80,8 @@ describe('ContactMeComponent', () => {
     component.formGroup.get('body')?.patchValue(validBody);
     const response = new Subject();
     const response$ = response.asObservable();
-    mailAPISpy.sendMail.and.returnValue(response$);
-    mailAPISpy.isResponseGood.and.returnValue(true);
+    jest.spyOn(mockMailApi, 'sendMail').mockReturnValue(response$);
+    jest.spyOn(mockMailApi, 'isResponseGood').mockReturnValue(true);
     component.onSubmit();
     response.next('');
     expect(component.sendButtonMessage).toEqual('Sent👍');
@@ -93,8 +94,8 @@ describe('ContactMeComponent', () => {
     component.formGroup.get('body')?.patchValue(validBody);
     const response = new Subject();
     const response$ = response.asObservable();
-    mailAPISpy.sendMail.and.returnValue(response$);
-    mailAPISpy.isResponseGood.and.returnValue(false);
+    jest.spyOn(mockMailApi, 'sendMail').mockReturnValue(response$);
+    jest.spyOn(mockMailApi, 'isResponseGood').mockReturnValue(false);
     component.onSubmit();
     response.next('');
     expect(component.sendButtonMessage).toEqual('SMTP Error👎');

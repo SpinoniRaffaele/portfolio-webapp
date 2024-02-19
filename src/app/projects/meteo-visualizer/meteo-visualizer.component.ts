@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaService } from 'src/app/shared/media.service';
-import { TimePointData } from 'src/app/shared/meteo-api.datamodel';
-import { MeteoApiService } from 'src/app/shared/meteo-api.service';
+import { MediaService } from '../../shared/media.service';
+import { TimePointData } from '../../shared/meteo-api.datamodel';
+import { MeteoApiService } from '../../shared/meteo-api.service';
 
 @Component({
   selector: 'app-meteo-visualizer',

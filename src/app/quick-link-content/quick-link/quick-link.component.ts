@@ -1,7 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input } from '@angular/core';
-import { ImageLoaderService } from 'src/app/shared/image-loader.service';
-import { halfHeaderMenuTransitionTime } from 'src/app/shared/transition-timing.datamodel';
+import { ImageLoaderService } from '../../shared/image-loader.service';
+import { halfHeaderMenuTransitionTime } from '../../shared/transition-timing.datamodel';
 import { QuickLink } from './quick-link-datamodel';
 
 @Component({

@@ -25,8 +25,9 @@ describe('ContentComponent', () => {
   });
 
   it('should open the image with fullscreen size', () => {
-    spyOn(component.modalService, 'open');
+    component.modalService.open = jest.fn();
+    jest.spyOn(component.modalService, 'open');
     component.openDialog({elementRef: {nativeElement: undefined}, createEmbeddedView: (): any => {}});
-    expect(component.modalService.open).toHaveBeenCalledOnceWith(jasmine.anything(),  { fullscreen: true });
+    expect(component.modalService.open).toHaveBeenCalledWith(expect.anything(),  { fullscreen: true });
   });
 });

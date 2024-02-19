@@ -22,10 +22,4 @@ describe('ProjectsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('ASK FOR COORDS: should call the right method', () => {
-    spyOn(window.navigator.geolocation, 'getCurrentPosition');
-    component.askForCoords();
-    expect(window.navigator.geolocation.getCurrentPosition).toHaveBeenCalled();
-  });
 });

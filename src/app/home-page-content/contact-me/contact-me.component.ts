@@ -1,8 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { MailAPIService } from 'src/app/shared/mail-api.service';
-import { MediaService } from 'src/app/shared/media.service';
+import { MailAPIService } from '../../shared/mail-api.service';
+import { MediaService } from '../../shared/media.service';
 
 @Component({
   selector: 'app-contact-me',

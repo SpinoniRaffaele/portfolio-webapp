@@ -25,7 +25,7 @@ describe('MailAPIService', () => {
   });
 
   it('should send the email with the correct headers', () => {
-    spyOn(service.http, 'post');
+    jest.spyOn(service.http, 'post');
     const sender = 'sender@mail.com';
     const content = 'thecontentoftheemail';
     service.sendMail(sender, content);

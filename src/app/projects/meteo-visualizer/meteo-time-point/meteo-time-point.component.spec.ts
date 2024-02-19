@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TimePointData, weatherImageMapping, windImageMapping, windMSMapping } from 'src/app/shared/meteo-api.datamodel';
+import { TimePointData, weatherImageMapping, windImageMapping, windMSMapping } from '../../../shared/meteo-api.datamodel';
 import { PrecipitationAmountPipe } from '../precipitation-amount.pipe';
 
 import { MeteoTimePointComponent } from './meteo-time-point.component';

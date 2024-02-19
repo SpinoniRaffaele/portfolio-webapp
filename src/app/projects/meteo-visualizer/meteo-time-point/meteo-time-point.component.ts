@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TimePointData, weatherImageMapping, windImageMapping, windMSMapping } from 'src/app/shared/meteo-api.datamodel';
+import { TimePointData, weatherImageMapping, windImageMapping, windMSMapping } from '../../../shared/meteo-api.datamodel';
 
 @Component({
   selector: 'app-meteo-time-point',

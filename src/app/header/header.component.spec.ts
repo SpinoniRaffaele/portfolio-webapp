@@ -23,21 +23,21 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component.isMenuToggled).toBeFalse();
+    expect(component.isMenuToggled).toBe(false);
     expect(component.headerList).toBeDefined();
   });
 
   it('should toggle the menu correctly', () => {
-    spyOn(component.isMenuToggledEmitter, 'emit');
+    jest.spyOn(component.isMenuToggledEmitter, 'emit');
     component.toggleMenu(true);
-    expect(component.isMenuToggled).toBeTrue();
+    expect(component.isMenuToggled).toBe(true);
     expect(component.isMenuToggledEmitter.emit).toHaveBeenCalledWith(true);
   });
 
   it('should close the menu correctly', () => {
-    spyOn(component.isMenuToggledEmitter, 'emit');
+    jest.spyOn(component.isMenuToggledEmitter, 'emit');
     component.toggleMenu(false);
-    expect(component.isMenuToggled).toBeFalse();
+    expect(component.isMenuToggled).toBe(false);
     expect(component.isMenuToggledEmitter.emit).toHaveBeenCalledWith(false);
   });
 });

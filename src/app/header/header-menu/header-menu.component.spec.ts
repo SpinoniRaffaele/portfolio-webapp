@@ -23,7 +23,7 @@ describe('HeaderMenuComponent', () => {
   });
 
   it('should emit the section selected', () => {
-    spyOn(component.menuItemSelected, 'emit');
+    jest.spyOn(component.menuItemSelected, 'emit');
     const nativeElement = fixture.nativeElement;
     const listElement = nativeElement.querySelector('.header-list-elem');
     listElement.dispatchEvent(new Event('click'));

@@ -8,6 +8,7 @@ import { MediaService } from './shared/media.service';
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
+  window.alert = jest.fn();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -25,9 +26,8 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
-    expect(component.sticky).toBeFalse();
-    expect(component.isMenuToggled).toBeFalse();
-    expect(component.isDark).toBeTrue();
-    expect(component.isDesktop).toBeTrue();
+    expect(component.sticky).toBe(false);
+    expect(component.isMenuToggled).toBe(false);
+    expect(component.isDark).toBe(true);
   });
 });

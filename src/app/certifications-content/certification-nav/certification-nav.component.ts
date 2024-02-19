@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PIXEL_HEIGHT_OF_SCROLLING_BEFORE_TOP } from '../certifications.datamodel';
-import { ThemeService } from 'src/app/shared/theme.service';
+import { ThemeService } from '../../shared/theme.service';
 
 @Component({
   selector: 'app-certification-nav',

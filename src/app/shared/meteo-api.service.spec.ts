@@ -19,7 +19,7 @@ describe('MeteoApiService', () => {
   });
 
   it('should call the API correctly', () => {
-    spyOn(service.http, 'get').and.returnValue(of({dataseries: []}));
+    jest.spyOn(service.http, 'get').mockReturnValue(of({dataseries: []}));
     service.requestMeteoClientData(12, 12);
     expect(service.http.get).toHaveBeenCalled();
   });
