@@ -10,11 +10,13 @@ const developerText: string = 'I have studied computer science in Politecnico di
     'I\'ve worked with quite some technologies as a dev and i\'m always looking forward learn some new ones.'
 
 const backendText: string = "I've experienced different backend technologies, more in details, i'm hard skilled in Java, " +
-"having 2+ year of working experience on the Spring framework. " +
-"I've a bit of experience with the C and C++ programming languages and a small knowledge of " +
+"having 2+ year of working experience and knowledge of the Spring framework. " +
+"I've a bit of experience with the C programming languages and a small knowledge of " +
 "Node.js for server side usage of JavaScript. I know different design patterns and different architectures " +
 "such as microservices, often using REST APIs. I've experience with Docker and Kubernetes " +
 "and a small knowledge of the AWS cloud environment. " +
+"I have small experience in python (and pytorch) gained during the university's final project. " +
+"I'm recently learning web3 technologies, in particular smart contracts development with Solidity. " +
 "On DB side, i've worked a bit with both SQL and noSQL DBMS (Microsoft SQL Server, Mongo, Couchbase).";
 
 const frontEndText: string = "I have recently joined the front-end side of development. "+ 
