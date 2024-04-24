@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --localize",
+    "build": "ng build --localize && node copy.js",
     "watch": "ng build --watch --configuration development",
     "test:ui": "ng test",
     "test:backend": "jest --config jest.backend.config.ts",
@@ -39,6 +39,7 @@
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.7.15",
+    "copy-dir": "^1.3.0",
     "hammerjs": "^2.0.8",
     "html-loader": "^4.1.0",
     "http-server": "^14.1.1",
