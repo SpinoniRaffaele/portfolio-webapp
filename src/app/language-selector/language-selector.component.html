@@ -1,0 +1,15 @@
+<div>
+    <div ngbDropdown class="d-inline-block position">
+        <button type="button" class="btn font-header selector-dimension" ngbDropdownToggle>
+            <span class="fi" #flag></span>
+        </button>
+        <div ngbDropdownMenu class="blurry">
+            <button ngbDropdownItem (click)="onChange('it')" class="font-general-big highlight">
+                <span class="fi fi-it"></span> Italian
+            </button>
+            <button ngbDropdownItem (click)="onChange('en-US')" class="font-general-big highlight">
+                <span class="fi fi-us"></span> English
+            </button>
+        </div>
+    </div>
+</div>
