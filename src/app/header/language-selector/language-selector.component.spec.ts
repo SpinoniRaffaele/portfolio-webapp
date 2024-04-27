@@ -19,4 +19,10 @@ describe('LanguageSelectorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should redirect after selecting the new language', () => {
+    component.activeLocale = "en-US";
+    component.onChange("it");
+    expect(component.activeLocale).toEqual("it");
+  });
 });
