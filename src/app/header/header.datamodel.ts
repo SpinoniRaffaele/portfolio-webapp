@@ -1,11 +1,12 @@
 export interface HeaderElement {
     label: string;
+    url: string
 }
 
 export const headerList: HeaderElement[] = [
-    { label: 'Home' },
-    { label: 'About me' },
-    { label: 'Quick Links' },
-    { label: 'Certifications' },
-    { label: 'Projects' }
+    { label: 'Home', url: "home" },
+    { label: 'About me', url: "about-me" },
+    { label: 'Quick Links', url: "quick-links" },
+    { label: 'Certifications', url: "certifications" },
+    { label: 'Projects', url: "projects" }
 ];

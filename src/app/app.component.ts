@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   backGroundImagePathWrapped: string = 
   "url('" + this.imageLoader.loadImage('assets/images/background_Home.png') + "')";
 
-  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects', ''];
+  requiresBackGroundSubPath = ['home', 'quick-links', 'projects', ''];
 
   animationState: 'not-loaded' | 'loaded' = 'not-loaded';
 
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
       if (ev instanceof NavigationStart) {
         this.animationState = 'not-loaded';
         if (this.isValidUrl(ev.url)) {
-          const url: string = ev.url === '/' ? 'Home' : ev.url.substring(1); 
+          const url: string = ev.url === '/' ? 'home' : ev.url.substring(1); 
           this.backGroundImagePathWrapped = 
           "url('" + this.imageLoader.loadImage("assets/images/background_" + url + ".png") + "')";
         } else {
