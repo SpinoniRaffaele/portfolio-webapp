@@ -243,6 +243,168 @@
           <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="8852490424970169127" datatype="html">
+        <source>Official</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certification-nav/certification-nav.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="482563486023821165" datatype="html">
+        <source>Unofficial</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certification-nav/certification-nav.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8549037049914004763" datatype="html">
+        <source>The DELF B2 is the official French Language certification
+    of level B2, the exam is testing four areas: Writing, Speaking, Listening and Reading.
+    The certification is given by official national authorities thet are present in different cities in France.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1571831142644735853" datatype="html">
+        <source>The TOEIC® Listening and Reading test has become a standard for decision 
+    makers worldwide. The test measures beginner to advanced English Listening and Reading comprehension 
+    skills and determine if someone studying English as a foreign language can communicate effectively 
+    and proficiently in English. The test assessed a level of B2 and my english has increased since.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8541315138867423668" datatype="html">
+        <source>Udemy course of 20 hours explaining web developement with javascript.
+    Basic course covering how javascript runs in a browser, its syntax and the DOM interaction.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5019110676966249374" datatype="html">
+        <source>Course offered by Cloud Academy inc. covering the bases of cloud service providers
+    and analyzing deeply the services offered by Amazon. The course goes through most of the
+    AWS services and offers a lab to practice with the AWS management console. At the end, a simulation exam is
+    requred in order to get the certification.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">17,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8267638748441318481" datatype="html">
+        <source>Udemy course covering the features of the language C++, from the basics
+    to the Object Oriented Programming paradigm implemented in C++. The course doesn&apos;t go deeper in a specific
+    framework and the programs generated use CLI.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6440389141090150726" datatype="html">
+        <source>Udemy course covering deeply every aspect of the UI framework in 40 hours.
+    The explanations go from the components and services to more advance concept like the angular CLI,
+    the http module, routing, animations... Practice session
+    are proposed where a complex web UI solution is build. It also includes content over the RxJs library,
+    the reducer pattern, and the TypeScript language.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">26,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5835275396834349103" datatype="html">
+        <source>Course delivered with 40 hours of live lessons. Focused on the spring framework&apos;s basics:
+    Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit of Spring Secuirity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1079113903323316018" datatype="html">
+        <source>june 2023</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6031459108023172835" datatype="html">
+        <source>no expiration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8800346577458710031" datatype="html">
+        <source>september 2019</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5045201202512356105" datatype="html">
+        <source>september 2021</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5011683055292702139" datatype="html">
+        <source>december 2023</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="260567100949434085" datatype="html">
+        <source>november 2022</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4761058165623559034" datatype="html">
+        <source>august 2021</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8887377498644773492" datatype="html">
+        <source>february 2021</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2316969541764998874" datatype="html">
+        <source>august 2020</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4433470739923804412" datatype="html">
         <source>🔗Check the source </source>
         <context-group purpose="location">
@@ -385,6 +547,20 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home-page-content/home-page-content.component.html</context>
           <context context-type="linenumber">38,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8378444851744918615" datatype="html">
+        <source>obtained in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/content-group/content/content.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8089011104503124972" datatype="html">
+        <source>expires in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/content-group/content/content.component.html</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
     </body>

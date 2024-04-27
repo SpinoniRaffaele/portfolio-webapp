@@ -6,7 +6,9 @@
     [class.solid-background]="hasScrolledTheHeader()"
     (click)="setActiveList('official')"
     >
-        <div class="h-center mt mb" [class.dark-text]="!this.isDark">Official</div>
+        <div class="h-center mt mb" [class.dark-text]="!this.isDark">
+            <a i18n>Official</a>
+        </div>
     </div>
     <div 
     class="font-header activate" 
@@ -15,7 +17,9 @@
     [class.solid-background]="hasScrolledTheHeader()"
     (click)="setActiveList('unofficial')"
     >
-        <div class="h-center mt mb" [class.dark-text]="!this.isDark">Unofficial</div>
+        <div class="h-center mt mb" [class.dark-text]="!this.isDark">
+            <a i18n>Unofficial</a>
+        </div>
     </div>
     <div class="underline" [class.underline-active]="isOfficial()"></div>
     <div class="underline" [class.underline-active]="!isOfficial()"></div>
