@@ -266,6 +266,15 @@
           <context context-type="linenumber">16,18</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5687315559061790202" datatype="html">
+        <source>your mail address</source>
+        <target>indirizzo mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">
+            src/app/home-page-content/contact-me/contact-me.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="5157321525971070453" datatype="html">
         <source> ❌Invalid Email </source>
         <target> ❌Email non valida </target>
@@ -273,6 +282,14 @@
           <context context-type="sourcefile">
             src/app/home-page-content/contact-me/contact-me.component.html</context>
           <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1391056849737890767" datatype="html">
+        <source>messaggio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">
+            src/app/home-page-content/contact-me/contact-me.component.html</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4508678359645214124" datatype="html">
@@ -325,20 +342,17 @@
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8490580226298047375" datatype="html">
+      <trans-unit id="3639567479339026405" datatype="html">
         <source> Hello! I&apos;m a fullstack developer based in France, I&apos;m passionate about
           technologies and I always enjoy learning something new. Here you can find all my projects
-          and get in touch with me! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;" /><x
-            id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;" /><x id="HORIZONTAL_RULE"
-            ctype="x-hr" equiv-text="&lt;hr&gt;" /></source>
-        <target>Ciao! Sono uno sviluppatore fullstack residente in Francia, sono appassionato di
+          and get in touch with me! </source>
+        <target> Ciao! Sono uno sviluppatore fullstack residente in Francia, sono appassionato di
           tecnologie informatiche e apprezzo sempre imparare qualcosa di nuovo. Qui puoi trovare
-          tutti i miei progetti
-          e contattarmi!</target>
+          tutti i miei progetti e contattarmi! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/home-page-content/home-page-content.component.html</context>
-          <context context-type="linenumber">24,29</context>
+          <context context-type="linenumber">25,29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7022775911936243742" datatype="html">
@@ -354,7 +368,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/home-page-content/home-page-content.component.html</context>
-          <context context-type="linenumber">36,41</context>
+          <context context-type="linenumber">38,43</context>
         </context-group>
       </trans-unit>
     </body>
