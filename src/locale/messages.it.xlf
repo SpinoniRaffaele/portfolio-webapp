@@ -241,6 +241,139 @@
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="321037304177985819" datatype="html">
+        <source>I have studied computer science in Politecnico di Milano in Italy obtaining a
+          Bachelor&apos;s
+          Degree in 2019 and a Master Degree in 2022. I am now working fulltime as a fullstack web
+          developer at Amadeus.
+          I&apos;ve worked with quite some technologies as a dev and i&apos;m always looking forward
+          learn some new ones.</source>
+        <target>Ho studiato ingegneria informatica al Politecnico di Milano in Italia ottenendo una
+          laurea triennale e una magistrale. Lavoro come sviluppatore web fullstack a Amadeus. Ho
+          lavorato con
+          diverse tecnologie e sono sempre interessato ad apprederne delle nuove.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2106788864433931848" datatype="html">
+        <source>I&apos;ve experienced different backend technologies, more in details, i&apos;m hard
+          skilled in Java,
+          having 3 year of working experience and knowledge of the Spring framework.
+          I&apos;ve a bit of experience with the C programming languages and a small knowledge of
+          Node.js for server side usage of JavaScript. I know different design patterns and
+          different architectures
+          such as microservices, often using REST APIs. I&apos;ve experience with Docker and
+          Kubernetes
+          and a small knowledge of the AWS cloud environment.
+          I have small experience in python (and pytorch) gained during the university&apos;s final
+          project.
+          I&apos;m recently learning web3 technologies, in particular smart contracts development
+          with Solidity.
+          On DB side, i&apos;ve worked a bit with both SQL and noSQL DBMS (Microsoft SQL Server,
+          Mongo, Couchbase).</source>
+        <target>
+          Ho sperimentato diverse tecnologie lato backend, in particolare, ho 3 anni di esperienza
+          in Java e
+          nel framework Spring. Ho un poco di esperienza con il linguaggio C e con Node.js. Conosco
+          diversi design
+          pattern, ho familiarità con l&apos;architettura a microservizi e lo sviluppo di API REST.
+          Ho dell&apos;esperienza nell&apos;utilizzo di Doker e poca conoscenza dell&apos;ambiente
+          cloud di AWS.
+          Ho lavorato con python durante l&apos;università e sto attualmente studiando tecnologie
+          Web3, in
+          particolare lo sviluppo di Smart Contracts con Solidity. Ho lavorato con database
+          relazionali e non:
+          Microsoft SQL Server, Mongo, Couchbase.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">12,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1184518878743763539" datatype="html">
+        <source>I have recently joined the front-end side of development.
+          I have 3 years of experience with the Angular framework and the TypeScript language.
+          I&apos;ve a basic knowledge of HTML5 and some experience with CSS3 using the SASS
+          framework.
+          I&apos;m actually learning flutter and the Dart language for multi-platform mobile
+          development.</source>
+        <target>
+          Ho di recente preso piede nello sviluppo front-end. Ho 3 anni di esperienza con il
+          framework Angular
+          e il linguaggio TypeScript. Ho una conoscenza base di CSS e HTML. Sto studiando flutter
+          e il linguaggio Dart
+          per lo sviluppo di applicazioni multi piattaforma.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">22,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2738966460877427451" datatype="html">
+        <source>Outside of the office, i really like any kind of outdoor activity.
+          I like to stay active and I enjoy physical activity, in particular when it involves also
+          the mountain and its
+          beautiful landscapes. My favourites activities are hiking in the summer and skying in the
+          winter</source>
+        <target>Al di fuori dell&apos;ufficio, apprezzo ogni tipologia di attività outdoor.
+          Mi piace restare attivo e apprezzo lo sforzo fisico, in particolare amo la montagna e i
+          paesaggi
+          straordinari che offre. Le mie attività preferite sono escursioni estive e sci in inverno.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5729766087140982505" datatype="html">
+        <source>Recently i&apos;ve discovered an amazing sport: Climbing; Either indoor or outdoor
+          this sport mix adrenaline and fatigue in a unique way!</source>
+        <target>Di recente ho scoperto uno sport emozionante: l'arrampicata; Indoor o outdoor,
+          questo sport mescola adrenalina e affaticamento fisico in un modo unico.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="949323299206955269" datatype="html">
+        <source>Traveling and exploring are also essential parts of my life.
+          I like to visit new places and meet new cultures all over the world.</source>
+        <target>Viaggiare e esplorare sono anch'esse parti essenziali della mia vita.
+          Mi piace visitare nuove terre e incontrare nuove culture in tutto il mondo.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3673548331180024336" datatype="html">
+        <source>Developer Career</source>
+        <target>Carriera nello sviluppo di software</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="926422273672212906" datatype="html">
+        <source>Technical writing</source>
+        <target>Articoli tecnici</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1975356621924283237" datatype="html">
+        <source>Outdoor</source>
+        <target>Outdoor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="5321211540764448689" datatype="html">
         <source>Your browser is currently not fully supported 😪, consider changing it for an
           optimal experience</source>
