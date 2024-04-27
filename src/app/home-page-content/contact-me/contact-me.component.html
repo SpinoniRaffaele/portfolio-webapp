@@ -1,6 +1,6 @@
 <div class="center-contact-me">
     <button class="submit get-in-touch">
-      <a (click)="openDialog(content)" class="little-blurry">
+      <a (click)="openDialog(content)" class="little-blurry" i18n>
         <span></span>
         <span></span>
         <span></span>
@@ -13,7 +13,7 @@
 <ng-template #content let-modal>
   <div class="modal_ super-blurry">
     <div class="inline mt">
-      <div class="font-subtitle ml">
+      <div class="font-subtitle ml" i18n>
         Get in touch
       </div>
       <div class="font-subtitle">
@@ -22,14 +22,14 @@
     </div>
     <form class="form" [formGroup]="formGroup">
       <input type="email" class="form-address" placeholder="your mail address" [formControl]="formGroup.controls['email']">
-      <div class="invalid-label" *ngIf="formGroup.get('email').errors && (formGroup.get('email').dirty || this.sendEmpty)">
+      <div class="invalid-label" *ngIf="formGroup.get('email').errors && (formGroup.get('email').dirty || this.sendEmpty)" i18n>
         ❌Invalid Email
       </div>
       <br>
       <br>
       <textarea name="Text1" cols="40" rows="5" class="form-content" 
       placeholder="Your message" [formControl]="formGroup.controls['body']"></textarea>
-      <div class="invalid-label" *ngIf="formGroup.get('body').errors && (formGroup.get('body').dirty || this.sendEmpty)">
+      <div class="invalid-label" *ngIf="formGroup.get('body').errors && (formGroup.get('body').dirty || this.sendEmpty)" i18n>
         ❌Empty Message
       </div>
     </form>
