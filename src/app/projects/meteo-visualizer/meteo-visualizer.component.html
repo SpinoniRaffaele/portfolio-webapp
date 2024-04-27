@@ -3,10 +3,11 @@
     src ="assets/svgs/info.svg" 
     ngbTooltip="The information present here are retrieved directly from www.7timer.info/doc.php
     As a developer I'm not responsible for the forecast reliability"
+    i18n-ngbTooltip
     >
 </div>
 <div class="font-subtitle v-padding" style="text-align: center;">
-    Meteo Application
+    <a i18n>Meteo Application</a>
 </div>
 
 <div class="h-scrolling" [class.phone-width]="!this.isDesktop" *ngIf="this.meteoState !== []; else apiError">
@@ -22,7 +23,7 @@
             <span></span>
             <span></span>
             <span></span>
-            {{ this.loading ? 'Loading...' : 'Refresh' }}
+            {{ this.loading ? this.loadingText : this.refreshText }}
         </a>
     </button>
 </div>
@@ -34,7 +35,7 @@
     [class.font-general]="!this.isDesktop" 
     [class.font-general-big]="this.isDesktop"
     >
-        Error response from the meteo API
+        <a i18n>Error response from the meteo API</a>
     </p>
 </ng-template>
 
@@ -44,6 +45,6 @@
     [class.font-general]="!this.isDesktop" 
     [class.font-general-big]="this.isDesktop"
     >
-        Allow the browser to access your position in order to retrieve meteo data
+        <a i18n>Allow the browser to access your position in order to retrieve meteo data</a>
     </p>
 </ng-template>

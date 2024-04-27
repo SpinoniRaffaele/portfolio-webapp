@@ -22,6 +22,9 @@ const config: Config = {
   // The test environment that will be used for testing
   testEnvironment: "jest-environment-jsdom",
 
+  // The files that are run to setup test execution
+  setupFilesAfterEnv : ["./polyfills.ts", "../setup.jest.ts"],
+
   // Options that will be passed to the testEnvironment
   testEnvironmentOptions: { "resources": "usable" },
 

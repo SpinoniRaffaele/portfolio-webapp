@@ -37,7 +37,12 @@
 
 .inline {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 10% 80%;
+}
+
+.inline-phone {
+    display: grid;
+    grid-template-columns: 15% 5% 80%;
 }
 
 .active {
@@ -65,7 +70,7 @@
     height: 40px;
     width: 50px;
     margin-top: 30px;
-    margin-left: 70vw;
+    margin-left: 60vw;
     position: fixed;
     opacity: 0;
     cursor: pointer;
@@ -78,7 +83,7 @@
     height: 40px;
     width: 50px;
     margin-top: 30px;
-    margin-left: 70vw;
+    margin-left: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

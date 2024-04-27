@@ -1,5 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'colors.scss';
+@import "~flag-icons/css/flag-icons.min.css";
 
 .h-center {
 	margin: auto;
@@ -57,7 +58,7 @@
 .font-general-big {
   font-family: Muli;
   font-size: 15px;
-  color: $light;
+  color: $light !important;
 }
 
 .font-general-light {

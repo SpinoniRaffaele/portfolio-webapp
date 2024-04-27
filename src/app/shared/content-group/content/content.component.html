@@ -17,8 +17,8 @@ class="height"
         [class.horizontal-no-space]="this.isDesktop" 
         *ngIf="this.certificationInfo"
         >
-            <p class="text"><i> obtained in: {{this.certificationInfo.dateFrom}}</i></p>
-            <p class="text"><i> expires in: {{this.certificationInfo.dateTo}}</i></p>
+            <p class="text"><i> <a i18n>obtained in</a>: {{this.certificationInfo.dateFrom}}</i></p>
+            <p class="text"><i> <a i18n>expires in</a>: {{this.certificationInfo.dateTo}}</i></p>
         </div>
         <p class="text">
             {{ this.textContent }}

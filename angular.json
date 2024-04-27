@@ -10,6 +10,12 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "it": "src/locale/messages.it.xlf"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "localize": ["it"],
             "outputPath": "dist/portfolio-webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -63,7 +70,17 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["en-US"]
+            },
+            "it": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "localize": ["it"]
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +93,9 @@
             },
             "development": {
               "browserTarget": "portfolio-webapp:build:development"
+            },
+            "it": {
+              "browserTarget": "portfolio-webapp:build:it"
             }
           },
           "defaultConfiguration": "development"

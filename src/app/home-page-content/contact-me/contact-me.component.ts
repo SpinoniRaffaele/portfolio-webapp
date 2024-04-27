@@ -17,7 +17,7 @@ export class ContactMeComponent implements OnInit {
 
   private modal: any;
 
-  sendButtonMessage: string = 'Send';
+  sendButtonMessage: string = $localize`Send`;
 
   sendEmpty: boolean;
 
@@ -48,7 +48,7 @@ export class ContactMeComponent implements OnInit {
   onSubmit() {
     if (this.formGroup.valid) {
       this.isLoading = true;
-      this.sendButtonMessage = 'Sending...';
+      this.sendButtonMessage = $localize`Sending...`;
       this.mailAPIService.sendMail(this.formGroup.controls['email'].value, this.formGroup.controls['body'].value)
       .subscribe(res => {
         this.isLoading = false;
@@ -64,15 +64,15 @@ export class ContactMeComponent implements OnInit {
   }
 
   handleSuccess() {
-    this.sendButtonMessage = 'Sent👍';
+    this.sendButtonMessage = $localize`Sent👍`;
     setTimeout(() => {
       this.modal.close();
       this.sendEmpty = false;
-      this.sendButtonMessage = 'Send';
+      this.sendButtonMessage = $localize`Send`;
     }, 900);
   }
 
   handleError() {
-    this.sendButtonMessage = 'SMTP Error👎';
+    this.sendButtonMessage = $localize`SMTP Error👎`;
   }
 }

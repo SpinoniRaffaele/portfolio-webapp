@@ -22,9 +22,9 @@ import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/
 export class AppComponent implements OnInit, OnDestroy {
 
   backGroundImagePathWrapped: string = 
-  "url('" + this.imageLoader.loadImage('assets/images/background_Home.png') + "')";
+  "url('" + this.imageLoader.loadImage('assets/images/background_home.png') + "')";
 
-  requiresBackGroundSubPath = ['Home', 'Quick%20Links', 'Projects', ''];
+  requiresBackGroundSubPath = ['home', 'quick-links', 'projects', ''];
 
   animationState: 'not-loaded' | 'loaded' = 'not-loaded';
 
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
       if (ev instanceof NavigationStart) {
         this.animationState = 'not-loaded';
         if (this.isValidUrl(ev.url)) {
-          const url: string = ev.url === '/' ? 'Home' : ev.url.substring(1); 
+          const url: string = ev.url === '/' ? 'home' : ev.url.substring(1); 
           this.backGroundImagePathWrapped = 
           "url('" + this.imageLoader.loadImage("assets/images/background_" + url + ".png") + "')";
         } else {
@@ -100,7 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.browserName = "edge";
       } 
       if (this.browserName === 'undefined') {
-        alert("Your browser is currently not fully supported 😪, consider changing it for an otpimal experience");
+        alert($localize`Your browser is currently not fully supported 😪, consider changing it for an optimal experience`);
       }
   }
 

@@ -6,10 +6,10 @@ import { QuickLinkContentComponent } from "./quick-link-content/quick-link-conte
 import { CertificationsComponent } from "./certifications-content/certifications.component";
 
 export const appRoutes: Routes = [
-    { path: 'Home', component: HomePageContentComponent },
-    { path: 'Projects', component: ProjectsComponent },
-    { path: 'About me', component: AboutMeContentComponent },
-    { path: 'Quick Links', component: QuickLinkContentComponent },
-    { path: 'Certifications', component: CertificationsComponent },
-    { path: '**', redirectTo: 'Home' }
+    { path: 'home', component: HomePageContentComponent },
+    { path: 'projects', component: ProjectsComponent },
+    { path: 'about-me', component: AboutMeContentComponent },
+    { path: 'quick-links', component: QuickLinkContentComponent },
+    { path: 'certifications', component: CertificationsComponent },
+    { path: '**', redirectTo: 'home' }
   ]
