@@ -14,6 +14,10 @@ export class MeteoVisualizerComponent implements OnInit {
 
   loading = false;
 
+  loadingText: string = $localize`Loading...`;
+
+  refreshText: string = $localize`Refresh`;
+
   isDesktop = false;
 
   latitude: number = 0;

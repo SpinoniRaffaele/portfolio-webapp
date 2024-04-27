@@ -622,6 +622,84 @@ On DB side, i&apos;ve worked a bit with both SQL and noSQL DBMS (Microsoft SQL S
           <context context-type="linenumber">38,43</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="258420987421557563" datatype="html">
+        <source>The information present here are retrieved directly from www.7timer.info/doc.php
+    As a developer I&apos;m not responsible for the forecast reliability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5176398798117842042" datatype="html">
+        <source>Meteo Application</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4610911360394473299" datatype="html">
+        <source>Error response from the meteo API</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1636358997624767473" datatype="html">
+        <source>Allow the browser to access your position in order to retrieve meteo data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3894950702316166331" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1102717806459547726" datatype="html">
+        <source>Refresh</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/meteo-visualizer.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3226253490468863097" datatype="html">
+        <source>hr</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/precipitation-amount.pipe.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="588478764542673288" datatype="html">
+        <source>No Precipitations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/meteo-visualizer/precipitation-amount.pipe.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5331030087891190970" datatype="html">
+        <source>A simple android native application developed in java</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2978525584275413264" datatype="html">
+        <source>Look at the source</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="883644601182613176" datatype="html">
+        <source> 🔗here </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8378444851744918615" datatype="html">
         <source>obtained in</source>
         <context-group purpose="location">
