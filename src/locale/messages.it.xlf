@@ -249,6 +249,64 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.datamodel.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3562199946446423606" datatype="html">
+        <source>About me</source>
+        <target>Info</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.datamodel.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1140327701924892323" datatype="html">
+        <source>Quick Links</source>
+        <target>Collegamenti</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.datamodel.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3014984376950430597" datatype="html">
+        <source>Certifications</source>
+        <target>Certificazioni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.datamodel.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <target>Progetti</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.datamodel.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1504651934366120650" datatype="html">
+        <source> Italian</source>
+        <target> Italiano</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">
+            src/app/header/language-selector/language-selector.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2444054146532510398" datatype="html">
+        <source> English</source>
+        <target> Inglese</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">
+            src/app/header/language-selector/language-selector.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="6369135019480628596" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;" /><x
             id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;" /><x id="START_TAG_SPAN"
