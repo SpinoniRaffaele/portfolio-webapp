@@ -70,7 +70,17 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["en-US"]
+            },
+            "it": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "localize": ["it"]
             }
           },
           "defaultConfiguration": "production"
@@ -83,6 +93,9 @@
             },
             "development": {
               "browserTarget": "portfolio-webapp:build:development"
+            },
+            "it": {
+              "browserTarget": "portfolio-webapp:build:it"
             }
           },
           "defaultConfiguration": "development"

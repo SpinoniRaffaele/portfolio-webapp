@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:it": "ng serve --configuration it",
     "build": "ng build --localize && node copy.js",
     "watch": "ng build --watch --configuration development",
     "test:ui": "ng test",
