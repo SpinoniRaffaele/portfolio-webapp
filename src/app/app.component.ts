@@ -22,7 +22,7 @@ import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/
 export class AppComponent implements OnInit, OnDestroy {
 
   backGroundImagePathWrapped: string = 
-  "url('" + this.imageLoader.loadImage('assets/images/background_Home.png') + "')";
+  "url('" + this.imageLoader.loadImage('assets/images/background_home.png') + "')";
 
   requiresBackGroundSubPath = ['home', 'quick-links', 'projects', ''];
 
