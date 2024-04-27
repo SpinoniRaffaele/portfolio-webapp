@@ -241,6 +241,16 @@
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5321211540764448689" datatype="html">
+        <source>Your browser is currently not fully supported 😪, consider changing it for an
+          optimal experience</source>
+        <target>Questo browser non è ufficialmente supportato 😪, utilizza chrome per
+          un&apos;esperienza ottimale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4433470739923804412" datatype="html">
         <source>🔗Check the source </source>
         <target>🔗Codice sorgente</target>

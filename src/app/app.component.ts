@@ -100,7 +100,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.browserName = "edge";
       } 
       if (this.browserName === 'undefined') {
-        alert("Your browser is currently not fully supported 😪, consider changing it for an otpimal experience");
+        alert($localize`Your browser is currently not fully supported 😪, consider changing it for an optimal experience`);
       }
   }
 
