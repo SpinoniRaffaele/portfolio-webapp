@@ -3,7 +3,7 @@
         <li
         *ngFor="let headerElement of headerList" 
         class="header-list-elem underline font-header h-center"
-        routerLink="{{ headerElement.label }}" 
+        routerLink="{{ headerElement.url }}" 
         routerLinkActive="active"
         (click)="menuItemSelected.emit(headerElement.label)">
         <div style="padding-top: 12px">
