@@ -7,7 +7,6 @@ export class ImageLoaderService {
 
   preloadedImagesList: string[] = [
     'assets/images/backend-dev.png',
-    'assets/images/background_projects.png',
     'assets/images/background_quick-links.png',
     'assets/images/big-dev-screen.jpeg',
     'assets/images/eze-sunset.jpg',

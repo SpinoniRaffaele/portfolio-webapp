@@ -60,36 +60,37 @@
 </div>
 
 <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
-    <app-meteo-visualizer></app-meteo-visualizer>
-  </div>
+  <app-meteo-visualizer></app-meteo-visualizer>
+</div>
 
-  <div class="center-block blurry" [class.phone-block]="!this.isDesktop">
-    <p class="font-subtitle v-padding" style="text-align: center;">Kinito App🍺</p>
-    <div 
-    class="v-padding" 
-    [class.font-general]="!this.isDesktop"
-    [class.font-general-big]="this.isDesktop"
-    style="text-align: center;"
-    > 
-      <a i18n>A simple android native application developed in java</a>
-      <br>
-      <br>
-      <button 
-      class="play-store-button shadow" 
-      (click)="openPlayStore()"
-      [style.background-image] ="this.googlePlayImage"
-      >
-      </button>
-      <br>
-      <br>
-      <a i18n>Look at the source</a>
-      <a 
-      href="https://github.com/SpinoniRaffaele/Kinito" 
-      class="no-decoration underline"
-      target="_blank"
-      i18n
-      >
-      🔗here
-      </a>
-    </div>
+<div class="center-block blurry" [class.phone-block]="!this.isDesktop">
+  <p class="font-subtitle v-padding" style="text-align: center;">Kinito App🍺</p>
+  <div 
+  class="v-padding" 
+  [class.font-general]="!this.isDesktop"
+  [class.font-general-big]="this.isDesktop"
+  style="text-align: center;"
+  > 
+    <a i18n>A simple android native application developed in java</a>
+    <br>
+    <br>
+    <button 
+    class="play-store-button shadow" 
+    (click)="openPlayStore()"
+    [style.background-image] ="this.googlePlayImage"
+    >
+    </button>
+    <br>
+    <br>
+    <a i18n>Look at the source</a>
+    <a 
+    href="https://github.com/SpinoniRaffaele/Kinito" 
+    class="no-decoration underline"
+    target="_blank"
+    i18n
+    >
+    🔗here
+    </a>
   </div>
+</div>
+<div class="footer-space"></div>

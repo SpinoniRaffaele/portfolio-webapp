@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   backGroundImagePathWrapped: string = 
   "url('" + this.imageLoader.loadImage('assets/images/background_home.png') + "')";
 
-  requiresBackGroundSubPath = ['home', 'quick-links', 'projects', ''];
+  requiresBackGroundSubPath = ['home', 'quick-links', ''];
 
   animationState: 'not-loaded' | 'loaded' = 'not-loaded';
 

@@ -8,7 +8,7 @@
 }
 
 .no-margin {
-    margin: 0%;
+  margin: 0%;
 }
 
 .v-padding {
@@ -22,42 +22,42 @@
 }
 
 .background-gradient-dark {
-    background: linear-gradient(30deg, rgb(82, 82, 82), rgb(66, 66, 66));
+  background: linear-gradient(30deg, rgb(82, 82, 82), rgb(66, 66, 66));
 }
 
 .background-gradient-white {
-    background: linear-gradient(30deg, rgb(230, 230, 230), rgb(210, 210, 210));
+  background: linear-gradient(30deg, rgb(230, 230, 230), rgb(210, 210, 210));
 }
 
 .blurry {
-    background-color: hsla(0, 0%, 0%, .30);
-    //backdrop-filter: blur(2px);
-    //todo: add blur when firefox is ok with it
-    border-radius: 15px;
+  background-color: hsla(0, 0%, 0%, .30);
+  //backdrop-filter: blur(2px);
+  //todo: add blur when firefox is ok with it
+  border-radius: 15px;
 }
 
 .font-title-dark-theme {
-    font-family: Space Mono;
-    font-size: 50px;
-    color: $textcolor;
+  font-family: Space Mono;
+  font-size: 50px;
+  color: $textcolor;
 }
 
 .font-title-light-theme {
-    font-family: Space Mono;
-    font-size: 50px;
-    color: $dark;
+  font-family: Space Mono;
+  font-size: 50px;
+  color: $dark;
 }
 
 .font-subtitle {
-    font-family: Muli;
-    font-size: 30px;
-    color: $textcolor;
+  font-family: Muli;
+  font-size: 30px;
+  color: $textcolor;
 }
 
 .font-general {
-    font-family: Muli;
-    font-size: 12px;
-    color: $light;
+  font-family: Muli;
+  font-size: 12px;
+  color: $light;
 }
 
 .font-general-big {
@@ -67,28 +67,28 @@
 }
 
 .font-general-light {
-    font-family: Muli;
-    font-size: 12px;
-    color: $dark;
+  font-family: Muli;
+  font-size: 12px;
+  color: $dark;
 }
 
 .font-header {
-    font-family: Muli;
-    font-size: 20px;
-    color: $textcolor !important;
+  font-family: Muli;
+  font-size: 20px;
+  color: $textcolor !important;
 }
 
 ::-webkit-scrollbar {
-    display:none;
+  display:none;
 }
 
 .vertical-center {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
 }
 
 .ml {
-    margin-left: 10px;
+  margin-left: 10px;
 }
   
 .mt {
@@ -96,147 +96,151 @@
 }
   
 .mb {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 //override the modal CSS to use a custom background color
 .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: var(--bs-modal-color);
-    pointer-events: auto;
-    background-color: transparent !important;
-    background-clip: padding-box;
-    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-    border-radius: var(--bs-modal-border-radius);
-    outline: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: transparent !important;
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
 }
 
 .center-contact-me {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 100px;
 }
 
 .get-in-touch {
-    background-color: transparent;
-    border: none;
-    outline: 5px;
-    width: 200px;
-  }
+  background-color: transparent;
+  border: none;
+  outline: 5px;
+  width: 200px;
+}
 
-  .little-blurry {
-    box-shadow:0 0 3px $color,0 0 3px $color,0 0 3px $color,0 0 3px $color;
-  }
+.little-blurry {
+  box-shadow:0 0 3px $color,0 0 3px $color,0 0 3px $color,0 0 3px $color;
+}
 
-  .submit a { 
-    width: 180px;
-    font-family: Muli;
-    font-size: 20px;
-    color: whitesmoke;
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 10px;
-    cursor:pointer;
-  }
-  
-  
-  .submit a:hover {
-    background: $color;
-    color: #fff;
-    border-radius: 5px; 
-    box-shadow:0 0 5px $color,0 0 5px $color,0 0 5px $color,0 0 5px $color;
-  }
-  
-  .submit a span {  
-    position: absolute;
-    display: block;
-  }
-  
-  .submit a span:nth-child(1) {
-    top: 0;
+.submit a { 
+  width: 180px;
+  font-family: Muli;
+  font-size: 20px;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 10px;
+  cursor:pointer;
+}
+
+
+.submit a:hover {
+  background: $color;
+  color: #fff;
+  border-radius: 5px; 
+  box-shadow:0 0 5px $color,0 0 5px $color,0 0 5px $color,0 0 5px $color;
+}
+
+.submit a span {  
+  position: absolute;
+  display: block;
+}
+
+.submit a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, $color);
+  animation: btn-anim1 1s linear 3;
+  animation-delay: 0s; 
+}
+
+@keyframes btn-anim1 { 
+  0% {
     left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, $color);
-    animation: btn-anim1 1s linear 3;
-    animation-delay: 0s; 
   }
+  50%,100% {  
+    left: 100%;
+  }
+}
   
-  @keyframes btn-anim1 { 
-    0% {
-      left: -100%;
-    }
-    50%,100% {  
-      left: 100%;
-    }
-  }
-    
-  .submit a span:nth-child(2) {
-    top: -100%; 
-    right: 0;
-    width: 2px;  
-    height: 100%;
-    background: linear-gradient(180deg, transparent, $color); 
-    animation: btn-anim2 1s linear 3;
-    animation-delay: .25s;
-  }
-    
-  @keyframes btn-anim2 { 
-    0% {
-      top: -100%;
-    }
-    50%,100% {  
-      top: 100%;
-    }
-  }
+.submit a span:nth-child(2) {
+  top: -100%; 
+  right: 0;
+  width: 2px;  
+  height: 100%;
+  background: linear-gradient(180deg, transparent, $color); 
+  animation: btn-anim2 1s linear 3;
+  animation-delay: .25s;
+}
   
-  .submit a span:nth-child(3) {
-    bottom: 0; 
-    right: -100%;
-    width: 100%;  
-    height: 2px;
-    background: linear-gradient(270deg, transparent, $color); 
-    animation: btn-anim3 1s linear 3;
-    animation-delay: .5s;
+@keyframes btn-anim2 { 
+  0% {
+    top: -100%;
   }
-    
-  @keyframes btn-anim3 { 
-    0% {
-      right: -100%;
-    }
-    50%,100% {  
-      right: 100%;
-    }
+  50%,100% {  
+    top: 100%;
   }
-  
-  .submit a span:nth-child(4) {
-    bottom: -100%; 
-    left: 0;
-    width: 2px;  
-    height: 100%;
-    background: linear-gradient(360deg, transparent, $color); 
-    animation: btn-anim4 1s linear 3;
-    animation-delay: .75s;
-  }
-    
-  @keyframes btn-anim4 { 
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {  
-      bottom: 100%;
-    }
-  }
+}
 
-  .focused {
-    background: $color;
+.submit a span:nth-child(3) {
+  bottom: 0; 
+  right: -100%;
+  width: 100%;  
+  height: 2px;
+  background: linear-gradient(270deg, transparent, $color); 
+  animation: btn-anim3 1s linear 3;
+  animation-delay: .5s;
+}
+  
+@keyframes btn-anim3 { 
+  0% {
+    right: -100%;
   }
+  50%,100% {  
+    right: 100%;
+  }
+}
+
+.submit a span:nth-child(4) {
+  bottom: -100%; 
+  left: 0;
+  width: 2px;  
+  height: 100%;
+  background: linear-gradient(360deg, transparent, $color); 
+  animation: btn-anim4 1s linear 3;
+  animation-delay: .75s;
+}
+  
+@keyframes btn-anim4 { 
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {  
+    bottom: 100%;
+  }
+}
+
+.focused {
+  background: $color;
+}
+
+.footer-space{
+  margin-top: 40px;
+}
