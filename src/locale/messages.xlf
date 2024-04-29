@@ -245,14 +245,14 @@
           <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2106788864433931848" datatype="html">
+      <trans-unit id="5534073208512834358" datatype="html">
         <source>I&apos;ve experienced different backend technologies, more in details, i&apos;m hard skilled in Java,
 having 3 year of working experience and knowledge of the Spring framework.
-I&apos;ve a bit of experience with the C programming languages and a small knowledge of
+I&apos;ve a bit of experience with the C programming languages and a basic knowledge of
 Node.js for server side usage of JavaScript. I know different design patterns and different architectures
 such as microservices, often using REST APIs. I&apos;ve experience with Docker and Kubernetes
-and a small knowledge of the AWS cloud environment.
-I have small experience in python (and pytorch) gained during the university&apos;s final project.
+and some knowledge of the AWS cloud environment.
+I have experience in python (and pytorch) gained during the university&apos;s final project.
 I&apos;m recently learning web3 technologies, in particular smart contracts development with Solidity.
 On DB side, i&apos;ve worked a bit with both SQL and noSQL DBMS (Microsoft SQL Server, Mongo, Couchbase).</source>
         <context-group purpose="location">
@@ -260,10 +260,10 @@ On DB side, i&apos;ve worked a bit with both SQL and noSQL DBMS (Microsoft SQL S
           <context context-type="linenumber">7,15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1184518878743763539" datatype="html">
+      <trans-unit id="3302454938875406962" datatype="html">
         <source>I have recently joined the front-end side of development.
     I have 3 years of experience with the Angular framework and the TypeScript language.
-    I&apos;ve a basic knowledge of HTML5 and some experience with CSS3 using the SASS framework.
+    I&apos;ve a basic knowledge of HTML5 and experience with CSS3 using the SASS framework.
     I&apos;m actually learning flutter and the Dart language for multi-platform mobile development.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>

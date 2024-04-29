@@ -258,17 +258,17 @@
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2106788864433931848" datatype="html">
+      <trans-unit id="5534073208512834358" datatype="html">
         <source>I&apos;ve experienced different backend technologies, more in details, i&apos;m hard
           skilled in Java,
           having 3 year of working experience and knowledge of the Spring framework.
-          I&apos;ve a bit of experience with the C programming languages and a small knowledge of
+          I&apos;ve a bit of experience with the C programming languages and a basic knowledge of
           Node.js for server side usage of JavaScript. I know different design patterns and
           different architectures
           such as microservices, often using REST APIs. I&apos;ve experience with Docker and
           Kubernetes
-          and a small knowledge of the AWS cloud environment.
-          I have small experience in python (and pytorch) gained during the university&apos;s final
+          and some knowledge of the AWS cloud environment.
+          I have experience in python (and pytorch) gained during the university&apos;s final
           project.
           I&apos;m recently learning web3 technologies, in particular smart contracts development
           with Solidity.
@@ -277,10 +277,10 @@
         <target>
           Ho sperimentato diverse tecnologie lato backend, in particolare, ho 3 anni di esperienza
           in Java e
-          nel framework Spring. Ho un poco di esperienza con il linguaggio C e con Node.js. Conosco
+          nel framework Spring. Ho qualche esperienza con il linguaggio C e con Node.js. Conosco
           diversi design
           pattern, ho familiarità con l&apos;architettura a microservizi e lo sviluppo di API REST.
-          Ho dell&apos;esperienza nell&apos;utilizzo di Doker e poca conoscenza dell&apos;ambiente
+          Ho dell&apos;esperienza nell&apos;utilizzo di Doker e conoscenza dell&apos;ambiente
           cloud di AWS.
           Ho lavorato con python durante l&apos;università e sto attualmente studiando tecnologie
           Web3, in
@@ -290,14 +290,13 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
-          <context context-type="linenumber">12,20</context>
+          <context context-type="linenumber">7,15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1184518878743763539" datatype="html">
+      <trans-unit id="3302454938875406962" datatype="html">
         <source>I have recently joined the front-end side of development.
           I have 3 years of experience with the Angular framework and the TypeScript language.
-          I&apos;ve a basic knowledge of HTML5 and some experience with CSS3 using the SASS
-          framework.
+          I&apos;ve a basic knowledge of HTML5 and experience with CSS3 using the SASS framework.
           I&apos;m actually learning flutter and the Dart language for multi-platform mobile
           development.</source>
         <target>
@@ -309,7 +308,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about-me-content/about-me-content.datamodel.ts</context>
-          <context context-type="linenumber">22,25</context>
+          <context context-type="linenumber">17,20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2738966460877427451" datatype="html">
@@ -521,7 +520,7 @@
           Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit of Spring Secuirity</source>
         <target>Corso costituito da 40 ore di lezione in videoconferenza. Focus principale ulle basi
           del framework spring:
-          Spring IoC, Spring Data, Spring WebMVC, Springboot e un poco di Spring Secuirity.</target>
+          Spring IoC, Spring Data, Spring WebMVC, Springboot e Spring Secuirity.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>

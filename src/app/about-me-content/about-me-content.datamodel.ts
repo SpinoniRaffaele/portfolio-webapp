@@ -6,17 +6,17 @@ const developerText: string = $localize`I have studied computer science in Polit
 
 const backendText: string = $localize`I've experienced different backend technologies, more in details, i'm hard skilled in Java,
 having 3 year of working experience and knowledge of the Spring framework.
-I've a bit of experience with the C programming languages and a small knowledge of
+I've a bit of experience with the C programming languages and a basic knowledge of
 Node.js for server side usage of JavaScript. I know different design patterns and different architectures
 such as microservices, often using REST APIs. I've experience with Docker and Kubernetes
-and a small knowledge of the AWS cloud environment.
-I have small experience in python (and pytorch) gained during the university's final project.
+and some knowledge of the AWS cloud environment.
+I have experience in python (and pytorch) gained during the university's final project.
 I'm recently learning web3 technologies, in particular smart contracts development with Solidity.
 On DB side, i've worked a bit with both SQL and noSQL DBMS (Microsoft SQL Server, Mongo, Couchbase).`;
 
 const frontEndText: string = $localize`I have recently joined the front-end side of development.
     I have 3 years of experience with the Angular framework and the TypeScript language.
-    I've a basic knowledge of HTML5 and some experience with CSS3 using the SASS framework.
+    I've a basic knowledge of HTML5 and experience with CSS3 using the SASS framework.
     I'm actually learning flutter and the Dart language for multi-platform mobile development.`;
 
 const mountainText: string = $localize`Outside of the office, i really like any kind of outdoor activity.
