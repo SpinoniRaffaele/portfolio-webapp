@@ -1,5 +1,5 @@
 import { Injectable, NgModule } from '@angular/core';
-import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -10,7 +10,7 @@ import { MediaService } from './shared/media.service';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { appRoutes } from './router.config';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ContactMeComponent } from './home-page-content/contact-me/contact-me.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderMenuComponent } from './header/header-menu/header-menu.component';
@@ -33,52 +33,44 @@ declare var Hammer: any;
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig  {
   override buildHammer(element: HTMLElement) {
-    let mc = new Hammer(element, {
+    return new Hammer(element, {
       touchAction: "pan-y"
     });
-    return mc;
   }
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomePageContentComponent,
-    ProjectsComponent,
-    ContactMeComponent,
-    HeaderMenuComponent,
-    AboutMeContentComponent,
-    ContentGroupComponent,
-    ContentComponent,
-    ThemeSelectorComponent,
-    QuickLinkContentComponent,
-    QuickLinkComponent,
-    MeteoVisualizerComponent,
-    MeteoTimePointComponent,
-    PrecipitationAmountPipe,
-    CertificationsComponent,
-    CertificationNavComponent,
-    LanguageSelectorComponent
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
-    HttpClientModule,
-    NgbModule,
-    ReactiveFormsModule,
-    HammerModule,
-    BrowserAnimationsModule
-  ],
-  providers: [
-    MediaService,
-    HttpClientModule,
-    {
-      provide: HAMMER_GESTURE_CONFIG,
-      useClass: MyHammerConfig
-    }
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomePageContentComponent,
+        ProjectsComponent,
+        ContactMeComponent,
+        HeaderMenuComponent,
+        AboutMeContentComponent,
+        ContentGroupComponent,
+        ContentComponent,
+        ThemeSelectorComponent,
+        QuickLinkContentComponent,
+        QuickLinkComponent,
+        MeteoVisualizerComponent,
+        MeteoTimePointComponent,
+        PrecipitationAmountPipe,
+        CertificationsComponent,
+        CertificationNavComponent,
+        LanguageSelectorComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+        NgbModule,
+        ReactiveFormsModule,
+        HammerModule,
+        BrowserAnimationsModule], providers: [
+        MediaService,
+        {
+            provide: HAMMER_GESTURE_CONFIG,
+            useClass: MyHammerConfig
+        },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
