@@ -527,13 +527,22 @@
           <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1079113903323316018" datatype="html">
-        <source>june 2023</source>
-        <target>giugno 2023</target>
+      <trans-unit id="5224384742553601082" datatype="html">
+        <source>Il corso ricropre le conoscenze fondamentali del cloud e di Microsoft Azure in particolare.
+  L'esame testa il candidato su concetti relativi al cloud, l'architettura di Azure, i servizi offerti, la gestione
+  dell'ambiente cloud e la governance dei dati.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6463428281373008617" datatype="html">
+        <source>december 2024</source>
+        <target>dicembre 2024</target>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6031459108023172835" datatype="html">
@@ -542,32 +551,44 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">46</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">58</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">85</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">96</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1079113903323316018" datatype="html">
+        <source>june 2023</source>
+        <target>giugno 2023</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/certifications-content/certifications.datamodel.ts</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8800346577458710031" datatype="html">
@@ -576,7 +597,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5045201202512356105" datatype="html">
@@ -585,7 +606,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5011683055292702139" datatype="html">
@@ -594,7 +615,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="260567100949434085" datatype="html">
@@ -603,7 +624,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4761058165623559034" datatype="html">
@@ -612,7 +633,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8887377498644773492" datatype="html">
@@ -621,7 +642,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">103</context>
+          <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2316969541764998874" datatype="html">
@@ -630,7 +651,7 @@
         <context-group purpose="location">
           <context context-type="sourcefile">
             src/app/certifications-content/certifications.datamodel.ts</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4433470739923804412" datatype="html">

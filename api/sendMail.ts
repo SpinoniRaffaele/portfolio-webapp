@@ -26,7 +26,7 @@ export default function handler(request: any, response: any) {
         ],
     });
     mailjetRequest
-        .then((result: any) => {
+        .then((_: any) => {
             response.send(JSON.stringify({status: "success"}))})
         .catch((err: any) => {
             response.send(JSON.stringify({status: "ko", error: err}))});

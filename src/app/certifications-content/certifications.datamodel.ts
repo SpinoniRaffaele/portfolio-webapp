@@ -32,7 +32,23 @@ const angularText: string = $localize`Udemy course covering deeply every aspect 
 const springOrsysText: string = $localize`Course delivered with 40 hours of live lessons. Focused on the spring framework\'s basics:
     Spring IoC, Spring Data, Spring WebMVC, Springboot and a little bit of Spring Secuirity`;
 
+const azureFundamentalsText: string = $localize`Foundational knowledge of cloud concepts in general 
+    and Microsoft Azure in particular. The exam covers cloud concepts, Azure architecture, services, 
+    Azure management and governance`;
+
 export const officialCertifications: ContentGroup[] = [
+    {
+        info: [{
+            imagePath: 'assets/images/azure.png',
+            text: azureFundamentalsText,
+            certificationInfo: {
+                dateFrom: $localize`december 2024`,
+                dateTo: $localize`no expiration`,
+                id: '2374429584B7CA36'
+            }
+        }],
+        title: 'Microsoft Certified: Azure Fundamentals'
+    },
     {
         info: [{
             imagePath: 'assets/images/delf-dalf-1.jpg',
