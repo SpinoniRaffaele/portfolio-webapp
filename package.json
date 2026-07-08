@@ -8,7 +8,6 @@
     "build": "ng build --localize && node copy.js",
     "watch": "ng build --watch --configuration development",
     "test:ui": "ng test",
-    "test:backend": "jest --config jest.backend.config.ts",
     "extract:i18n": "ng extract-i18n --output-path src/locale",
     "start:built": "http-server dist/portfolio-webapp"
   },
@@ -49,7 +48,6 @@
     "http-server": "^14.1.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "node-mailjet": "^6.0.5",
     "ts-jest": "^29.1.2",
     "typescript": "~5.4.5"
   }

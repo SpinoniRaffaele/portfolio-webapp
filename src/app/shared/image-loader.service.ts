@@ -6,19 +6,13 @@ import { Injectable } from '@angular/core';
 export class ImageLoaderService {
 
   preloadedImagesList: string[] = [
-    'assets/images/backend-dev.png',
     'assets/images/background_quick-links.png',
-    'assets/images/big-dev-screen.jpeg',
-    'assets/images/eze-sunset.jpg',
     'assets/images/github.png',
     'assets/images/googlePlayBadge.png',
     'assets/images/instagram_logo.png',
     'assets/images/linkedin_circle_logo.png',
     'assets/images/medium_logo.png',
     'assets/images/Medium_logo.webp',
-    'assets/images/mountain.jpg',
-    'assets/images/polimi.jpg',
-    'assets/images/ski.jpg'
   ];
 
   constructor() { }

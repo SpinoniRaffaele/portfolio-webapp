@@ -1,8 +1,6 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { MailAPIService } from '../../shared/mail-api.service';
-import { MediaService } from '../../shared/media.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {MediaService} from '../../shared/media.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -15,19 +13,13 @@ export class ContactMeComponent implements OnInit {
 
   readonly mailRegEx: RegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  private modal: any;
-
   sendButtonMessage: string = $localize`Send`;
 
   sendEmpty: boolean;
 
   formGroup: FormGroup;
 
-  isLoading: boolean = false;
-
   constructor(
-    private modalService: NgbModal, 
-    private mailAPIService: MailAPIService, 
     private formBuilder: FormBuilder,
     private mediaService: MediaService) {
       this.formGroup = this.formBuilder.group({
@@ -39,40 +31,5 @@ export class ContactMeComponent implements OnInit {
 
   ngOnInit() {
     this.mediaService.isDesktop$.subscribe(val => this.isDesktop = val);
-  }
-
-  openDialog(content: TemplateRef<any>) {
-    this.modal = this.modalService.open(content);
-  }
-
-  onSubmit() {
-    if (this.formGroup.valid) {
-      this.isLoading = true;
-      this.sendButtonMessage = $localize`Sending...`;
-      this.mailAPIService.sendMail(this.formGroup.controls['email'].value, this.formGroup.controls['body'].value)
-      .subscribe(res => {
-        this.isLoading = false;
-        if(this.mailAPIService.isResponseGood(res)) {
-          this.handleSuccess();
-        } else {
-          this.handleError();
-        }
-      });
-    } else {
-      this.sendEmpty = true;
-    }
-  }
-
-  handleSuccess() {
-    this.sendButtonMessage = $localize`Sent👍`;
-    setTimeout(() => {
-      this.modal.close();
-      this.sendEmpty = false;
-      this.sendButtonMessage = $localize`Send`;
-    }, 900);
-  }
-
-  handleError() {
-    this.sendButtonMessage = $localize`SMTP Error👎`;
   }
 }
