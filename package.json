@@ -28,6 +28,7 @@
     "@vercel/analytics": "^1.1.1",
     "bootstrap": "^5.2.0",
     "flag-icons": "^7.2.1",
+    "request": "^2.88.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -41,6 +42,7 @@
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.7.15",
+    "@types/request": "^2.48.13",
     "copy-dir": "^1.3.0",
     "hammerjs": "^2.0.8",
     "html-loader": "^4.1.0",

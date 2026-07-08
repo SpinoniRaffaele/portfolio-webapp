@@ -23,7 +23,7 @@ export class ContactMeComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  isLoading: boolean = false;;
+  isLoading: boolean = false;
 
   constructor(
     private modalService: NgbModal, 

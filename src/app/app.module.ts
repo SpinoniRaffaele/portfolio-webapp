@@ -15,7 +15,6 @@ import { ContactMeComponent } from './home-page-content/contact-me/contact-me.co
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderMenuComponent } from './header/header-menu/header-menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AboutMeContentComponent } from './about-me-content/about-me-content.component';
 import { ContentGroupComponent } from './shared/content-group/content-group.component';
 import { ContentComponent } from './shared/content-group/content/content.component';
 import { ThemeSelectorComponent } from './theme-selector/theme-selector.component';
@@ -47,7 +46,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
         ProjectsComponent,
         ContactMeComponent,
         HeaderMenuComponent,
-        AboutMeContentComponent,
         ContentGroupComponent,
         ContentComponent,
         ThemeSelectorComponent,
