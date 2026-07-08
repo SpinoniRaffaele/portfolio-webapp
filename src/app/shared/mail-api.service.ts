@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MailAPIService {
 
-  private readonly baseUrl = 'https://portfolio-webapp-spinoniraffaele.vercel.app/api/sendMail';
+  private readonly baseUrl = 'https://portfolio-webapp-one.vercel.app/api/sendMail';
 
   constructor(public http: HttpClient) { }
 

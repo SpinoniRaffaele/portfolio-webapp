@@ -8,7 +8,7 @@ import { MeteoApiData, TimePointData } from './meteo-api.datamodel';
 })
 export class MeteoApiService {
 
-  private readonly BASE_PATH = 'https://portfolio-webapp-spinoniraffaele.vercel.app/api/getWeather';
+  private readonly BASE_PATH = 'https://portfolio-webapp-one.vercel.app/api/getWeather';
 
   private readonly DEFAULT_LATITUDE = 23;
 
