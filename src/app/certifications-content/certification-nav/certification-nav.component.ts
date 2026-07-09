@@ -3,9 +3,10 @@ import { PIXEL_HEIGHT_OF_SCROLLING_BEFORE_TOP } from '../certifications.datamode
 import { ThemeService } from '../../shared/theme.service';
 
 @Component({
-  selector: 'app-certification-nav',
-  templateUrl: './certification-nav.component.html',
-  styleUrls: ['./certification-nav.component.scss']
+    selector: 'app-certification-nav',
+    templateUrl: './certification-nav.component.html',
+    styleUrls: ['./certification-nav.component.scss'],
+    standalone: false
 })
 export class CertificationNavComponent implements OnInit {
 

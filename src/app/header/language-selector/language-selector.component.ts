@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, Inject, LOCALE_ID, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-language-selector',
-  templateUrl: './language-selector.component.html',
-  styleUrl: './language-selector.component.scss'
+    selector: 'app-language-selector',
+    templateUrl: './language-selector.component.html',
+    styleUrl: './language-selector.component.scss',
+    standalone: false
 })
 export class LanguageSelectorComponent implements AfterViewInit {
 

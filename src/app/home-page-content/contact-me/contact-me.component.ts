@@ -3,9 +3,10 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MediaService} from '../../shared/media.service';
 
 @Component({
-  selector: 'app-contact-me',
-  templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+    selector: 'app-contact-me',
+    templateUrl: './contact-me.component.html',
+    styleUrls: ['./contact-me.component.scss'],
+    standalone: false
 })
 export class ContactMeComponent implements OnInit {
 

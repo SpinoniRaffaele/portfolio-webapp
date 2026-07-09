@@ -7,21 +7,20 @@ import { headerList } from './header.datamodel';
 const disappearedMenuStyle: any = {'opacity':'0', 'transform': 'translateY(-400px)'};
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  animations:  [
-    trigger('animationTrigger', [
-      state('in', style({})),
-      transition('void => *', [
-        style(disappearedMenuStyle), 
-        animate(headerMenuTransitionTime + ' ease-out')
-      ]),
-      transition('* => void', 
-        animate(headerMenuTransitionTime + ' ease-in', style(disappearedMenuStyle))
-      )
-    ])
-  ]
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    animations: [
+        trigger('animationTrigger', [
+            state('in', style({})),
+            transition('void => *', [
+                style(disappearedMenuStyle),
+                animate(headerMenuTransitionTime + ' ease-out')
+            ]),
+            transition('* => void', animate(headerMenuTransitionTime + ' ease-in', style(disappearedMenuStyle)))
+        ])
+    ],
+    standalone: false
 })
 export class HeaderComponent implements OnInit {
 

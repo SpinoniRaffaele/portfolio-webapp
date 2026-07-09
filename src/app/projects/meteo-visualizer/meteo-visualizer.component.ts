@@ -4,9 +4,10 @@ import { TimePointData } from '../../shared/meteo-api.datamodel';
 import { MeteoApiService } from '../../shared/meteo-api.service';
 
 @Component({
-  selector: 'app-meteo-visualizer',
-  templateUrl: './meteo-visualizer.component.html',
-  styleUrls: ['./meteo-visualizer.component.scss']
+    selector: 'app-meteo-visualizer',
+    templateUrl: './meteo-visualizer.component.html',
+    styleUrls: ['./meteo-visualizer.component.scss'],
+    standalone: false
 })
 export class MeteoVisualizerComponent implements OnInit {
 

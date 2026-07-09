@@ -7,31 +7,32 @@ const toTheRight: any = {'opacity':'0', 'transform': 'translateX(100%)'};
 const toTheLeft: any = {'opacity':'0', 'transform': 'translateX(-100%)'};
 
 @Component({
-  selector: 'app-certifications',
-  templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.scss'],
-  animations:  [
-    trigger('animationTrigger', [
-      state('official', style({})),
-      state('unofficial', style({})),
-      state('officialToUnofficial', style(toTheLeft)),
-      state('unofficialToUfficial', style(toTheRight)),
-      transition('official => officialToUnofficial', [
-        animate(halfHeaderMenuTransitionTime)
-      ]),
-      transition('officialToUnofficial => unofficial', [
-        animate('1ms', style(toTheRight)),
-        animate(halfHeaderMenuTransitionTime)
-      ]),
-      transition('unofficial => unofficialToUfficial', [
-        animate(halfHeaderMenuTransitionTime)
-      ]),
-      transition('unofficialToUfficial => official', [
-        animate('1ms', style(toTheLeft)),
-        animate(halfHeaderMenuTransitionTime)
-      ]),
-    ])
-  ]
+    selector: 'app-certifications',
+    templateUrl: './certifications.component.html',
+    styleUrls: ['./certifications.component.scss'],
+    animations: [
+        trigger('animationTrigger', [
+            state('official', style({})),
+            state('unofficial', style({})),
+            state('officialToUnofficial', style(toTheLeft)),
+            state('unofficialToUfficial', style(toTheRight)),
+            transition('official => officialToUnofficial', [
+                animate(halfHeaderMenuTransitionTime)
+            ]),
+            transition('officialToUnofficial => unofficial', [
+                animate('1ms', style(toTheRight)),
+                animate(halfHeaderMenuTransitionTime)
+            ]),
+            transition('unofficial => unofficialToUfficial', [
+                animate(halfHeaderMenuTransitionTime)
+            ]),
+            transition('unofficialToUfficial => official', [
+                animate('1ms', style(toTheLeft)),
+                animate(halfHeaderMenuTransitionTime)
+            ]),
+        ])
+    ],
+    standalone: false
 })
 export class CertificationsComponent {
 

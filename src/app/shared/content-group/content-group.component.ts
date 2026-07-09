@@ -3,9 +3,10 @@ import { MediaService } from '../media.service';
 import { ContentGroup, ContentInfo, emptyGroup } from './content-group.datamodel';
 
 @Component({
-  selector: 'app-content-group',
-  templateUrl: './content-group.component.html',
-  styleUrls: ['./content-group.component.scss']
+    selector: 'app-content-group',
+    templateUrl: './content-group.component.html',
+    styleUrls: ['./content-group.component.scss'],
+    standalone: false
 })
 export class ContentGroupComponent implements OnInit {
 

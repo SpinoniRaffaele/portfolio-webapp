@@ -89,19 +89,19 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolio-webapp:build:production"
+              "buildTarget": "portfolio-webapp:build:production"
             },
             "development": {
-              "browserTarget": "portfolio-webapp:build:development"
+              "buildTarget": "portfolio-webapp:build:development"
             },
             "it": {
-              "browserTarget": "portfolio-webapp:build:it"
+              "buildTarget": "portfolio-webapp:build:it"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "@angular/build:extract-i18n",
           "options": {
             "buildTarget": "portfolio-webapp:build"
           }

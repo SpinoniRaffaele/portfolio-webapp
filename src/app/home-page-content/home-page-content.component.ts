@@ -3,9 +3,10 @@ import { MediaService } from '../shared/media.service';
 import { ThemeService } from '../shared/theme.service';
 
 @Component({
-  selector: 'app-home-page-content',
-  templateUrl: './home-page-content.component.html',
-  styleUrls: ['./home-page-content.component.scss']
+    selector: 'app-home-page-content',
+    templateUrl: './home-page-content.component.html',
+    styleUrls: ['./home-page-content.component.scss'],
+    standalone: false
 })
 export class HomePageContentComponent implements OnInit {
 

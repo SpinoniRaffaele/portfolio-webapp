@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { TimePointData, weatherImageMapping, windImageMapping, windMSMapping } from '../../../shared/meteo-api.datamodel';
 
 @Component({
-  selector: 'app-meteo-time-point',
-  templateUrl: './meteo-time-point.component.html',
-  styleUrls: ['./meteo-time-point.component.scss']
+    selector: 'app-meteo-time-point',
+    templateUrl: './meteo-time-point.component.html',
+    styleUrls: ['./meteo-time-point.component.scss'],
+    standalone: false
 })
 export class MeteoTimePointComponent implements OnInit {
 

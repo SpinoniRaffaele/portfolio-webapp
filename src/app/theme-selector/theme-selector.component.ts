@@ -5,18 +5,19 @@ import { ThemeService } from '../shared/theme.service';
 import { contentFadeInTransitionTime, headerMenuTransitionTime } from '../shared/transition-timing.datamodel';
 
 @Component({
-  selector: 'app-theme-selector',
-  templateUrl: './theme-selector.component.html',
-  styleUrls: ['./theme-selector.component.scss'],
-  animations:  [
-    trigger('animationTrigger', [
-      state('in', style({})),
-      transition('void => *', [
-        style({'opacity':'0'}), 
-        animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)
-      ])
-    ])
-  ]
+    selector: 'app-theme-selector',
+    templateUrl: './theme-selector.component.html',
+    styleUrls: ['./theme-selector.component.scss'],
+    animations: [
+        trigger('animationTrigger', [
+            state('in', style({})),
+            transition('void => *', [
+                style({ 'opacity': '0' }),
+                animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class ThemeSelectorComponent implements OnInit {
 

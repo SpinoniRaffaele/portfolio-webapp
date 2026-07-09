@@ -7,17 +7,18 @@ import { ThemeService } from './shared/theme.service';
 import { contentFadeInTransitionTime, headerMenuTransitionTime } from './shared/transition-timing.datamodel';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations:  [
-    trigger('animationTrigger', [
-      state('loaded', style({'opacity':'1'})),
-      state('not-loaded', style({'opacity':'0'})), 
-      transition('not-loaded => loaded', [animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)]),
-      transition('loaded => not-loaded', [animate('0s')])
-    ])
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    animations: [
+        trigger('animationTrigger', [
+            state('loaded', style({ 'opacity': '1' })),
+            state('not-loaded', style({ 'opacity': '0' })),
+            transition('not-loaded => loaded', [animate(contentFadeInTransitionTime + ' ' + headerMenuTransitionTime)]),
+            transition('loaded => not-loaded', [animate('0s')])
+        ])
+    ],
+    standalone: false
 })
 export class AppComponent implements OnInit, OnDestroy {
 
