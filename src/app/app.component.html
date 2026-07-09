@@ -1,20 +1,22 @@
-<div 
-[class.background-gradient-dark]="this.isDark" 
-[class.background-gradient-white]="!this.isDark"
->
-    <div 
-    class="shape3d dim" 
-    [class.shape-position-phone]="!isDesktop" 
+<div
+  [class.background-gradient-dark]="this.isDark"
+  [class.background-gradient-white]="!this.isDark"
+  >
+  <div
+    class="shape3d dim"
+    [class.shape-position-phone]="!isDesktop"
     [style.background-image]="backGroundImagePathWrapped"
     >
-        <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
+    <app-header (isMenuToggledEmitter)="this.isMenuToggled = $event"></app-header>
 
-        <app-theme-selector *ngIf="!this.isMenuToggled" [class.sticky]="sticky" class="h-center"></app-theme-selector>
+    @if (!this.isMenuToggled) {
+      <app-theme-selector [class.sticky]="sticky" class="h-center"></app-theme-selector>
+    }
 
-        <div [@animationTrigger]="this.animationState" class="min-height">
-            <router-outlet></router-outlet>
-        </div>
-    
-        <app-footer></app-footer>
+    <div [@animationTrigger]="this.animationState" class="min-height">
+      <router-outlet></router-outlet>
     </div>
+
+    <app-footer></app-footer>
+  </div>
 </div>

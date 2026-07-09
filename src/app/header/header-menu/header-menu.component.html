@@ -1,14 +1,15 @@
 <div class="font-header">
-    <ul class="no-margin blurry header-list radius">
-        <li
-        *ngFor="let headerElement of headerList" 
+  <ul class="no-margin blurry header-list radius">
+    @for (headerElement of headerList; track headerElement) {
+      <li
         class="header-list-elem underline font-header h-center"
-        routerLink="{{ headerElement.url }}" 
+        routerLink="{{ headerElement.url }}"
         routerLinkActive="active"
         (click)="menuItemSelected.emit(headerElement.label)">
         <div style="padding-top: 12px">
-            {{ headerElement.label }}
+          {{ headerElement.label }}
         </div>
-        </li>
-    </ul>
+      </li>
+    }
+  </ul>
 </div>

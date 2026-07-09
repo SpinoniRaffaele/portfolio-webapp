@@ -1,41 +1,44 @@
-<div 
-class="height"
-[class.font-general]="!this.isDesktop"
-[class.font-general-big]="this.isDesktop"
-[class.horizontal]="this.isDesktop" 
-[class.vertical]="!this.isDesktop"
->
-    <div 
-    class="image" 
+<div
+  class="height"
+  [class.font-general]="!this.isDesktop"
+  [class.font-general-big]="this.isDesktop"
+  [class.horizontal]="this.isDesktop"
+  [class.vertical]="!this.isDesktop"
+  >
+  <div
+    class="image"
     [style.background-image]="wrapImagePath(this.imagePath)"
     (click)="this.openDialog(content)">
-    </div>
-    <div class="spacing"></div>
-    <div class="center">
-        <div 
-        [class.vertical-no-space]="!this.isDesktop" 
-        [class.horizontal-no-space]="this.isDesktop" 
-        *ngIf="this.certificationInfo"
+  </div>
+  <div class="spacing"></div>
+  <div class="center">
+    @if (this.certificationInfo) {
+      <div
+        [class.vertical-no-space]="!this.isDesktop"
+        [class.horizontal-no-space]="this.isDesktop"
         >
-            <p class="text"><i> <a i18n>obtained in</a>: {{this.certificationInfo.dateFrom}}</i></p>
-            <p class="text"><i> <a i18n>expires in</a>: {{this.certificationInfo.dateTo}}</i></p>
-        </div>
-        <p class="text">
-            {{ this.textContent }}
-        </p>
-        <p *ngIf="this.certificationInfo && this.certificationInfo.id">
-            <i>ID: {{this.certificationInfo.id}}</i>
-        </p>
-    </div>
+        <p class="text"><i> <a i18n>obtained in</a>: {{this.certificationInfo.dateFrom}}</i></p>
+        <p class="text"><i> <a i18n>expires in</a>: {{this.certificationInfo.dateTo}}</i></p>
+      </div>
+    }
+    <p class="text">
+      {{ this.textContent }}
+    </p>
+    @if (this.certificationInfo && this.certificationInfo.id) {
+      <p>
+        <i>ID: {{this.certificationInfo.id}}</i>
+      </p>
+    }
+  </div>
 </div>
 
 
 <ng-template #content let-modal>
-    <div class="blurry modal_">
-        <div class="mt font-subtitle">
-            <div class="close-button" (click)="modal.dismiss()">X</div>
-        </div>
-        <div class="image-open" [style.background-image]="wrapImagePath(this.imagePath)">
-        </div>
+  <div class="blurry modal_">
+    <div class="mt font-subtitle">
+      <div class="close-button" (click)="modal.dismiss()">X</div>
     </div>
+    <div class="image-open" [style.background-image]="wrapImagePath(this.imagePath)">
+    </div>
+  </div>
 </ng-template>

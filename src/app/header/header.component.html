@@ -1,38 +1,42 @@
-<div *ngIf="isDesktop; else phoneLayout" class="blurry header-dim inline">
+@if (isDesktop) {
+  <div class="blurry header-dim inline">
     <div class="image">
     </div>
     <app-language-selector></app-language-selector>
     <nav>
-        <ul class="no-margin header-list">
-            <li 
-            *ngFor="let headerElement of headerList" 
+      <ul class="no-margin header-list">
+        @for (headerElement of headerList; track headerElement) {
+          <li
             class="header-list-elem underline font-header"
-            routerLink="{{ headerElement.url }}" 
+            routerLink="{{ headerElement.url }}"
             routerLinkActive="active">
             <div class="mt">
-                {{ headerElement.label }}
+              {{ headerElement.label }}
             </div>
-            </li>
-        </ul>
+          </li>
+        }
+      </ul>
     </nav>
-</div>
+  </div>
+} @else {
+  <div class="blurry header-dim inline-phone" [style.border-radius]="isMenuToggled ? '0px' : '0px 0px 15px 15px'">
+    <div class="image shadow">
+    </div>
+    <app-language-selector></app-language-selector>
+    <div #separator></div>
+    <div class="nav-container">
+      <input class="checkbox" type="checkbox" [checked]="isMenuToggled" (click)="toggleMenu($event.target.checked)"/>
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+    </div>
+  </div>
+  @if (isMenuToggled) {
+    <div class="no-margin" [@animationTrigger]="animationState">
+      <app-header-menu (menuItemSelected)="toggleMenu(false)"></app-header-menu>
+    </div>
+  }
+}
 
-<ng-template #phoneLayout>
-    <div class="blurry header-dim inline-phone" [style.border-radius]="isMenuToggled ? '0px' : '0px 0px 15px 15px'">
-        <div class="image shadow">
-        </div>
-        <app-language-selector></app-language-selector>
-        <div #separator></div>
-        <div class="nav-container">
-            <input class="checkbox" type="checkbox" [checked]="isMenuToggled" (click)="toggleMenu($event.target.checked)"/>
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>  
-        </div>
-    </div>
-    <div *ngIf="isMenuToggled" class="no-margin" [@animationTrigger]="animationState">
-        <app-header-menu (menuItemSelected)="toggleMenu(false)"></app-header-menu>
-    </div>
-</ng-template>

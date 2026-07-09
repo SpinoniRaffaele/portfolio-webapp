@@ -77,7 +77,7 @@ export class AppComponent implements OnInit, OnDestroy {
     return found;
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   handleScroll(){
     const windowScroll = window.pageYOffset;
     if(windowScroll >= 100){

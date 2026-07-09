@@ -1,43 +1,51 @@
 <div class="blurry group"  [class.group-width]="isDesktop" [class.group-width-phone]="!isDesktop">
-    <p class="font-subtitle" style="text-align: center;">{{this.contentGroupInfo.title}}</p>
-    <div [class.grid]="isDesktop" [class.grid-phone]="!isDesktop">
-        <div class="image">
-            <img 
-            *ngIf="this.contentGroupInfo.info.length > 1"
-            src ="assets/svgs/left-arrow-svgrepo-com.svg" 
-            [class.scale]="!isFirstContent()"
-            [class.disabled]="isFirstContent()"
-            (click)=changeComponent(false)
-            >
-        </div>
-        <app-content 
-        [textContent]="this.contentGroupInfo.info[selectedContent].text"
-        [imagePath]="this.contentGroupInfo.info[selectedContent].imagePath"
-        [certificationInfo]="this.contentGroupInfo.info[selectedContent].certificationInfo"
-        (swipeleft)="changeComponent(true)"
-        (swiperight)="changeComponent(false)"
-        >
-        </app-content>
-        <div class="image">
-            <img 
-            *ngIf="this.contentGroupInfo.info.length > 1"
-            src ="assets/svgs/right-arrow-svgrepo-com.svg" 
-            [class.scale]="!isLastContent()" 
-            [class.disabled]="isLastContent()"
-            (click)=changeComponent(true)
-            >
-        </div>
+  <p class="font-subtitle" style="text-align: center;">{{this.contentGroupInfo.title}}</p>
+  <div [class.grid]="isDesktop" [class.grid-phone]="!isDesktop">
+    <div class="image">
+      @if (this.contentGroupInfo.info.length > 1) {
+        <img
+          src ="assets/svgs/left-arrow-svgrepo-com.svg"
+          [class.scale]="!isFirstContent()"
+          [class.disabled]="isFirstContent()"
+          (click)=changeComponent(false)
+          >
+      }
     </div>
-    <div *ngIf="this.contentGroupInfo.info.length > 1" class="center-content-group" [style.width]="">
-        <div *ngFor="let item of [].constructor(this.contentGroupInfo.info.length); let i = index">
-            <img 
-            *ngIf="i !== this.selectedContent" 
-            src="assets/svgs/white empty circle.svg" 
-            class="circle-dim">
-            <img 
-            *ngIf="i === this.selectedContent" 
-            src="assets/svgs/filled circle.svg" 
-            class="circle-dim selected">
-        </div>
+    <app-content
+      [textContent]="this.contentGroupInfo.info[selectedContent].text"
+      [imagePath]="this.contentGroupInfo.info[selectedContent].imagePath"
+      [certificationInfo]="this.contentGroupInfo.info[selectedContent].certificationInfo"
+      (swipeleft)="changeComponent(true)"
+      (swiperight)="changeComponent(false)"
+      >
+    </app-content>
+    <div class="image">
+      @if (this.contentGroupInfo.info.length > 1) {
+        <img
+          src ="assets/svgs/right-arrow-svgrepo-com.svg"
+          [class.scale]="!isLastContent()"
+          [class.disabled]="isLastContent()"
+          (click)=changeComponent(true)
+          >
+      }
     </div>
+  </div>
+  @if (this.contentGroupInfo.info.length > 1) {
+    <div class="center-content-group" [style.width]="">
+      @for (item of [].constructor(this.contentGroupInfo.info.length); track item; let i = $index) {
+        <div>
+          @if (i !== this.selectedContent) {
+            <img
+              src="assets/svgs/white empty circle.svg"
+              class="circle-dim">
+          }
+          @if (i === this.selectedContent) {
+            <img
+              src="assets/svgs/filled circle.svg"
+              class="circle-dim selected">
+          }
+        </div>
+      }
+    </div>
+  }
 </div>
